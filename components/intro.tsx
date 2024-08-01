@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { FaInstagramSquare } from "react-icons/fa";
+import { BsArrowRight } from "react-icons/bs";
+import { FaInstagram, FaBehance } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 
 import { EXTRA_LINKS, OWNER_NAME } from "@/constants";
@@ -113,7 +113,7 @@ const Intro = () => {
             aria-label="Linkedin"
             title="Linkedin"
           >
-            <BsLinkedin />
+            <FaInstagram />
           </Link>
 
           <Link
@@ -124,7 +124,7 @@ const Intro = () => {
             aria-label="GitHub"
             title="GitHub"
           >
-            <FaInstagramSquare />
+            <FaBehance />
           </Link>
         </div>
       </motion.div>
