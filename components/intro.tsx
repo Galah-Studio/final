@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 import { FaInstagram, FaBehance } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 import { EXTRA_LINKS, OWNER_NAME } from "@/constants";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -111,7 +112,7 @@ const Intro = () => {
             rel="noopener noreferrer"
             className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.1] hover:scale-[1.1] active:scale-95 hover:text-gray-950 transition borderBlack dark:bg-white/10 dark:text-white/60"
             aria-label="Linkedin"
-            title="Linkedin"
+            title="Instagram"
           >
             <FaInstagram />
           </Link>
@@ -122,9 +123,9 @@ const Intro = () => {
             rel="noopener noreferrer"
             className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full outline-none focus:scale-[1.1] hover:scale-[1.1] active:scale-95 hover:text-gray-950 transition borderBlack dark:bg-white/10 dark:text-white/60"
             aria-label="GitHub"
-            title="GitHub"
+            title="X"
           >
-            <FaBehance />
+            <FaSquareXTwitter />
           </Link>
         </div>
       </motion.div>
