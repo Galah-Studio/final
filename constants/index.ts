@@ -3,7 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
-import carhubImg from "@/public/carhub.png";
+import abjImg from "@/public/abajora.png";
 import realtorImg from "@/public/realtor.png";
 import ecommerceImg from "@/public/ecommerce.png";
 
@@ -75,12 +75,12 @@ export const EXPERIENCES_DATA = [
 // Data for projects
 export const PROJECTS_DATA = [
   {
-    title: "CarHub",
+    title: "Abajora",
     description:
       "A web app that is built using NextJS and enables users to quickly search and obtain information about cars.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind", "Headless UI"],
-    imageUrl: carhubImg,
-    projectUrl: "https://carhb.vercel.app/",
+    imageUrl: abjImg,
+    projectUrl: "https://google.com/",
   },
   {
     title: "Realtor",
