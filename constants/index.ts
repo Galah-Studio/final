@@ -38,7 +38,7 @@ export const LINKS = [
 // External links
 export const EXTRA_LINKS = {
   linkedin: "https://www.instagram.com/galah.tv/",
-  github: "https://github.com/sanidhyy",
+  github: "https://x.com/Galahtv",
   resume: "/resume.pdf",
   source_code: "https://github.com/sanidhyy/portfolio",
   email: "sanidhya.verma12345@gmail.com",
