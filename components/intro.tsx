@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 
 import { EXTRA_LINKS, OWNER_NAME } from "@/constants";
@@ -124,7 +124,7 @@ const Intro = () => {
             aria-label="GitHub"
             title="GitHub"
           >
-            <FaGithubSquare />
+            <FaInstagramSquare />
           </Link>
         </div>
       </motion.div>
