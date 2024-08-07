@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 import { FaInstagram, FaBehance } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 
 import { EXTRA_LINKS, OWNER_NAME } from "@/constants";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -125,7 +125,7 @@ const Intro = () => {
             aria-label="GitHub"
             title="X"
           >
-            <FaSquareXTwitter />
+            <FaXTwitter />
           </Link>
         </div>
       </motion.div>
