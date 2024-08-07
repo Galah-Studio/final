@@ -47,81 +47,101 @@ export const EXTRA_LINKS = {
 // Data for work experience
 export const EXPERIENCES_DATA = [
   {
-    title: "Passed High School",
-    location: "Sitapur, IN",
-    description:
-      "Completed my high school curriculum, gaining a solid foundation in various subjects and essential skills.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2021",
-  },
-  {
-    title: "React.js Bootcamp",
-    location: "Lucknow, IN",
-    description:
-      "Successfully completed an intensive 1-month React.js Developer Bootcamp. Acquired expertise in React components, state management with Redux, and interacting with RESTful APIs.",
+    title: "Studio Standards",
+    date: "We're Passionate About Our Work",
+    description: `“Passion is the key essential force that drives our success. It determines everything that we think and do!”`,
     icon: React.createElement(CgWorkAlt),
-    date: "2022",
   },
   {
-    title: "Freelancer React.js Developer",
-    location: "Bangalore, IN",
-    description:
-      "Working as a freelance React.js Developer, I have collaborated with various clients to create responsive and dynamic web applications.",
-    icon: React.createElement(FaReact),
-    date: "2022 - present",
+    title: "Exceptional Animation Services",
+    date: "Our Mission & Vision",
+    description: `Our mission is to provide our clients with exceptional animation services that meet their unique needs and exceed their expectations. We strive to be a leader in the animation industry in the Middle East, and to build long-term relationships with our clients based on trust, collaboration, and quality work.`,
+    icon: React.createElement(CgWorkAlt),
+  },
+  {
+    title: "Specialists in High-Quality 2D Animation",
+    date: "About Us",
+    description: `We are an animation studio based in Riyadh, Saudi Arabia, specializing in creating high-quality 2D animations for a variety of industries and clients. Our team of skilled animators and designers are passionate about creating engaging and visually stunning content that brings our clients' ideas to life.`,
+    icon: React.createElement(CgWorkAlt),
+  },
+  {
+    title: "Extensive Industry Experience",
+    date: "Our Expertise",
+    description: `Our exceptional team brings a wealth of expertise and experience gained through working on different shows including Masameer, from YouTube to Movie and to Netflix. Our team members have honed their skills and developed a deep understanding of industry best practices. We are perfectly equipped to bring our animated TV shows to life.`,
+    icon: React.createElement(CgWorkAlt),
+  },
+  {
+    title: "Transforming Ideas into Captivating Experiences",
+    date: "Bringing Ideas to Life",
+    description: `At Galah, we specialize in turning ideas into captivating experiences. From concept designing to storyboarding, animation, and final delivery, we bring your vision to life. With meticulous attention to detail and state-of-the-art animation techniques, we create immersive experiences that captivate and entertain.`,
+    icon: React.createElement(CgWorkAlt),
+  },
+  {
+    title: "Crafting Stories that Inspire",
+    date: "Creating Engaging Stories",
+    description: `We craft stories that captivate and entertain. But we go beyond mere entertainment. Our narratives also impart knowledge and inspire personal growth. Through compelling characters and immersive settings, we engage audiences while seamlessly integrating educational elements.`,
+    icon: React.createElement(CgWorkAlt),
+  },
+  {
+    title: "Showcasing the Beauty of Saudi Arabia",
+    date: "Embracing Saudi Arabia's Nature",
+    description: `We are dedicated to creating immersive environments that vividly reflect the breathtaking landscapes and natural wonders of Saudi Arabia. Our aim is to educate and inspire people, allowing them to discover and appreciate the vast and diverse nature that Saudi Arabia has to offer.`,
+    icon: React.createElement(CgWorkAlt),
   },
 ] as const;
 
 // Data for projects
 export const PROJECTS_DATA = [
   {
-    title: "Abajora",
-    description:
-      "A web app that is built using NextJS and enables users to quickly search and obtain information about cars.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Headless UI"],
-    imageUrl: abjImg,
-    projectUrl: "https://google.com/",
+    title: "Abajora Podcast Commercial",
+    description: `We created a commercial for a podcast called "Abajora". The ad includes realistic 3D modeling, motion graphics, and video editing. #3D #Blender #AfterEffects #Premiere`,
+    tags: ["3D", "Blender", "AfterEffects", "Premiere"],
+    imageUrl: "/path/to/abajora-image.png",
+    projectUrl: "https://yourprojecturl.com/abajora",
   },
   {
-    title: "Realtor",
-    description:
-      "Buy and rent homes for everyone. I was the front-end developer. It has features like filtering, sorting, and pagination.",
-    tags: ["React", "Chakra UI", "Next.js", "Framer Motion", "React Icons"],
-    imageUrl: realtorImg,
-    projectUrl: "https://real-estate-app-react.vercel.app/",
+    title: "Vivi Water Company Campaign",
+    description: `We created an ad campaign for Vivi, a water company, featuring realistic product modeling and renders. #Blender #AfterEffects #Photoshop #Illustrator`,
+    tags: ["Blender", "AfterEffects", "Photoshop", "Illustrator"],
+    imageUrl: "/path/to/vivi-image.png",
+    projectUrl: "https://yourprojecturl.com/vivi",
   },
   {
-    title: "ECommerce Store",
-    description:
-      "A NextJS-based eCommerce store that allows users to order different products. It supports real-time payments using Stripe.",
-    tags: ["React", "Next.js", "Sanity", "React Router", "Stripe"],
-    imageUrl: ecommerceImg,
-    projectUrl: "https://ecommerce-app-next.vercel.app/",
+    title: "ARKI Tectonica Ceremony Documentation",
+    description: `We documented a celebration ceremony for ARKI Tectonica, using a cinematic kit and edited the videos and photos. #DaVinciResolve #AfterEffects #Premiere #Photoshop #Videography #Photography`,
+    tags: ["DaVinciResolve", "AfterEffects", "Premiere", "Photoshop", "Videography", "Photography"],
+    imageUrl: "/path/to/arki-image.png",
+    projectUrl: "https://yourprojecturl.com/arki",
+  },
+  {
+    title: "Tiraz Brochure Design",
+    description: `We designed a brochure for Tiraz, including writing the content, editing photos, and designing the layout. #InDesign #Photoshop #Writing #Illustrator`,
+    tags: ["InDesign", "Photoshop", "Writing", "Illustrator"],
+    imageUrl: "/path/to/tiraz-image.png",
+    projectUrl: "https://yourprojecturl.com/tiraz",
   },
 ] as const;
 
 // Data for skills
 export const SKILLS_DATA = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Shadcn UI",
-  "Three.js",
-  "Framer Motion",
-  "Prisma",
-  "MySQL",
-  "PostgreSQL",
-  "Redux",
-  "Express",
-  "Python",
-  "Django",
+  "2D Animation",
+  "Motion Graphics",
+  "Project Development",
+  "Pre-production",
+  "Post-production",
+  "Production",
+  "Writing",
+  "Blender",
+  "After Effects",
+  "Premiere",
+  "Photoshop",
+  "Illustrator",
+  "DaVinci Resolve",
+  "Videography",
+  "Photography",
+  "InDesign",
 ] as const;
 
+
 // Owner name
-export const OWNER_NAME = "Sanidhya Kumar Verma";
+export const OWNER_NAME = "Galah Studio";
