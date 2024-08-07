@@ -2,10 +2,38 @@
 
 import { motion } from "framer-motion";
 
-import { SKILLS_DATA } from "@/constants";
 import { useSectionInView } from "@/lib/hooks";
-
 import SectionHeading from "./section-heading";
+
+// Define the skills data
+const SKILLS_DATA = [
+  "2d",
+  "Animation",
+  "Motion Graphics",
+  "Video Editing",
+  "Editing",
+  "Storyboarding",
+  "Visual Effects",
+  "Blender",
+  "After Effects",
+  "Premiere Pro",
+  "Photoshop",
+  "Illustrator",
+  "InDesign",
+  "DaVinci Resolve",
+  "Cinematic Videography",
+  "3d",
+  "Photography",
+  "Color Grading",
+  "Project Development",
+  "Pre-Production",
+  "Production",
+  "Post-Production",
+  "Writing",
+];
+
+// Shuffle the skills array to mix up the skills
+const shuffledSkills = SKILLS_DATA.sort(() => Math.random() - 0.5);
 
 // Define animation variants for the fade-in effect
 const fadeInAnimationVariants = {
@@ -31,10 +59,10 @@ const Skills = () => {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-8 text-center sm:mb-40"
     >
-      <SectionHeading>My skills</SectionHeading>
+      <SectionHeading>Our Skills</SectionHeading>
 
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {SKILLS_DATA.map((skill, i) => (
+        {shuffledSkills.map((skill, i) => (
           <motion.li
             id="skills"
             key={`skill-${i}`}
