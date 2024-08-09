@@ -123,10 +123,10 @@ const Contact = () => {
         once: true,
       }}
     >
-      <SectionHeading>My contact</SectionHeading>
+      <SectionHeading>Our contact</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at my{" "}
+        Please contact us directly at our{" "}
         <Link className="underline" href={`mailto:${EXTRA_LINKS.email}`}>
           e-mail
         </Link>{" "}
