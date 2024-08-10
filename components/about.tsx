@@ -30,12 +30,12 @@ const About = () => {
         <span
           className="text-[#ff2b69] glow-effect"
           style={{
-            textShadow: "0 0 8px #ff2b69, 0 0 10px #ff2b69, 0 0 12px #ff2b69",
+            textShadow: "0 0 80px #ff2b69, 0 0 10px #ff2b69, 0 0 12px #ff2b69",
           }}
         >
-          {OWNER_NAME.split(" ")[0]}
+          {OWNER_NAME.split(" ")[0]} Studio
         </span>{" "}
-        Studio is dedicated to crafting exquisite{" "}
+        is dedicated to crafting exquisite{" "}
         <b className="font-medium">animation shows and commercials</b>. Our
         team of experienced filmmakers and animators brings stories to life with
         creativity and passion. We also specialize in producing high-quality{" "}
