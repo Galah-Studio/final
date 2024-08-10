@@ -124,7 +124,7 @@ const Contact = () => {
     >
       <SectionHeading className="font-comfortaa">Our contact</SectionHeading>
 
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
+      <p className="text-gray-700 -mt-6 dark:text-white/80 font-maven">
         Please contact us directly at our{" "}
         <Link className="underline" href={`mailto:${EXTRA_LINKS.email}`}>
           e-mail
@@ -147,20 +147,6 @@ const Contact = () => {
           value={form.name}
           onChange={handleChange}
           placeholder="Your name"
-          className="h-14 rounded-lg px-4 borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          required
-          maxLength={200}
-          autoComplete="off"
-          autoCapitalize="off"
-        />
-
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={form.name}
-          onChange={handleChange}
-          placeholder="Your name"
           className="h-14 rounded-lg px-4 borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none font-maven"
           required
           maxLength={200}
@@ -168,9 +154,22 @@ const Contact = () => {
           autoCapitalize="off"
         />
 
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value={form.email}
+          onChange={handleChange}
+          placeholder="Your email"
+          className="h-14 rounded-lg my-4 px-4 borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none font-maven"
+          required
+          maxLength={100}
+          autoComplete="off"
+          autoCapitalize="off"
+        />
 
         <textarea
-          className="h-52 rounded-lg mb-4 borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 rounded-lg mb-4 borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none font-maven"
           name="message"
           id="message"
           value={form.message}
@@ -185,7 +184,7 @@ const Contact = () => {
         {/* Submit button with conditional rendering for loading state. */}
         <button
           type="submit"
-          className="group flex self-center sm:self-start items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 disabled:scale-100 disabled:bg-opacity-65 dark:bg-white dark:bg-opacity-10"
+          className="group flex self-center sm:self-start items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 disabled:scale-100 disabled:bg-opacity-65 dark:bg-white dark:bg-opacity-10 font-maven"
           disabled={loading}
         >
           {loading ? (
