@@ -9,9 +9,9 @@ const Footer = () => {
       <small className="mb-2 block text-xs font-maven">
         {/* Display the copyright notice with dynamic years and owner name. */}
         &copy; {new Date().getFullYear()}{" "}
-        <b className="font-comfortaa text-[#ff2b69]">{OWNER_NAME.split(" ")[0]}</b> | All rights reserved{" "}
+        <b className="font-comfortaa">{OWNER_NAME.split(" ")[0]}</b> | All rights reserved{" "}
       </small>
-      <p className="font-maven text-[#ff2b69]">
+      <p className="text-xs font-maven">
         {/* Provide information about the website and the technologies used. */}
         <b className="font-comfortaa text-[#ff2b69]">About this website:</b> built with React
         &amp; Next.js (App Router and Server Actions), Typescript, Tailwind CSS,
