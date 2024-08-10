@@ -155,12 +155,12 @@ const Contact = () => {
         />
 
         <input
-          type="email"  {/* Corrected this to be an email input */}
-          name="email"  {/* Updated the name attribute to "email" */}
-          id="email"    {/* Updated the id attribute to "email" */}
-          value={form.email}  {/* Binding to the email state */}
+          type="email"  
+          name="email"  
+          id="email"    
+          value={form.email}  
           onChange={handleChange}
-          placeholder="Your email"  {/* Updated placeholder to "Your email" */}
+          placeholder="Your email"  
           className="h-14 rounded-lg my-4 px-4 borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none font-maven"
           required
           maxLength={100}
