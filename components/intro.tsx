@@ -61,14 +61,14 @@ const Intro = () => {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl font-comfortaa"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <b className="font-bold">
           Hi, We&apos;re{" "}
           <span
-            className="text-[#ff2b69] glow-effect"
+            className="text-[#ff2b69] glow-effect font-comfortaa"
             style={{
               textShadow: "0 0 120px #ff2b69, 0 0 40px #ff2b69",
             }}
@@ -86,7 +86,7 @@ const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-2 justify-center items-center"
+        className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-2 justify-center items-center font-maven"
       >
         <div className="flex gap-2 flex-col sm:flex-row text-lg font-medium">
           <Link
