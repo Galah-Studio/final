@@ -63,7 +63,7 @@ const Skills = () => {
         Our Skills
       </SectionHeading>
 
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 font-maven">
         {shuffledSkills.map((skill, i) => (
           <motion.li
             id="skills"
