@@ -50,7 +50,9 @@ const Project = ({
     >
       <div className="bg-gray-100 max-w-[42rem] sm:group-even:pl-8 border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[28rem] rounded-lg hover:bg-gray-200 transition dark:bg-white/10 dark:hover:bg-white/20">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold font-comfortaa">{title}</h3>
+          <h3 className="text-2xl font-semibold font-comfortaa text-[#ff2b69]">
+            {title}
+          </h3>
 
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
@@ -111,28 +113,39 @@ const Projects = () => {
   const PROJECTS_DATA = [
     {
       title: "Abajora Podcast Commercial",
-      description: "Crafted a captivating commercial for the 'Abajora' podcast, utilizing cutting-edge 3D modeling, dynamic motion graphics, and expert video editing. This project showcases our ability to blend realism with creativity, bringing the podcast's essence to life.",
+      description:
+        "Crafted a captivating commercial for the 'Abajora' podcast, utilizing cutting-edge 3D modeling, dynamic motion graphics, and expert video editing. This project showcases our ability to blend realism with creativity, bringing the podcast's essence to life.",
       tags: ["3D", "Blender", "AfterEffects", "Premiere"],
       imageUrl: "/public/abajora.png",
       projectUrl: "https://www.google.com/",
     },
     {
       title: "Vivi Water Company Ad Campaign",
-      description: "Executed a compelling ad campaign for Vivi Water Company, featuring meticulously realistic product modeling and stunning renders. Our team leveraged advanced tools to create visually striking content that effectively promoted Vivi's brand.",
+      description:
+        "Executed a compelling ad campaign for Vivi Water Company, featuring meticulously realistic product modeling and stunning renders. Our team leveraged advanced tools to create visually striking content that effectively promoted Vivi's brand.",
       tags: ["Blender", "AfterEffects", "Photoshop", "Illustrator"],
       imageUrl: "/images/vivi.jpg",
       projectUrl: "#",
     },
     {
       title: "ARKI Tectonica Celebration Ceremony",
-      description: "Documented a prestigious celebration ceremony for ARKI Tectonica with cinematic precision. Utilizing our high-end cinematic kit, we captured and edited breathtaking visuals that highlighted the event's grandeur and significance.",
-      tags: ["DaVinciResolve", "AfterEffects", "Premiere", "Photoshop", "Videography", "Photography"],
+      description:
+        "Documented a prestigious celebration ceremony for ARKI Tectonica with cinematic precision. Utilizing our high-end cinematic kit, we captured and edited breathtaking visuals that highlighted the event's grandeur and significance.",
+      tags: [
+        "DaVinciResolve",
+        "AfterEffects",
+        "Premiere",
+        "Photoshop",
+        "Videography",
+        "Photography",
+      ],
       imageUrl: "/images/arki.jpg",
       projectUrl: "#",
     },
     {
       title: "Tiraz Company Brochure Design",
-      description: "Designed a visually appealing brochure for Tiraz Company, from content writing to photo editing and layout design. This project exemplifies our comprehensive approach to creating engaging marketing materials.",
+      description:
+        "Designed a visually appealing brochure for Tiraz Company, from content writing to photo editing and layout design. This project exemplifies our comprehensive approach to creating engaging marketing materials.",
       tags: ["InDesign", "Photoshop", "Writing", "Illustrator"],
       imageUrl: "/images/tiraz.jpg",
       projectUrl: "#",
@@ -141,7 +154,9 @@ const Projects = () => {
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
-      <SectionHeading className="font-comfortaa">Our Projects</SectionHeading>
+      <SectionHeading className="font-comfortaa text-[#ff2b69]">
+        Our Projects
+      </SectionHeading>
       <div>
         {PROJECTS_DATA.map((project, i) => (
           <Project key={`project-${i}`} {...project} />
