@@ -57,7 +57,7 @@ const Header = () => {
                       stiffness: 300,
                       damping: 30,
                     }}
-                    className="bg-gray-200/50 rounded-full absolute inset-0 -z-10 dark:bg-pink-500"
+                    className="bg-pink-200/50 rounded-full absolute inset-0 -z-10 dark:bg-pink-700"
                   />
                 )}
               </Link>
