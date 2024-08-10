@@ -7,11 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        comfortaa: ['Comfortaa', 'cursive'],
+        maven: ['Maven Pro', 'sans-serif'],
+      },
       colors: {
-      'custom-dark': '#030001',
-      'divider-dark': '#5E1028',
-
-    },
+        'custom-dark': '#030001',
+        'divider-dark': '#5E1028',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
