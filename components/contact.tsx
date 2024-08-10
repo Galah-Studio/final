@@ -156,18 +156,19 @@ const Contact = () => {
         />
 
         <input
-          type="email"
-          name="email"
-          id="email"
-          value={form.email}
-          onChange={handleChange}
-          placeholder="Your email"
-          className="h-14 rounded-lg my-4 px-4 borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          required
-          maxLength={100}
-          autoComplete="off"
-          autoCapitalize="off"
-        />
+        type="text"
+        name="name"
+        id="name"
+        value={form.name}
+        onChange={handleChange}
+        placeholder="Your name"
+        className="h-14 rounded-lg px-4 borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none font-maven"
+        required
+        maxLength={200}
+        autoComplete="off"
+        autoCapitalize="off"
+      />
+
 
         <textarea
           className="h-52 rounded-lg mb-4 borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
