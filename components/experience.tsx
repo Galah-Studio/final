@@ -32,7 +32,10 @@ const Experience = () => {
 
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>Our Experience</SectionHeading>
+      {/* Use Comfortaa for SectionHeading */}
+      <SectionHeading>
+        <span className="font-comfortaa">Our Experience</span>
+      </SectionHeading>
 
       <VerticalTimeline lineColor="">
         {EXPERIENCES_DATA.map((experience, i) => (
@@ -61,7 +64,8 @@ const Experience = () => {
                 fontSize: "1.5rem",
               }}
             >
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              {/* Use Maven Pro for the experience content */}
+              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75 font-maven">
                 <b>{experience.title}</b> {experience.description}
               </p>
             </VerticalTimelineElement>
@@ -72,5 +76,5 @@ const Experience = () => {
   );
 };
 
-// Export the Experience componesnt.
+// Export the Experience component.
 export default Experience;
