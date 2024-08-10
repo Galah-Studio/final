@@ -46,11 +46,11 @@ const Project = ({
         opacity: opacityProgress,
       }}
       ref={projectRef}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 sm:mb-8 last:mb-0 font-maven"
     >
       <div className="bg-gray-100 max-w-[42rem] sm:group-even:pl-8 border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[28rem] rounded-lg hover:bg-gray-200 transition dark:bg-white/10 dark:hover:bg-white/20">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
+          <h3 className="text-2xl font-semibold font-comfortaa">{title}</h3>
 
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
@@ -141,7 +141,7 @@ const Projects = () => {
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
-      <SectionHeading>Our Projects</SectionHeading>
+      <SectionHeading className="font-comfortaa">Our Projects</SectionHeading>
       <div>
         {PROJECTS_DATA.map((project, i) => (
           <Project key={`project-${i}`} {...project} />
