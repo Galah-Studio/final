@@ -24,7 +24,7 @@ const About = () => {
     >
       {/* Display the section heading for "About us." */}
       <SectionHeading>
-        <span className="font-comfortaa">About Us</span>
+        <span className="font-comfortaa text-[#ff2b69]">About Us</span>
       </SectionHeading>
 
       {/* Display a paragraph with information about Galah Studio's background and focus. */}
