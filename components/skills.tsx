@@ -59,7 +59,9 @@ const Skills = () => {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-8 text-center sm:mb-40"
     >
-      <SectionHeading>Our Skills</SectionHeading>
+      <SectionHeading className="font-comfortaa text-[#ff2b69]">
+        Our Skills
+      </SectionHeading>
 
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {shuffledSkills.map((skill, i) => (
