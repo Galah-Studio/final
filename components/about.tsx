@@ -23,32 +23,36 @@ const About = () => {
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
     >
       {/* Display the section heading for "About us." */}
-      <SectionHeading>About Us</SectionHeading>
+      <SectionHeading>
+        <span className="font-comfortaa">About Us</span>
+      </SectionHeading>
 
       {/* Display a paragraph with information about Galah Studio's background and focus. */}
-      <p className="mb-3">
+      <p className="mb-3 font-maven">
         <span
-          className="text-[#ff2b69] glow-effect"
+          className="font-comfortaa text-[#ff2b69] glow-effect"
           style={{
-            textShadow: "0 0 80px #ff2b69, 0 0 10px #ff2b69, 0 0 12px #ff2b69",
+            textShadow:
+              "0 0 80px #ff2b69, 0 0 10px #ff2b69, 0 0 12px #ff2b69",
           }}
         >
           {OWNER_NAME.split(" ")[0]} Studio
         </span>{" "}
         is dedicated to crafting exquisite{" "}
         <b className="font-medium">animation shows and commercials</b>. Our
-        team of experienced filmmakers and animators brings stories to life with
-        creativity and passion. We also specialize in producing high-quality{" "}
+        team of experienced filmmakers and animators brings stories to life
+        with creativity and passion. We also specialize in producing
+        high-quality{" "}
         <b className="font-medium">live-action commercials</b>, ensuring
         top-notch visual storytelling in every project.
       </p>
 
       {/* Display another paragraph about the studio's philosophy and approach. */}
-      <p>
+      <p className="font-maven">
         Our focus is on delivering visually stunning and emotionally engaging
         content. We believe in the power of storytelling and strive to create
-        works that resonate with audiences. Whether it's an animation show or a
-        live-action commercial, our goal is to captivate and inspire.
+        works that resonate with audiences. Whether it's an animation show or
+        a live-action commercial, our goal is to captivate and inspire.
       </p>
     </motion.section>
   );
