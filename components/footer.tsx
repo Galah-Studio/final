@@ -13,7 +13,7 @@ const Footer = () => {
       </small>
       <p className="text-xs font-maven">
         {/* Provide information about the website and the technologies used. */}
-        <b className="font-semibold">About this website:</b> built with React
+        <b className="font-comfortaa text-[#ff2b69]">About this website:</b> built with React
         &amp; Next.js (App Router and Server Actions), Typescript, Tailwind CSS,
         Framer Motion, EmailJS, React Toaster, React Vertical Timeline &amp;
         Vercel Hosting.
