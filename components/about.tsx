@@ -28,7 +28,15 @@ const About = () => {
 
       {/* Display a paragraph with information about Galah Studio's background and focus. */}
       <p className="mb-3">
-        Galah Studio is dedicated to crafting exquisite <b className="font-medium">animation shows and commercials</b>. Our team of experienced filmmakers and animators brings stories to life with creativity and passion. We also specialize in producing high-quality <b className="font-medium">live-action commercials</b>, ensuring top-notch visual storytelling in every project.
+        <span
+            className="text-[#ff2b69] glow-effect"
+            style={{
+              textShadow: "0 0 120px #ff2b69, 0 0 40px #ff2b69",
+            }}
+          >
+            {OWNER_NAME.split(" ")[0]}
+          </span>
+         Studio is dedicated to crafting exquisite <b className="font-medium">animation shows and commercials</b>. Our team of experienced filmmakers and animators brings stories to life with creativity and passion. We also specialize in producing high-quality <b className="font-medium">live-action commercials</b>, ensuring top-notch visual storytelling in every project.
       </p>
 
       {/* Display another paragraph about the studio's philosophy and approach. */}
