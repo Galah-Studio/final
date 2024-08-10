@@ -1,4 +1,3 @@
-// Import necessary dependencies and components.
 "use client"; // This comment indicates that this code should run on the client side in Next.js.
 
 import clsx from "clsx";
@@ -33,7 +32,7 @@ const Header = () => {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-200",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-200 font-maven", // Applied Maven Pro font for the rest
                   {
                     "!text-gray-950 font-medium dark:!text-gray-100":
                       activeSection === link.name,
