@@ -70,7 +70,7 @@ const Intro = () => {
           <span
             className="text-[#ff2b69] glow-effect"
             style={{
-              textShadow: "0 0 8px #ff2b69, 0 0 10px #ff2b69, 0 0 12px #ff2b69",
+              textShadow: "0 0 24px #ff2b69",
             }}
           >
             {OWNER_NAME.split(" ")[0]}
