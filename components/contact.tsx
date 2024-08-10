@@ -123,7 +123,7 @@ const Contact = () => {
         once: true,
       }}
     >
-      <SectionHeading>Our contact</SectionHeading>
+      <SectionHeading className="font-comfortaa">Our contact</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact us directly at our{" "}
