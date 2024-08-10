@@ -122,7 +122,7 @@ const Contact = () => {
         once: true,
       }}
     >
-      <SectionHeading className="font-comfortaa">Our contact</SectionHeading>
+      <SectionHeading className="font-comfortaa text-[#ff2b69]">Our contact</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact us directly at our{" "}
