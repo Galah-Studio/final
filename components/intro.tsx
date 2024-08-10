@@ -1,6 +1,4 @@
-
-       // Import necessary dependencies and components.
-"use client"; // This comment indicates that this code should run on the client side in Next.js.
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -15,11 +13,8 @@ import { EXTRA_LINKS, OWNER_NAME } from "@/constants";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
 
-// Define the Intro component.
 const Intro = () => {
-  // Use the 'useSectionInView' hook to track section visibility.
   const { ref } = useSectionInView("Home", 0.5);
-  // Use the 'useActiveSectionContext' to manage active sections and clicks.
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
@@ -70,11 +65,21 @@ const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <b className="font-bold">Hi, We&apos;re {OWNER_NAME.split(" ")[0]}.</b>{" "}
-        I&apos;m a <b className="font-bold">full-stack developer</b> with{" "}
-        <b className="font-bold">5+ years</b> of experience. I enjoy building{" "}
-        <i className="italic">sites and apps</i>. My focus is{" "}
-        <u className="underline">React (Next.js)</u>.
+        <b className="font-bold">
+          Hi, We&apos;re{" "}
+          <span
+            className="text-[#ff2b69] glow-effect"
+            style={{
+              textShadow: "0 0 8px #ff2b69, 0 0 10px #ff2b69, 0 0 12px #ff2b69",
+            }}
+          >
+            {OWNER_NAME.split(" ")[0]}
+          </span>
+          .
+        </b>{" "}
+        We specialize in <b className="font-bold">animation shows and commercials</b>, bringing stories to life with{" "}
+        <b className="font-bold">passion and creativity</b>. Our expertise also extends to{" "}
+        <u className="underline">producing live-action commercials</u>.
       </motion.h1>
 
       <motion.div
@@ -88,12 +93,11 @@ const Intro = () => {
             href="#contact"
             className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-95 transition"
             onClick={() => {
-              // Set the active section and the time of the last click.
               setActiveSection("Contact");
               setTimeOfLastClick(Date.now());
             }}
           >
-            Contact me
+            Contact us
             <BsArrowRight className="opacity-70 group-hover:translate-x-0.5 transition" />
           </Link>
 
@@ -102,7 +106,7 @@ const Intro = () => {
             target="_blank"
             className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-95 transition borderBlack dark:bg-white/10"
           >
-            My Resume
+            Our Resume
             <HiDownload className="opacity-60 group-hover:translate-y-0.5 transition" />
           </Link>
         </div>
@@ -135,4 +139,3 @@ const Intro = () => {
 };
 
 export default Intro;
-
