@@ -34,7 +34,7 @@ const Experience = () => {
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       {/* Use Comfortaa for SectionHeading */}
       <SectionHeading>
-        <span className="font-comfortaa">Our Experience</span>
+        <span className="font-comfortaa text-[#ff2b69]">Our Experience</span>
       </SectionHeading>
 
       <VerticalTimeline lineColor="">
