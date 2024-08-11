@@ -14,8 +14,8 @@ module.exports = {
       colors: {
         'custom-dark': '#030001',
         'divider-dark': '#5E1028',
-        'backbanner-dark': '#100709',
-        'selectedbanner-dark': '#1d0012',
+        'backbanner-dark': '#1e070f',
+        'selectedbanner-dark': '#782243',
         'galah': '#ff2b69',
         'galahlight': '#c9466c',
       },
