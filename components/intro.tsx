@@ -91,7 +91,7 @@ const Intro = () => {
         <div className="flex gap-2 flex-col sm:flex-row text-lg font-medium">
           <Link
             href="#contact"
-            className="group bg-galah text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-selectedbanner-dark active:scale-95 transition"
+            className="group bg-galah text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-galahlight active:scale-95 transition"
             onClick={() => {
               setActiveSection("Contact");
               setTimeOfLastClick(Date.now());
