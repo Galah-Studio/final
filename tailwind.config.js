@@ -16,6 +16,7 @@ module.exports = {
         'divider-dark': '#5E1028',
         'backbanner-dark': '#100709',
         'selectedbanner-dark': '#1d0012',
+        'galah': '#ff2b69',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
