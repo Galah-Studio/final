@@ -4,8 +4,8 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
 import abjImg from "@/public/abajora.png";
-import realtorImg from "@/public/realtor.png";
-import ecommerceImg from "@/public/ecommerce.png";
+import realtorImg from "@/public/arki.jpg";
+import ecommerceImg from "@/public/vivi.jpg";
 
 // Navigation links
 export const LINKS = [
