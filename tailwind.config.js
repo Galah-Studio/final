@@ -14,6 +14,8 @@ module.exports = {
       colors: {
         'custom-dark': '#030001',
         'divider-dark': '#5E1028',
+        'backbanner-dark': '#100709',
+        'selectedbanner-dark': '#1d0012',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
