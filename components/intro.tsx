@@ -17,7 +17,7 @@ const BirdLogoSVG = () => {
       id="a"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1180.18 464.68"
-      style={{ width: '100px', height: '100px' }} // Adjust size as needed
+      style={{ width: '500px', height: '500px' }} // Adjust size as needed
     >
       <defs>
         <style>
