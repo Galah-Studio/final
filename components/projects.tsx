@@ -124,7 +124,7 @@ const Projects = () => {
       description:
         "Executed a compelling ad campaign for Vivi Water Company, featuring meticulously realistic product modeling and stunning renders. Our team leveraged advanced tools to create visually striking content that effectively promoted Vivi's brand.",
       tags: ["Blender", "AfterEffects", "Photoshop", "Illustrator"],
-      imageUrl: "/vivi.jpg",
+      imageUrl: "/vivi.png",
       projectUrl: "#",
     },
     {
