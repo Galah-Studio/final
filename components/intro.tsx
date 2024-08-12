@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 import { BsArrowRight } from "react-icons/bs";
 import { FaInstagram, FaBehance } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
@@ -17,11 +19,10 @@ const BirdLogoSVG = () => {
       id="a"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1180.18 464.68"
-      className="w-24 h-24 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2" // Adjust size and positioning
     >
       <defs>
         <style>
-          {`.b{fill:#ff2b69;}`}
+          {.b{fill:#ff2b69;}}
         </style>
       </defs>
       <path 
@@ -67,17 +68,41 @@ const Intro = () => {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] relative"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex items-center justify-center relative">
-        <BirdLogoSVG />
-        <span className="absolute text-2xl bottom-0 right-0">
-          👋
-        </span>
+      <div className="flex items-center justify-center">
+        <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "tween",
+              duration: 0.2,
+            }}
+          >
+            <BirdLogoSVG />
+          </motion.div>
+
+          <motion.span
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 125,
+              delay: 0.1,
+              duration: 0.7,
+            }}
+            className="absolute text-2xl bottom-0 right-0"
+          >
+            👋
+          </motion.span>
+        </div>
       </div>
 
-      <h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl font-comfortaa relative z-10"
+      <motion.h1
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl font-comfortaa"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
       >
         <b className="font-bold">
           Hi, We&apos;re{" "}
@@ -94,9 +119,12 @@ const Intro = () => {
         We specialize in <b className="font-bold">animation shows and commercials</b>, bringing stories to life with{" "}
         <b className="font-bold">passion and creativity</b>. Our expertise also extends to{" "}
         <u className="underline">producing live-action commercials</u>.
-      </h1>
+      </motion.h1>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
         className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-2 justify-center items-center font-maven"
       >
         <div className="flex gap-2 flex-col sm:flex-row text-lg font-medium">
@@ -144,7 +172,7 @@ const Intro = () => {
             <FaXTwitter />
           </Link>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
