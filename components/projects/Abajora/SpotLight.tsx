@@ -1,18 +1,13 @@
-import Image from "next/image";
+import React from 'react';
 
 const SpotLight = () => {
   return (
-    <section className="relative w-full h-[500px]">
-      <Image
-        src="/path-to-main-image.jpg"
-        alt="Abajora Main Image"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-      />
-      <h1 className="absolute bottom-10 left-10 text-white text-4xl font-bold">
-        The Title Goes Here
-      </h1>
+    <section className="relative w-full h-[70vh] bg-cover bg-center" style={{ backgroundImage: "url('/path-to-your-banner-image.jpg')" }}>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-4xl sm:text-6xl text-white font-bold shadow-lg">
+          The Title Goes Here
+        </h1>
+      </div>
     </section>
   );
 };
