@@ -17,7 +17,7 @@ const BirdLogoSVG = () => {
       id="a"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1180.18 464.68"
-      style={{ width: '500px', height: '500px' }} // Adjust size as needed
+      className="w-24 h-24 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2" // Adjust size and positioning
     >
       <defs>
         <style>
@@ -67,19 +67,17 @@ const Intro = () => {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] relative"
     >
-      <div className="flex items-center justify-center">
-        <div className="relative">
-          <BirdLogoSVG />
-          <span className="absolute text-2xl bottom-0 right-0">
-            👋
-          </span>
-        </div>
+      <div className="flex items-center justify-center relative">
+        <BirdLogoSVG />
+        <span className="absolute text-2xl bottom-0 right-0">
+          👋
+        </span>
       </div>
 
       <h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl font-comfortaa"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl font-comfortaa relative z-10"
       >
         <b className="font-bold">
           Hi, We&apos;re{" "}
