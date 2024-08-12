@@ -139,7 +139,7 @@ const Projects = () => {
         "Videography",
         "Photography",
       ],
-      imageUrl: "/arki.jpg",
+      imageUrl: "/arki.png",
       projectUrl: "#",
     },
     {
@@ -147,7 +147,7 @@ const Projects = () => {
       description:
         "Designed a visually appealing brochure for Tiraz Company, from content writing to photo editing and layout design. This project exemplifies our comprehensive approach to creating engaging marketing materials.",
       tags: ["InDesign", "Photoshop", "Writing", "Illustrator"],
-      imageUrl: "/tiraz.jpg",
+      imageUrl: "/tiraz.png",
       projectUrl: "#",
     },
   ];
