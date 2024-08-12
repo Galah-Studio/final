@@ -116,7 +116,7 @@ const Projects = () => {
       description:
         "Crafted a captivating commercial for the 'Abajora' podcast, utilizing cutting-edge 3D modeling, dynamic motion graphics, and expert video editing. This project showcases our ability to blend realism with creativity, bringing the podcast's essence to life.",
       tags: ["3D", "Blender", "AfterEffects", "Premiere"],
-      imageUrl: "/public/abajora.png",
+      imageUrl: "/abajora.png",
       projectUrl: "https://www.google.com/",
     },
     {
@@ -124,7 +124,7 @@ const Projects = () => {
       description:
         "Executed a compelling ad campaign for Vivi Water Company, featuring meticulously realistic product modeling and stunning renders. Our team leveraged advanced tools to create visually striking content that effectively promoted Vivi's brand.",
       tags: ["Blender", "AfterEffects", "Photoshop", "Illustrator"],
-      imageUrl: "/images/vivi.jpg",
+      imageUrl: "/vivi.jpg",
       projectUrl: "#",
     },
     {
@@ -139,7 +139,7 @@ const Projects = () => {
         "Videography",
         "Photography",
       ],
-      imageUrl: "/images/arki.jpg",
+      imageUrl: "/arki.jpg",
       projectUrl: "#",
     },
     {
@@ -147,7 +147,7 @@ const Projects = () => {
       description:
         "Designed a visually appealing brochure for Tiraz Company, from content writing to photo editing and layout design. This project exemplifies our comprehensive approach to creating engaging marketing materials.",
       tags: ["InDesign", "Photoshop", "Writing", "Illustrator"],
-      imageUrl: "/images/tiraz.jpg",
+      imageUrl: "/tiraz.jpg",
       projectUrl: "#",
     },
   ];
