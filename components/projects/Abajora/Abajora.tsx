@@ -6,6 +6,11 @@ import ToolsSection from './ToolsSection';
 import ShareButtons from './ShareButtons';
 
 const Abajora = () => {
+  // Temporary placeholder values for the ShareButtons component
+  const title = "Abajora Project";
+  const url = "https://placeholder.com/abajora";
+  const imageUrl = "https://placeholder.com/path-to-image.jpg";
+
   return (
     <>
       <ProjectHeader />
@@ -13,7 +18,7 @@ const Abajora = () => {
       <StorySection />
       <CraftSection />
       <ToolsSection />
-      <ShareButtons />
+      <ShareButtons title={title} url={url} imageUrl={imageUrl} />
     </>
   );
 };
