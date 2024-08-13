@@ -10,10 +10,10 @@ const Abajora = () => {
     <>
       <ProjectHeader />
       <SpotLight />
-      <ShareButtons />
       <StorySection />
       <CraftSection />
       <ToolsSection />
+      <ShareButtons />
     </>
   );
 };
