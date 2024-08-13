@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeading from "@/components/SectionHeading"; // Adjust the path based on your folder structure
+import SectionHeading from "../../section-heading"; // Adjusted the path based on your folder structure
 
 const StorySection = () => {
   return (
