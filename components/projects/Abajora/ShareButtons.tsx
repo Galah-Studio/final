@@ -1,6 +1,12 @@
 import { FaTwitter, FaInstagram } from 'react-icons/fa';
 
-const ShareButtons = ({ title, url, imageUrl }) => {
+type ShareButtonsProps = {
+  title: string;
+  url: string;
+  imageUrl: string;
+};
+
+const ShareButtons = ({ title, url, imageUrl }: ShareButtonsProps) => {
   const tweetText = encodeURIComponent(`${title} ${url}`);
   const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}&url=${imageUrl}`;
 
