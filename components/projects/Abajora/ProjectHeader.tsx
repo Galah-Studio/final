@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-// Define the sections specific to your project page
 const PROJECT_LINKS = [
   { name: "Spot Light", hash: "#spot-light" },
   { name: "Story", hash: "#story" },
@@ -36,7 +35,7 @@ const ProjectHeader = () => {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-200 font-maven", // Applied Maven Pro font for the rest
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-200 font-maven",
                   {
                     "!text-gray-950 font-medium dark:!text-gray-100":
                       activeSection === link.name,
@@ -44,8 +43,7 @@ const ProjectHeader = () => {
                 )}
                 href={link.hash}
                 onClick={() => {
-                  // Cast link.name to SectionName
-                  setActiveSection(link.name as SectionName);
+                  setActiveSection(link.name as any);
                   setTimeOfLastClick(Date.now());
                 }}
               >
