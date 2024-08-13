@@ -44,7 +44,8 @@ const ProjectHeader = () => {
                 )}
                 href={link.hash}
                 onClick={() => {
-                  setActiveSection(link.name);
+                  // Cast link.name to SectionName
+                  setActiveSection(link.name as SectionName);
                   setTimeOfLastClick(Date.now());
                 }}
               >
