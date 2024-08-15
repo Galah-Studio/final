@@ -117,7 +117,7 @@ const Projects = () => {
         "Crafted a captivating commercial for the 'Abajora' podcast, utilizing cutting-edge 3D modeling, dynamic motion graphics, and expert video editing. This project showcases our ability to blend realism with creativity, bringing the podcast's essence to life.",
       tags: ["3D", "Blender", "AfterEffects", "Premiere"],
       imageUrl: "/abajora.png",
-      projectUrl: "/projects/Abajora",
+      projectUrl: "/projects/abajora",
     },
     {
       title: "Vivi Water Company Ad Campaign",
