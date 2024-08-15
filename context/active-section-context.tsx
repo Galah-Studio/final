@@ -14,7 +14,11 @@ type SectionName =
   | "Projects"
   | "Skills"
   | "Experience"
-  | "Contact";
+  | "Contact"
+  | "SpotLight"  // Add this
+  | "Story"      // Add this
+  | "Craft"      // Add this
+  | "Tools";     // Add this
 
 // Define the type for the ActiveSectionContext
 type ActiveSectionContextType = {
