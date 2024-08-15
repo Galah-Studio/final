@@ -1,33 +1,13 @@
-import { FaTwitter, FaInstagram } from 'react-icons/fa';
+import React from 'react';
 
-type ShareButtonsProps = {
-  title: string;
-  url: string;
-  imageUrl: string;
-};
-
-const ShareButtons = ({ title, url, imageUrl }: ShareButtonsProps) => {
-  const tweetText = encodeURIComponent(`${title} ${url}`);
-  const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}&url=${imageUrl}`;
-
+const ShareButtons = ({ title, url, imageUrl }) => {
   return (
-    <div className="flex gap-4">
-      <a
-        href={tweetUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-white bg-blue-500 p-2 rounded-full hover:bg-blue-600 transition"
-      >
-        <FaTwitter size={24} />
+    <div className="flex space-x-4">
+      <a href={`https://twitter.com/share?url=${url}&text=${title}`} target="_blank" rel="noopener noreferrer">
+        <img src="/path-to-twitter-icon.png" alt="Share on Twitter" className="w-8 h-8" />
       </a>
-
-      <a
-        href={`https://www.instagram.com/?url=${url}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-white bg-pink-500 p-2 rounded-full hover:bg-pink-600 transition"
-      >
-        <FaInstagram size={24} />
+      <a href={`https://www.instagram.com/?url=${url}`} target="_blank" rel="noopener noreferrer">
+        <img src="/path-to-instagram-icon.png" alt="Share on Instagram" className="w-8 h-8" />
       </a>
     </div>
   );
