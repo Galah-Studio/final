@@ -1,19 +1,13 @@
 import React from 'react';
-import SectionHeading from '../../section-heading';
 
 const CraftSection = () => {
   return (
-    <section id="craft" className="py-16 bg-dark-900 text-white">
-      <div className="max-w-5xl mx-auto">
-        <SectionHeading title="Process" />
-        <div className="mt-6">
-          <h3 className="text-2xl font-bold">Step Title</h3>
-          <p className="mt-4">
-            Explanation of this step in the process.
-          </p>
-          <div className="mt-6">
-            <img src="/path-to-image.jpg" alt="Step Image" className="w-full h-auto" />
-          </div>
+    <section id="craft" className="bg-custom-dark text-white p-8">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="font-comfortaa text-3xl mb-4 text-galah">Process</h2>
+        <div className="mb-8">
+          <h3 className="font-comfortaa text-2xl">Step Title</h3>
+          <p className="font-maven text-lg">Explanation of this step in the process.</p>
         </div>
       </div>
     </section>
