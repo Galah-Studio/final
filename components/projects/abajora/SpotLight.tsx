@@ -2,9 +2,10 @@ import React from 'react';
 
 const SpotLight = () => {
   return (
-    <section id="spotlight" className="relative w-full h-96 bg-cover bg-center text-center text-white" style={{ backgroundImage: 'url(/path-to-your-image.jpg)' }}>
-      <div className="flex justify-center items-center h-full bg-black bg-opacity-50">
-        <h1 className="text-4xl font-bold">The Title Goes Here</h1>
+    <section className="bg-custom-dark text-white p-8 min-h-screen flex items-center justify-center">
+      <div className="max-w-4xl text-center">
+        <img src="/path/to/your/image.jpg" alt="Spotlight Image" className="mx-auto mb-8" />
+        <h1 className="font-comfortaa text-4xl mb-4">The Title Goes Here</h1>
       </div>
     </section>
   );
