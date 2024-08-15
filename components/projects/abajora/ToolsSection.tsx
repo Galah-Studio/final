@@ -1,16 +1,14 @@
 import React from 'react';
-import SectionHeading from '../../section-heading';
 
 const ToolsSection = () => {
   return (
-    <section id="tools" className="py-16 bg-dark-800 text-white">
-      <div className="max-w-5xl mx-auto">
-        <SectionHeading title="Tools Used" />
-        <div className="flex flex-wrap mt-6">
-          <span className="mr-4 mb-4 text-lg">Blender</span>
-          <span className="mr-4 mb-4 text-lg">After Effects</span>
-          <span className="mr-4 mb-4 text-lg">Photoshop</span>
-          {/* Add more tools as necessary */}
+    <section id="tools" className="bg-backbanner-dark text-white p-8">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="font-comfortaa text-3xl mb-4 text-galah">Tools Used</h2>
+        <div className="flex flex-wrap space-x-4">
+          <span className="font-maven">Blender</span>
+          <span className="font-maven">After Effects</span>
+          <span className="font-maven">Photoshop</span>
         </div>
       </div>
     </section>
