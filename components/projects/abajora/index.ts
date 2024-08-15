@@ -1,11 +1,11 @@
 // Import and re-export the following components to simplify imports in your project.
-import abajora from './abajora'; // Make sure this matches the file name exactly
-import ProjectHeader from './ProjectHeader';
-import SpotLight from './SpotLight';
-import StorySection from './StorySection';
-import CraftSection from './CraftSection';
-import ToolsSection from './ToolsSection';
-import ShareButtons from './ShareButtons';
+export { default as Abajora } from './abajora';
+export { default as ProjectHeader } from './ProjectHeader';
+export { default as SpotLight } from './SpotLight';
+export { default as StorySection } from './StorySection';
+export { default as CraftSection } from './CraftSection';
+export { default as ToolsSection } from './ToolsSection';
+export { default as ShareButtons } from './ShareButtons';
 
 // Export the re-exported components.
 export {
