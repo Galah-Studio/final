@@ -6,7 +6,11 @@ import CraftSection from '../../components/projects/abajora/CraftSection';
 import ToolsSection from '../../components/projects/abajora/ToolsSection';
 import ShareButtons from '../../components/projects/abajora/ShareButtons';
 
-const abajora = () => {
+const Abajora = () => {
+  const title = "Abajora Project";
+  const url = "https://galah.tv/projects/abajora";
+  const imageUrl = "https://yourwebsite.com/path-to-image.jpg"; // Replace with the correct image URL
+
   return (
     <div>
       <ProjectHeader />
@@ -14,9 +18,9 @@ const abajora = () => {
       <StorySection />
       <CraftSection />
       <ToolsSection />
-      <ShareButtons />
+      <ShareButtons title={title} url={url} imageUrl={imageUrl} /> {/* Pass the required props */}
     </div>
   );
 };
 
-export default abajora;
+export default Abajora;
