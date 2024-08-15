@@ -6,14 +6,3 @@ export { default as StorySection } from './StorySection';
 export { default as CraftSection } from './CraftSection';
 export { default as ToolsSection } from './ToolsSection';
 export { default as ShareButtons } from './ShareButtons';
-
-// Export the re-exported components.
-export {
-  abajora,
-  ProjectHeader,
-  SpotLight,
-  StorySection,
-  CraftSection,
-  ToolsSection,
-  ShareButtons,
-};
