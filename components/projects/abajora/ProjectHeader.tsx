@@ -1,68 +1,36 @@
-"use client";
-
-import clsx from "clsx";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { useActiveSectionContext } from "@/context/active-section-context";
-
-const PROJECT_LINKS = [
-  { name: "Spot Light", hash: "#spot-light" },
-  { name: "Story", hash: "#story" },
-  { name: "Craft", hash: "#craft" },
-  { name: "Tools", hash: "#tools" },
-];
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { useActiveSectionContext } from '../../context/active-section-context';
 
 const ProjectHeader = () => {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+  const { activeSection } = useActiveSectionContext();
 
   return (
-    <header className="z-[999] relative">
-      <motion.div
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-backbanner-dark dark:border-black/40 dark:bg-opacity-75"
-      />
-
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex flex-wrap w-[22rem] items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {PROJECT_LINKS.map((link) => (
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-200 font-maven",
-                  {
-                    "!text-gray-950 font-medium dark:!text-gray-100":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name as any);
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                {link.name}
-
-                {link.name === activeSection && (
-                  <motion.span
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                    }}
-                    className="bg-pink-200/50 rounded-full absolute inset-0 -z-10 dark:bg-selectedbanner-dark"
-                  />
-                )}
-              </Link>
-            </motion.li>
-          ))}
+    <header className="fixed top-0 left-1/2 transform -translate-x-1/2 w-full z-50 bg-white shadow-lg">
+      <nav className="flex justify-between items-center max-w-6xl mx-auto py-4 px-6">
+        <div className="text-xl font-bold">Your Logo</div>
+        <ul className="flex space-x-8 text-gray-500">
+          <li>
+            <Link href="#spotlight">
+              <a className={activeSection === 'SpotLight' ? 'text-blue-500' : ''}>Spot Light</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#story">
+              <a className={activeSection === 'Story' ? 'text-blue-500' : ''}>Story</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#craft">
+              <a className={activeSection === 'Craft' ? 'text-blue-500' : ''}>Craft</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#tools">
+              <a className={activeSection === 'Tools' ? 'text-blue-500' : ''}>Tools</a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
