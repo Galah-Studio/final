@@ -6,6 +6,9 @@ import CraftSection from '../../components/projects/abajora/CraftSection';
 import ToolsSection from '../../components/projects/abajora/ToolsSection';
 import ShareButtons from '../../components/projects/abajora/ShareButtons';
 import Footer from '../../components/projects/abajora/Footer';
+import { ActiveSectionContextProvider } from '../../context/active-section-context';
+import { ProjectHeader, SpotLight, StorySection, CraftSection, ToolsSection, ShareButtons } from '../../components/projects/abajora';
+
 
 const Abajora = () => {
   return (
