@@ -1,5 +1,5 @@
 // Import and re-export the following components to simplify imports in your project.
-import Abajora from './Abajora';
+import abajora from './abajora';
 import ProjectHeader from './ProjectHeader';
 import SpotLight from './SpotLight';
 import StorySection from './StorySection';
@@ -9,7 +9,7 @@ import ShareButtons from './ShareButtons';
 
 // Export the re-exported components.
 export {
-  Abajora,
+  abajora,
   ProjectHeader,
   SpotLight,
   StorySection,
