@@ -1,12 +1,12 @@
 import React from 'react';
-import ProjectHeader from '../../components/projects/Abajora/ProjectHeader';
-import SpotLight from '../../components/projects/Abajora/SpotLight';
-import StorySection from '../../components/projects/Abajora/StorySection';
-import CraftSection from '../../components/projects/Abajora/CraftSection';
-import ToolsSection from '../../components/projects/Abajora/ToolsSection';
-import ShareButtons from '../../components/projects/Abajora/ShareButtons';
+import ProjectHeader from '../../components/projects/abajora/ProjectHeader';
+import SpotLight from '../../components/projects/abajora/SpotLight';
+import StorySection from '../../components/projects/abajora/StorySection';
+import CraftSection from '../../components/projects/abajora/CraftSection';
+import ToolsSection from '../../components/projects/abajora/ToolsSection';
+import ShareButtons from '../../components/projects/abajora/ShareButtons';
 
-const Abajora = () => {
+const abajora = () => {
   return (
     <div>
       <ProjectHeader />
@@ -19,4 +19,4 @@ const Abajora = () => {
   );
 };
 
-export default Abajora;
+export default abajora;
