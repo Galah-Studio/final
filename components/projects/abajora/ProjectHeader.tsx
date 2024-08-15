@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { useActiveSectionContext } from '../../context/active-section-context';
+import { useActiveSectionContext } from '../../../context/active-section-context'; // Adjusted the import path
 
 const ProjectHeader = () => {
   const { activeSection } = useActiveSectionContext();
