@@ -5,6 +5,7 @@ import StorySection from '../../components/projects/abajora/StorySection';
 import CraftSection from '../../components/projects/abajora/CraftSection';
 import ToolsSection from '../../components/projects/abajora/ToolsSection';
 import ShareButtons from '../../components/projects/abajora/ShareButtons';
+import { ActiveSectionContextProvider } from '../../context/active-section-context';
 
 const Abajora = () => {
   const title = "Abajora Project";
@@ -12,14 +13,16 @@ const Abajora = () => {
   const imageUrl = "https://yourwebsite.com/path-to-image.jpg"; // Replace with the correct image URL
 
   return (
-    <div>
-      <ProjectHeader />
-      <SpotLight />
-      <StorySection />
-      <CraftSection />
-      <ToolsSection />
-      <ShareButtons title={title} url={url} imageUrl={imageUrl} /> {/* Pass the required props */}
-    </div>
+    <ActiveSectionContextProvider>
+      <div>
+        <ProjectHeader />
+        <SpotLight />
+        <StorySection />
+        <CraftSection />
+        <ToolsSection />
+        <ShareButtons title={title} url={url} imageUrl={imageUrl} />
+      </div>
+    </ActiveSectionContextProvider>
   );
 };
 
