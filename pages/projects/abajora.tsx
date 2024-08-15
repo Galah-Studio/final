@@ -5,7 +5,8 @@ import StorySection from '../../components/projects/abajora/StorySection';
 import CraftSection from '../../components/projects/abajora/CraftSection';
 import ToolsSection from '../../components/projects/abajora/ToolsSection';
 import ShareButtons from '../../components/projects/abajora/ShareButtons';
-import { ActiveSectionContextProvider } from '../../context/active-section-context';
+// Import the context provider
+import ActiveSectionContextProvider from '../../context/active-section-context'; // Adjust the path as needed
 
 const Abajora = () => {
   const title = "Abajora Project";
