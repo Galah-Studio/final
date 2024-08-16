@@ -69,4 +69,5 @@ export const useActiveSectionContext = () => {
 };
 
 // Export the context provider as the default export
+export { ActiveSectionContextProvider };
 export default ActiveSectionContextProvider;
