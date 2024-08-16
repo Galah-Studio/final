@@ -1,3 +1,4 @@
+// pages/projects/abajora.tsx
 import React from 'react';
 import ProjectHeader from '../../components/projects/abajora/ProjectHeader';
 import SpotLight from '../../components/projects/abajora/SpotLight';
