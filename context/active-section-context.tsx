@@ -1,4 +1,3 @@
-// Import necessary modules and types
 "use client";
 import React, { createContext, useContext, useState } from "react";
 
@@ -68,6 +67,6 @@ export const useActiveSectionContext = () => {
   return context;
 };
 
-// Export the context provider as the default export
+// Export the context provider as the default export and named export
 export { ActiveSectionContextProvider };
 export default ActiveSectionContextProvider;
