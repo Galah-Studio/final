@@ -13,7 +13,7 @@ console.log(testExport); // Temporary debug statement to ensure import works
 
 const Abajora = () => {
   return (
-    <ActiveSectionContextProvider>
+    <useActiveSectionContext>
       <div className="bg-custom-dark text-white">
         <ProjectHeader />
         <SpotLight />
@@ -25,7 +25,7 @@ const Abajora = () => {
         </div>
         <Footer />
       </div>
-    </ActiveSectionContextProvider>
+    </useActiveSectionContext>
   );
 };
 
