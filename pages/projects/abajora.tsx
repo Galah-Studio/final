@@ -8,7 +8,7 @@ import ShareButtons from '../../components/projects/abajora/ShareButtons';
 import Footer from '../../components/footer';
 
 // Import the context provider
-import { ActiveSectionContextProvider } from '../../context/ActiveSectionContext';
+import { ActiveSectionContextProvider } from '../../context/active-section-context';
 
 const Abajora = () => {
   // Define the props to pass to the ShareButtons component
