@@ -71,4 +71,4 @@ const Header = () => {
 };
 
 // Export the Header component.
-export default Header;
+export default ProjectHeader;
