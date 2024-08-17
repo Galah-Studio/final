@@ -14,10 +14,10 @@ type SectionName =
   | "Skills"
   | "Experience"
   | "Contact"
-  | "SpotLight"
-  | "Story"
-  | "Craft"
-  | "Tools";
+  | "SpotLight"  // Add this
+  | "Story"      // Add this
+  | "Craft"      // Add this
+  | "Tools";     // Add this
 
 // Define the type for the ActiveSectionContext
 type ActiveSectionContextType = {
@@ -70,5 +70,6 @@ export const useActiveSectionContext = () => {
 // Export the context provider as the default export and named export
 export { ActiveSectionContextProvider };
 export default ActiveSectionContextProvider;
-export ActiveSectionContextProvider
 
+// Temporary test export for debugging purposes
+export const testExport = "Test Value";
