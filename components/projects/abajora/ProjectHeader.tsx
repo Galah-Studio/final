@@ -3,6 +3,8 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Layout from '../../app/Layout';
+
 
 import { LINKS } from "@/constants";
 import { useActiveSectionContext } from "@/context/active-section-context";
