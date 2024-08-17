@@ -1,13 +1,13 @@
 import React from 'react';
-import ProjectHeader from '../components/projects/Abajora/ProjectHeader';
-import SpotLight from '../components/projects/Abajora/SpotLight';
-import CraftSection from '../components/projects/Abajora/CraftSection';
-import StorySection from '../components/projects/Abajora/StorySection';
-import ToolsSection from '../components/projects/Abajora/ToolsSection';
-import ShareButtons from '../components/projects/Abajora/ShareButtons';
+import ProjectHeader from '../components/projects/abajora/ProjectHeader';
+import SpotLight from '../components/projects/abajora/SpotLight';
+import CraftSection from '../components/projects/abajora/CraftSection';
+import StorySection from '../components/projects/abajora/StorySection';
+import ToolsSection from '../components/projects/abajora/ToolsSection';
+import ShareButtons from '../components/projects/abajora/ShareButtons';
 import Footer from '../components/Footer';
 
-const Abajora = () => {
+const abajora = () => {
   return (
     <div className="bg-custom-dark text-white">
       <ProjectHeader />
@@ -21,4 +21,4 @@ const Abajora = () => {
   );
 };
 
-export default Abajora;
+export default abajora;
