@@ -7,7 +7,14 @@ import ToolsSection from '../../components/projects/abajora/ToolsSection';
 import ShareButtons from '../../components/projects/abajora/ShareButtons';
 import Footer from '../../components/footer';
 
-const abajora = () => {
+const Abajora = () => {
+  // Define the props to pass to the ShareButtons component
+  const shareProps = {
+    title: 'Abajora Project',
+    url: 'https://your-website-url.com/projects/abajora',
+    imageUrl: 'https://your-website-url.com/path-to-your-image.jpg',
+  };
+
   return (
     <div className="bg-custom-dark text-white">
       <ProjectHeader />
@@ -15,10 +22,11 @@ const abajora = () => {
       <StorySection />
       <CraftSection />
       <ToolsSection />
-      <ShareButtons />
+      {/* Pass the necessary props to the ShareButtons component */}
+      <ShareButtons {...shareProps} />
       <Footer />
     </div>
   );
 };
 
-export default abajora;
+export default Abajora;
