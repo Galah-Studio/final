@@ -5,7 +5,7 @@ import CraftSection from '../../components/projects/abajora/CraftSection';
 import StorySection from '../../components/projects/abajora/StorySection';
 import ToolsSection from '../../components/projects/abajora/ToolsSection';
 import ShareButtons from '../../components/projects/abajora/ShareButtons';
-import Footer from '../../components/Footer';
+import Footer from '../../components/footer';
 
 const abajora = () => {
   return (
