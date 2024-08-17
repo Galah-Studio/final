@@ -7,6 +7,9 @@ import ToolsSection from '../../components/projects/abajora/ToolsSection';
 import ShareButtons from '../../components/projects/abajora/ShareButtons';
 import Footer from '../../components/footer';
 
+// Import the context provider
+import { ActiveSectionContextProvider } from '../../context/ActiveSectionContext';
+
 const Abajora = () => {
   // Define the props to pass to the ShareButtons component
   const shareProps = {
@@ -16,16 +19,17 @@ const Abajora = () => {
   };
 
   return (
-    <div className="bg-custom-dark text-white">
-      <ProjectHeader />
-      <SpotLight />
-      <StorySection />
-      <CraftSection />
-      <ToolsSection />
-      {/* Pass the necessary props to the ShareButtons component */}
-      <ShareButtons {...shareProps} />
-      <Footer />
-    </div>
+    <ActiveSectionContextProvider>
+      <div className="bg-custom-dark text-white">
+        <ProjectHeader />
+        <SpotLight />
+        <StorySection />
+        <CraftSection />
+        <ToolsSection />
+        <ShareButtons {...shareProps} />
+        <Footer />
+      </div>
+    </ActiveSectionContextProvider>
   );
 };
 
