@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../../app/Layout';
-import '../../styles/globals.css';
+import Layout from '../../app/layout';
+import '../../app/globals.css';
 import ProjectHeader from '../../components/projects/abajora/ProjectHeader';
 import SpotLight from '../../components/projects/abajora/SpotLight';
 import CraftSection from '../../components/projects/abajora/CraftSection';
