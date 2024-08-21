@@ -1,6 +1,3 @@
-// Remove the "use client" directive
-// This file should now be treated as a server component to support metadata
-
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
