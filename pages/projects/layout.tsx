@@ -10,14 +10,12 @@ import ThemeContextProvider from "@/context/theme-context";
 
 import "./globals.css";
 
-// Inter font export
 const inter = Inter({ subsets: ["latin"] });
 
 export const viewport: Viewport = {
   themeColor: "#CCD6E0",
 };
 
-// Site metadata
 export const metadata: Metadata = {
   title: `${OWNER_NAME.split(" ")[0]} | Personal Portfolio`,
   description: `${OWNER_NAME.split(" ")[0]} is a full-stack developer with 4 years of experience.`,
@@ -34,7 +32,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Root layout
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="!scroll-smooth">
