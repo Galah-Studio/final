@@ -1,6 +1,4 @@
 import React from 'react';
-import Layout from '../../app/layout';
-import '../../app/globals.css';
 import ProjectHeader from '../../components/projects/abajora/ProjectHeader';
 import SpotLight from '../../components/projects/abajora/SpotLight';
 import CraftSection from '../../components/projects/abajora/CraftSection';
@@ -22,17 +20,15 @@ const Abajora = () => {
 
   return (
     <ActiveSectionContextProvider>
-      <Layout>
-        <div className="bg-custom-dark text-white min-h-screen">
-          <ProjectHeader />
-          <SpotLight />
-          <StorySection />
-          <CraftSection />
-          <ToolsSection />
-          <ShareButtons {...shareProps} />
-          <Footer />
-        </div>
-      </Layout>
+      <div className="bg-custom-dark text-white">
+        <ProjectHeader />
+        <SpotLight />
+        <StorySection />
+        <CraftSection />
+        <ToolsSection />
+        <ShareButtons {...shareProps} />
+        <Footer />
+      </div>
     </ActiveSectionContextProvider>
   );
 };
