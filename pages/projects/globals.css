@@ -6,15 +6,15 @@
 
 /* react-timeline-vertical-component line color */
 html {
-  --line-color: #e5e7eb;
+  --line-color: #e5e7eb; /* Ensure this color is visible against your background */
 }
 
 /* react-timeline-vertical-component line color (dark mode) */
 html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+  --line-color: rgba(255, 255, 255, 0.2); /* Ensure this color is visible in dark mode */
 }
 
-/* border black */
+/* border black with increased visibility */
 .borderBlack {
-  @apply border border-black/10;
+  @apply border border-black/50; /* Increased opacity for better visibility */
 }
