@@ -6,7 +6,8 @@
 
 /* react-timeline-vertical-component line color */
 html {
-  --line-color: #e5e7eb; /* Ensure this color is visible against your background */
+  --line-color: rgba(255, 255, 255, 0.2); /* Ensure this color is visible in dark mode */
+ /* --line-color: #e5e7eb; * Ensure this color is visible against your background */
 }
 
 /* react-timeline-vertical-component line color (dark mode) */
