@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Layout from '../../../app/layout'; // This goes up three levels from ProjectHeader.tsx
 
-
 import { LINKS } from "@/constants";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 // Define the Header component.
-const Header = () => {
+const ProjectHeader = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
