@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Layout from '../../app/layout';
+import Layout from '../../../app/layout'; // This goes up three levels from ProjectHeader.tsx
 
 
 import { LINKS } from "@/constants";
