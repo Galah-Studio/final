@@ -11,43 +11,13 @@ import ThemeContextProvider from "@/context/theme-context";
 
 import "./globals.css";
 
-// inter font export
+// Inter font export
 const inter = Inter({ subsets: ["latin"] });
 
-// Site metadata (Server-side code)
-export const metadata: Metadata = {
-  title: `${OWNER_NAME.split(" ")[0]} | Personal Portfolio`,
-  description: `${OWNER_NAME.split(" ")[0]} is a full-stack developer with 4 years of experience.`,
-  authors: {
-    name: OWNER_NAME,
-    url: EXTRA_LINKS.github,
-  },
-  keywords: [
-    "reactjs",
-    "nextjs",
-    "vercel",
-    "react",
-    "portfolio",
-    "portfolio-next",
-    "emailjs",
-    "framer-motion",
-    "react-hot-toast",
-    "react-icons",
-    "react-intersection-observer",
-    "react-vertical-timeline",
-    "tailwindcss",
-    "ui/ux",
-    "js",
-    "javascript",
-    "typescript",
-    "html",
-    "css",
-  ],
-  manifest: "/manifest.json",
-  other: {
-    "google-site-verification": process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION_KEY!,
-  },
-};
+// Metadata should be defined in a common file if used across both client and server
+// I'm assuming you will move this to a separate file such as utils/siteMetadata.ts
+// Here's the import statement you would use:
+import { metadata } from "@/utils/siteMetadata";
 
 // Root layout
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -72,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* Toaster Notifications */}
             <aside>
               <Toaster
-                position="top-right"
+                position="top-right",
                 toastOptions={{
                   className: "dark:bg-white/10 dark:text-white/80",
                 }}
