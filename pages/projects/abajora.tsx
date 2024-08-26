@@ -6,7 +6,6 @@ import {
   CraftSection,
   ToolsSection,
   ShareButtons,
-  //Footer,
 } from "@/components/projects/abajora";
 
 // This is the main component for the Abajora project page
@@ -37,8 +36,6 @@ export default function Abajora() {
 
       {/* The ShareButtons component allows users to share the project on social media */}
       <ShareButtons {...shareProps} />
-
-      {/* The Footer component is displayed at the bottom of the page */}
     </main>
   );
 }
