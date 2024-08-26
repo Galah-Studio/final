@@ -1,11 +1,10 @@
 import React from "react";
 
-// This is the main component for the Abajora project page
+// Basic component to check if anything renders
 export default function Abajora() {
   return (
-    <main className="flex items-center justify-center min-h-screen bg-custom-dark text-white">
-      {/* Draw a big red circle */}
-      <div className="w-640 h-640 bg-red-500 rounded-full"></div>
+    <main className="min-h-screen flex items-center justify-center bg-black text-white">
+      <h1>Hello, Abajora!</h1>
     </main>
   );
 }
