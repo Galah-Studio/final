@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useSectionInView } from "@/lib/hooks";
-import SectionHeading from "./section-heading";
+import SectionHeading from "@/components/section-heading"; // Corrected import path
 
 // Define the ProjectProps type based on the structure of the projects data.
 type ProjectProps = {
