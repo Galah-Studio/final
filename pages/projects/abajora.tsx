@@ -9,13 +9,9 @@ import {
   Skills,
 } from "@/components";
 
-// Importing the context provider
-import { ActiveSectionContextProvider } from "@/context/active-section-context";
-
 // This is the main component for the Abajora project page
 export default function Abajora() {
   return (
-    <ActiveSectionContextProvider>
       <main className="flex flex-col items-center px-4">
         {/* The Intro component is displayed at the top of the page. */}
         <Intro />
@@ -38,6 +34,5 @@ export default function Abajora() {
         {/* The Contact component allows users to get in touch. */}
         <Contact />
       </main>
-    </ActiveSectionContextProvider>
   );
 }
