@@ -8,6 +8,9 @@ import {
   ShareButtons,
 } from "@/components/projects/abajora";
 
+// Importing the context provider
+import { ActiveSectionContextProvider } from "@/context/active-section-context";
+
 // This is the main component for the Abajora project page
 export default function Abajora() {
   // Define the props to pass to the ShareButtons component
@@ -18,26 +21,26 @@ export default function Abajora() {
   };
 
   return (
-        <ActiveSectionContextProvider>
-    <main className="bg-custom-dark text-white">
-      {/* The ProjectHeader component displays the header section of the project */}
-      <ProjectHeader />
+    <ActiveSectionContextProvider>
+      <main className="bg-custom-dark text-white">
+        {/* The ProjectHeader component displays the header section of the project */}
+        <ProjectHeader />
 
-      {/* The SpotLight component highlights a key visual of the project */}
-      <SpotLight />
+        {/* The SpotLight component highlights a key visual of the project */}
+        <SpotLight />
 
-      {/* The StorySection component provides the narrative of the project */}
-      <StorySection />
+        {/* The StorySection component provides the narrative of the project */}
+        <StorySection />
 
-      {/* The CraftSection component details the process behind the project */}
-      <CraftSection />
+        {/* The CraftSection component details the process behind the project */}
+        <CraftSection />
 
-      {/* The ToolsSection component lists the tools and technologies used */}
-      <ToolsSection />
+        {/* The ToolsSection component lists the tools and technologies used */}
+        <ToolsSection />
 
-      {/* The ShareButtons component allows users to share the project on social media */}
-      <ShareButtons {...shareProps} />
-    </main>
+        {/* The ShareButtons component allows users to share the project on social media */}
+        <ShareButtons {...shareProps} />
+      </main>
     </ActiveSectionContextProvider>
   );
 }
