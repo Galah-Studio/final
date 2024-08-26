@@ -1,4 +1,4 @@
-// Import necessary components from the specified location
+// Importing necessary components from the specified location ("@/components/projects/abajora").
 import {
   ProjectHeader,
   SpotLight,
@@ -23,11 +23,22 @@ export default function Abajora() {
   return (
     <ActiveSectionContextProvider>
       <main className="bg-custom-dark text-white">
+        {/* The ProjectHeader component displays the header section of the project */}
         <ProjectHeader />
+
+        {/* The SpotLight component highlights a key visual of the project */}
         <SpotLight />
+
+        {/* The StorySection component provides the narrative of the project */}
         <StorySection />
+
+        {/* The CraftSection component details the process behind the project */}
         <CraftSection />
+
+        {/* The ToolsSection component lists the tools and technologies used */}
         <ToolsSection />
+
+        {/* The ShareButtons component allows users to share the project on social media */}
         <ShareButtons {...shareProps} />
       </main>
     </ActiveSectionContextProvider>
