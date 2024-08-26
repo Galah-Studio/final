@@ -3,9 +3,9 @@ import React from "react";
 // This is the main component for the Abajora project page
 export default function Abajora() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white">
+    <main style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "white" }}>
       {/* Drawing a big red circle */}
-      <div className="w-64 h-64 bg-red-500 rounded-full"></div>
+      <div style={{ width: "200px", height: "200px", backgroundColor: "red", borderRadius: "50%" }}></div>
     </main>
   );
 }
