@@ -1,46 +1,38 @@
-// Importing necessary components from the specified location ("@/components/projects/abajora").
+// Importing necessary components from the specified location ("@/components").
 import {
-  ProjectHeader,
-  SpotLight,
-  StorySection,
-  CraftSection,
-  ToolsSection,
-  ShareButtons,
-} from "@/components/projects/abajora";
-
-// Importing the context provider
-import { ActiveSectionContextProvider } from "@/context/active-section-context";
+  About,
+  Contact,
+  Experience,
+  Intro,
+  Projects,
+  SectionDivider,
+  Skills,
+} from "@/components";
 
 // This is the main component for the Abajora project page
 export default function Abajora() {
-  // Define the props to pass to the ShareButtons component
-  const shareProps = {
-    title: "Abajora Project",
-    url: "https://your-website-url.com/projects/abajora",
-    imageUrl: "https://your-website-url.com/path-to-your-image.jpg",
-  };
-
   return (
-    <ActiveSectionContextProvider>
-      <main className="bg-custom-dark text-white">
-        {/* The ProjectHeader component displays the header section of the project */}
-        <ProjectHeader />
+    <main className="flex flex-col items-center px-4">
+      {/* The Intro component is displayed at the top of the page */}
+      <Intro />
 
-        {/* The SpotLight component highlights a key visual of the project */}
-        <SpotLight />
+      {/* A Vertical line or divider separating sections on the page */}
+      <SectionDivider />
 
-        {/* The StorySection component provides the narrative of the project */}
-        <StorySection />
+      {/* The About component provides information about the author or user */}
+      <About />
 
-        {/* The CraftSection component details the process behind the project */}
-        <CraftSection />
+      {/* The Projects component displays information about projects */}
+      <Projects />
 
-        {/* The ToolsSection component lists the tools and technologies used */}
-        <ToolsSection />
+      {/* The Skills component shows the skills of the author or user */}
+      <Skills />
 
-        {/* The ShareButtons component allows users to share the project on social media */}
-        <ShareButtons {...shareProps} />
-      </main>
-    </ActiveSectionContextProvider>
+      {/* The Experience component displays work or education experience */}
+      <Experience />
+
+      {/* The Contact component allows users to get in touch */}
+      <Contact />
+    </main>
   );
 }
