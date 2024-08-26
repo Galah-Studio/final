@@ -18,6 +18,7 @@ export default function Abajora() {
   };
 
   return (
+        <ActiveSectionContextProvider>
     <main className="bg-custom-dark text-white">
       {/* The ProjectHeader component displays the header section of the project */}
       <ProjectHeader />
@@ -37,5 +38,6 @@ export default function Abajora() {
       {/* The ShareButtons component allows users to share the project on social media */}
       <ShareButtons {...shareProps} />
     </main>
+    </ActiveSectionContextProvider>
   );
 }
