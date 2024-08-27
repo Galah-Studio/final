@@ -1,5 +1,3 @@
-import React from 'react';
-
 const StorySection = () => {
   return (
     <section id="story" className="bg-backbanner-dark text-white p-8">
