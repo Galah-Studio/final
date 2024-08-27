@@ -7,7 +7,7 @@ module.exports = {
     "./components/projects/abajora/**/*.{js,ts,jsx,tsx}",
     "./pages/projects/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
+    theme: {
     extend: {
       fontFamily: {
         comfortaa: ['Comfortaa', 'cursive'],
@@ -30,9 +30,4 @@ module.exports = {
   },
   plugins: [],
   darkMode: "class",
-  mode: 'jit', // Just-In-Time Mode for Tailwind
-  purge: [
-    './pages/**/*.{js,ts,jsx,tsx}', 
-    './components/**/*.{js,ts,jsx,tsx}'
-  ],
 };
