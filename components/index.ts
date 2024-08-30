@@ -11,6 +11,13 @@ import SectionDivider from "./section-divider"; // Re-export the 'SectionDivider
 import SectionHeading from "./section-heading"; // Re-export the 'SectionHeading' component.
 import Skills from "./skills"; // Re-export the 'Skills' component.
 import ThemeSwitch from "./theme-switch"; // Re-export the 'ThemeSwitch' component.
+export { default as abajoraProjectHeader } from './abajoraProjectHeader';
+export { default as abajoraSpotLight } from './abajoraSpotLight';
+export { default as abajoraStorySection } from './abajoraStorySection';
+export { default as abajoraCraftSection } from './abajoraCraftSection';
+export { default as abajoraToolsSection } from './abajoraToolsSection';
+export { default as abajoraShareButtons } from './abajoraShareButtons';
+
 
 // Export the re-exported components.
 export {
