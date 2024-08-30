@@ -51,6 +51,54 @@ export const LINKS = [
   },
 ] as const;
 
+export const MAIN_PAGE_LINKS = [
+  {
+    name: "Home",
+    hash: "#home",
+  },
+  {
+    name: "About",
+    hash: "#about",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
+  },
+  {
+    name: "Skills",
+    hash: "#skills",
+  },
+  {
+    name: "Experience",
+    hash: "#experience",
+  },
+  {
+    name: "Contact",
+    hash: "#contact",
+  },
+] as const;
+
+// Navigation links for the Abajora page
+export const ABAJORA_PAGE_LINKS = [
+  {
+    name: "SpotLight",
+    hash: "#spotlight",
+  },
+  {
+    name: "Story",
+    hash: "#story",
+  },
+  {
+    name: "Craft",
+    hash: "#craft",
+  },
+  {
+    name: "Tools",
+    hash: "#tools",
+  },
+] as const;
+
+
 // External links
 export const EXTRA_LINKS = {
   linkedin: "https://www.instagram.com/galah.tv/",
