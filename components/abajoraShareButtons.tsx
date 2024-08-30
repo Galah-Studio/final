@@ -33,4 +33,4 @@ const abajoraShareButtons: React.FC<ShareButtonsProps> = ({ title, url, imageUrl
   );
 };
 
-export default AbajoraShareButtons;
+export default abajoraShareButtons;
