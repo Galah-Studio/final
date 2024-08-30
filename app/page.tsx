@@ -1,18 +1,19 @@
-// Importing necessary components from the specified location ("@/components").
-import {
-  About,
-  Contact,
-  Experience,
-  Intro,
-  Projects,
-  SectionDivider,
-  Skills,
-} from "@/components";
+"use client";
 
-// This is the main component for the Home page.
+import { useThemeContext } from "@/context/theme-context";
+import { About } from "@/components/about";
+import { Contact } from "@/components/contact";
+import { Experience } from "@/components/experience";
+import { Intro } from "@/components/intro";
+import { Projects } from "@/components/projects";
+import { SectionDivider } from "@/components/section-divider";
+import { Skills } from "@/components/skills";
+
 export default function Home() {
+  const { theme } = useThemeContext();
+
   return (
-    <main className="flex flex-col items-center px-4">
+    <main className={`flex flex-col items-center px-4 ${theme === "light" ? "light-theme" : "dark-theme"}`}>
       {/* The Intro component is displayed at the top of the page. */}
       <Intro />
 
