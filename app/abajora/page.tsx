@@ -1,6 +1,6 @@
 "use client"; // Ensure this runs on the client-side
 
-import { ActiveSectionContextProvider } from "@/context/active-section-context"; // Replace with your actual context
+import { ActiveSectionContextProvider, useActiveSectionContext } from "@/context/active-section-context"; // Correct import
 
 export default function Page() {
   return (
@@ -15,12 +15,15 @@ export default function Page() {
 
 // A simple component to display and update the context value
 function DisplayValue() {
-  const { activeSection, setActiveSection } = useActiveSectionContext(); // Adjust according to your context structure
+  const { activeSection, setActiveSection } = useActiveSectionContext();
 
   return (
     <div>
       <p>Current Active Section: {activeSection}</p>
-      <button onClick={() => setActiveSection("New Section")} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
+      <button
+        onClick={() => setActiveSection("New Section")}
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+      >
         Change Active Section
       </button>
     </div>
