@@ -20,20 +20,32 @@ export default function Page() {
       {/* Project Header Section */}
       <AbajoraProjectHeader />
 
-      {/* Spotlight Section */}
+      <section id="spotlight">
+        
       <AbajoraSpotLight />
 
-      {/* Story Section */}
-      <AbajoraStorySection />
-
-      {/* Craft Section */}
-      <AbajoraCraftSection />
-
-      {/* Tools Section */}
-      <AbajoraToolsSection />
 
       {/* Share Buttons Section */}
       <AbajoraShareButtons {...shareProps} />
+
+        
+      <section id="story">
+        
+      <AbajoraStorySection />
+
+
+        
+      <section id="craft">
+
+      <AbajoraCraftSection />
+
+
+        
+      <section id="tools">
+        
+      <AbajoraToolsSection />
+
+
     </main>
   );
 }
