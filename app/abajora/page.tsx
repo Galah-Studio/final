@@ -1,3 +1,8 @@
+import { createContext } from "react";
+
+// Then re-declaring it like:
+// const createContext = require('react').createContext; // This should be avoided.
+
 import {
   abajoraProjectHeader as ProjectHeader,
   abajoraSpotLight as SpotLight,
