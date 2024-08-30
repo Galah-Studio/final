@@ -1,6 +1,6 @@
-import React from 'react';
+// components/abajora_craftsection.tsx
 
-const CraftSection = () => {
+const AbajoraCraftSection = () => {
   return (
     <section id="craft" className="bg-custom-dark text-white p-8">
       <div className="max-w-4xl mx-auto">
@@ -14,4 +14,4 @@ const CraftSection = () => {
   );
 };
 
-export default CraftSection;
+export default AbajoraCraftSection;
