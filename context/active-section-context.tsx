@@ -70,6 +70,3 @@ export const useActiveSectionContext = () => {
 // Export the context provider as the default export and named export
 export { ActiveSectionContextProvider };
 export default ActiveSectionContextProvider;
-
-// Temporary test export for debugging purposes
-export const testExport = "Test Value";
