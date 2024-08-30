@@ -1,4 +1,4 @@
-import React from 'react';
+// components/abajora_sharebuttons.tsx
 
 interface ShareButtonsProps {
   title: string;
@@ -6,7 +6,7 @@ interface ShareButtonsProps {
   imageUrl: string;
 }
 
-const ShareButtons: React.FC<ShareButtonsProps> = ({ title, url, imageUrl }) => {
+const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({ title, url, imageUrl }) => {
   return (
     <div className="flex space-x-4 mt-4">
       <a
@@ -29,4 +29,4 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ title, url, imageUrl }) => 
   );
 };
 
-export default ShareButtons;
+export default AbajoraShareButtons;
