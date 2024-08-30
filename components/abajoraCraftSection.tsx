@@ -23,4 +23,4 @@ const abajoraCraftSection = () => {
   );
 };
 
-export default AbajoraCraftSection;
+export default abajoraCraftSection;
