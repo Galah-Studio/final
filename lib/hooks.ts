@@ -1,6 +1,7 @@
+"use client"; // This ensures the file is treated as a client component.
+
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-
 import { useActiveSectionContext } from "@/context/active-section-context";
 import type { SectionName } from "./types";
 
