@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { LINKS } from "@/constants";
+import { MAIN_PAGE_LINKS } from "@/constants";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 // Define the Header component.
