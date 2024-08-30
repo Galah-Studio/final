@@ -1,11 +1,28 @@
-import { abajoraProjectHeader as AbajoraProjectHeader } from "@/components";
+"use client"; // Ensure this runs on the client-side
 
-// This is the main component for the Abajora project page
-export default function AbajoraPage() {
+import { MyContextProvider, useMyContext } from "@/context/my-context";
+
+export default function Page() {
   return (
-    <main className="flex flex-col items-center px-4 bg-custom-dark text-white">
-      {/* The ProjectHeader component displays the header section of the project */}
-      <AbajoraProjectHeader />
-    </main>
+    <MyContextProvider>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-custom-dark text-white">
+        <h1 className="text-4xl mb-4">Testing Context</h1>
+        <DisplayValue />
+      </div>
+    </MyContextProvider>
+  );
+}
+
+// A simple component to display and update the context value
+function DisplayValue() {
+  const { value, setValue } = useMyContext();
+
+  return (
+    <div>
+      <p>Current Value: {value}</p>
+      <button onClick={() => setValue("New Value")} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
+        Change Value
+      </button>
+    </div>
   );
 }
