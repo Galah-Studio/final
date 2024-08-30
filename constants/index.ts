@@ -33,6 +33,22 @@ export const LINKS = [
     name: "Contact",
     hash: "#contact",
   },
+  {
+    name: "SpotLight", // New section
+    hash: "#spotlight",
+  },
+  {
+    name: "Story", // New section
+    hash: "#story",
+  },
+  {
+    name: "Craft", // New section
+    hash: "#craft",
+  },
+  {
+    name: "Tools", // New section
+    hash: "#tools",
+  },
 ] as const;
 
 // External links
