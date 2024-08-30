@@ -1,5 +1,6 @@
 // Importing necessary components from the specified location ("@/components").
  import {
+   Header,
    About,
    Contact,
    Experience,
@@ -13,6 +14,7 @@
  export default function Home() {
    return (
      <main className="flex flex-col items-center px-4">
+      <Header />
        {/* The Intro component is displayed at the top of the page. */}
        <Intro />
 
