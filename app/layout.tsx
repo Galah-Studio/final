@@ -75,8 +75,6 @@ export default function RootLayout({
         <ThemeContextProvider>
           {/* active section context provider */}
           <ActiveSectionContextProvider>
-            {/* header */}
-            <Header />
             {children}
             {/* footer */}
             <Footer />
