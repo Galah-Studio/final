@@ -1,12 +1,12 @@
 "use client"; // Ensure this file is treated as a client-side component
 
 import {
-  AbajoraProjectHeader,
-  AbajoraSpotLight,
-  AbajoraStorySection,
-  AbajoraCraftSection,
-  AbajoraToolsSection,
-  AbajoraShareButtons,
+  abajoraProjectHeader,
+  abajoraSpotLight,
+  abajoraStorySection,
+  abajoraCraftSection,
+  abajoraToolsSection,
+  abajoraShareButtons,
 } from "@/components";
 
 // Import the context provider for managing the active section
@@ -25,22 +25,22 @@ export default function Abajora() {
     <ActiveSectionContextProvider>
       <main className="bg-custom-dark text-white">
         {/* Project Header Section */}
-        <AbajoraProjectHeader />
+        <abajoraProjectHeader />
 
         {/* Spotlight Section */}
-        <AbajoraSpotLight />
+        <abajoraSpotLight />
 
         {/* Story Section */}
-        <AbajoraStorySection />
+        <abajoraStorySection />
 
         {/* Craft Section */}
-        <AbajoraCraftSection />
+        <abajoraCraftSection />
 
         {/* Tools Section */}
-        <AbajoraToolsSection />
+        <abajoraToolsSection />
 
         {/* Share Buttons Section */}
-        <AbajoraShareButtons {...shareProps} />
+        <abajoraShareButtons {...shareProps} />
       </main>
     </ActiveSectionContextProvider>
   );
