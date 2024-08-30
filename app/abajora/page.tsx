@@ -1,32 +1,47 @@
-"use client"; // Ensure this runs on the client-side
+"use client"; // Ensure this file is treated as a client-side component
 
-import { ActiveSectionContextProvider, useActiveSectionContext } from "@/context/active-section-context"; // Correct import
+import {
+  abajoraProjectHeader,
+  abajoraSpotLight,
+  abajoraStorySection,
+  abajoraCraftSection,
+  abajoraToolsSection,
+  abajoraShareButtons,
+} from "@/components";
 
-export default function Page() {
+// Import the context provider for managing the active section
+import { ActiveSectionContextProvider } from "@/context/active-section-context";
+
+// Main component for the Abajora project page
+export default function Abajora() {
+  // Define props to pass to the ShareButtons component
+  const shareProps = {
+    title: "Abajora Project",
+    url: "https://your-website-url.com/projects/abajora",
+    imageUrl: "https://your-website-url.com/path-to-your-image.jpg",
+  };
+
   return (
     <ActiveSectionContextProvider>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-custom-dark text-white">
-        <h1 className="text-4xl mb-4">Testing Context</h1>
-        <DisplayValue />
-      </div>
+      <main className="bg-custom-dark text-white">
+        {/* Project Header Section */}
+        <abajoraProjectHeader />
+
+        {/* Spotlight Section */}
+        <abajoraSpotLight />
+
+        {/* Story Section */}
+        <abajoraStorySection />
+
+        {/* Craft Section */}
+        <abajoraCraftSection />
+
+        {/* Tools Section */}
+        <abajoraToolsSection />
+
+        {/* Share Buttons Section */}
+        <abajoraShareButtons {...shareProps} />
+      </main>
     </ActiveSectionContextProvider>
-  );
-}
-
-// A simple component to display and update the context value
-function DisplayValue() {
-  const { activeSection, setActiveSection } = useActiveSectionContext();
-
-  return (
-    <div>
-      <p>Current Active Section: {activeSection}</p>
- <button
-  onClick={() => setActiveSection("Home")} // Replace with a valid section name
-  className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
->
-  Change Active Section
-</button>
-
-    </div>
   );
 }
