@@ -10,11 +10,7 @@ import {
 // This is the main component for the Abajora project page.
 export default function AbajoraPage() {
   // Define the props to pass to the ShareButtons component
-  const shareProps = {
-    title: "Abajora Project",
-    url: "https://your-website-url.com/projects/abajora",
-    imageUrl: "https://your-website-url.com/path-to-your-image.jpg",
-  };
+
 
   return (
     <main className="flex flex-col items-center px-4 bg-custom-dark text-white">
@@ -33,8 +29,6 @@ export default function AbajoraPage() {
       {/* The ToolsSection component lists the tools and technologies used */}
       <ToolsSection />
 
-      {/* The ShareButtons component allows users to share the project on social media */}
-      <ShareButtons {...shareProps} />
     </main>
   );
 }
