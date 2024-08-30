@@ -1,6 +1,6 @@
 // components/abajoraProjectHeader.tsx
 
-import { LINKS } from "@/constants"; // Make sure this path is correct
+import { ABAJORA_PAGE_LINKS } from "@/constants"; // Make sure this path is correct
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
