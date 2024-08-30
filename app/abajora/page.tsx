@@ -11,8 +11,8 @@ export default function Page() {
   // Define the props to pass to the ShareButtons component
   const shareProps = {
     title: "Abajora Project",
-    url: "https://your-website-url.com/projects/abajora",
-    imageUrl: "https://your-website-url.com/path-to-your-image.jpg",
+    url: "https://Galah.tv/abajora",
+    imageUrl: "https://Galah.tv/_next/image?url=%2Fvivi_full.png",
   };
 
   return (
