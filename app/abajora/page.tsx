@@ -20,12 +20,13 @@ function DisplayValue() {
   return (
     <div>
       <p>Current Active Section: {activeSection}</p>
-      <button
-        onClick={() => setActiveSection("New Section")}
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-      >
-        Change Active Section
-      </button>
+ <button
+  onClick={() => setActiveSection("Home")} // Replace with a valid section name
+  className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+>
+  Change Active Section
+</button>
+
     </div>
   );
 }
