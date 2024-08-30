@@ -1,4 +1,6 @@
-const StorySection = () => {
+// components/abajora_storysection.tsx
+
+const AbajoraStorySection = () => {
   return (
     <section id="story" className="bg-backbanner-dark text-white p-8">
       <div className="max-w-4xl mx-auto">
@@ -11,4 +13,4 @@ const StorySection = () => {
   );
 };
 
-export default StorySection;
+export default AbajoraStorySection;
