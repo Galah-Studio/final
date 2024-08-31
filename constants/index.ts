@@ -84,6 +84,11 @@ export const ABAJORA_PAGE_LINKS = [
     name: "SpotLight",
     hash: "#spotlight",
   },
+
+   {
+    name: "Clients",
+    hash: "#clients",
+  },
   {
     name: "Story",
     hash: "#story",
