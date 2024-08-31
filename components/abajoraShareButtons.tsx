@@ -27,4 +27,4 @@ const AbajoraShareButtons = () => {
   );
 };
 
-export default AbajoraShareButtons;
+export default abajoraShareButtons;
