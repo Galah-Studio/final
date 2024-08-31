@@ -6,6 +6,8 @@ import AbajoraStorySection from "@/components/abajoraStorySection";
 import AbajoraCraftSection from "@/components/abajoraCraftSection";
 import AbajoraToolsSection from "@/components/abajoraToolsSection";
 import AbajoraShareButtons from "@/components/abajoraShareButtons";
+import AbajoraLogos from "@/components/abajoraLogos";
+
 
 export default function Page() {
   // Define the props to pass to the ShareButtons component
@@ -23,6 +25,11 @@ export default function Page() {
       {/* Spotlight Section */}
       <section id="spotlight">
         <AbajoraSpotLight />
+      </section>
+
+       {/* AbajoraLogos Section */}
+      <section id="abajoraLogos">
+        <AbajoraLogos />
       </section>
 
       {/* Share Buttons Section */}
