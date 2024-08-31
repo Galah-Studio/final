@@ -10,17 +10,16 @@ interface ShareButtonsProps {
   imageUrl: string;
 }
 
-const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({ title, url }) => {
+const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({ title, url, imageUrl }) => {
   const { theme } = useThemeContext();
 
   return (
-    <div className="flex flex-col space-y-4 fixed right-8 top-[50%] transform -translate-y-1/2 z-10">
+    <div className="fixed right-4 bottom-20 flex flex-col items-center space-y-4">
       <a
         href={`https://twitter.com/share?url=${url}&text=${title}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white transition transform hover:scale-105"
-        aria-label="Share on Twitter"
+        className={`w-12 h-12 flex items-center justify-center rounded-full ${theme === "light" ? "bg-white text-black" : "bg-black text-white"} shadow-md`}
       >
         <FaXTwitter size={24} />
       </a>
@@ -28,8 +27,7 @@ const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({ title, url }) => {
         href={`https://www.instagram.com/?url=${url}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white transition transform hover:scale-105"
-        aria-label="Share on Instagram"
+        className={`w-12 h-12 flex items-center justify-center rounded-full ${theme === "light" ? "bg-white text-black" : "bg-black text-white"} shadow-md`}
       >
         <FaInstagram size={24} />
       </a>
