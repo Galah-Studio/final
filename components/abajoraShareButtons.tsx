@@ -1,30 +1,38 @@
-// components/abajora_sharebuttons.tsx
+// components/abajoraShareButtons.tsx
 
-import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useThemeContext } from "@/context/theme-context";
 
-const AbajoraShareButtons = () => {
+interface ShareButtonsProps {
+  title: string;
+  url: string;
+  imageUrl: string;
+}
+
+const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({ title, url, imageUrl }) => {
+  const { theme } = useThemeContext();
+
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="fixed right-4 bottom-20 flex flex-col items-center space-y-4">
       <a
-        href="https://twitter.com/share?url=your-url"
+        href={`https://twitter.com/share?url=${url}&text=${title}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-white text-3xl hover:text-pink-500 transition-colors duration-300"
+        className={`w-12 h-12 flex items-center justify-center rounded-full ${theme === "light" ? "bg-white text-black" : "bg-black text-white"} shadow-md`}
       >
-        <FaXTwitter />
+        <FaXTwitter size={24} />
       </a>
       <a
-        href="https://www.instagram.com/?url=your-url"
+        href={`https://www.instagram.com/?url=${url}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-white text-3xl hover:text-pink-500 transition-colors duration-300"
+        className={`w-12 h-12 flex items-center justify-center rounded-full ${theme === "light" ? "bg-white text-black" : "bg-black text-white"} shadow-md`}
       >
-        <FaInstagram />
+        <FaInstagram size={24} />
       </a>
     </div>
   );
 };
 
-export default abajoraShareButtons;
+export default AbajoraShareButtons;
