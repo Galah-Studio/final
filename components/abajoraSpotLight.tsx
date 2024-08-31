@@ -19,12 +19,6 @@ const AbajoraSpotLight = () => {
             background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%)',
           }}
         />
-        
-        {/* Logos */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center">
-          <Image src={GalahLogo} alt="Galah Logo" width={100} height={100} className="mb-4" />
-          <Image src={GalahLogo} alt="Abajora Logo" width={100} height={100} />
-        </div>
 
         {/* Title */}
         <h1 className="absolute bottom-8 w-full text-center text-4xl font-bold text-white">
