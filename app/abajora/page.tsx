@@ -28,7 +28,7 @@ export default function Page() {
       </section>
 
        {/* AbajoraLogos Section */}
-      <section id="abajoraLogos">
+      <section id="clients">
         <AbajoraLogos />
       </section>
 
