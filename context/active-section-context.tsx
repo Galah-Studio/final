@@ -15,7 +15,7 @@ type SectionName =
   | "Experience"
   | "Contact"
   | "SpotLight"  // Add this
-  | "Clients";   // Add this
+  | "Clients"    // Add this
   | "Story"      // Add this
   | "Craft"      // Add this
   | "Tools";     // Add this
