@@ -8,12 +8,12 @@ import { EXTRA_LINKS, OWNER_NAME } from "@/constants"; // Import OWNER_NAME
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 
-// Define the About component.
-const About = () => {
+// Define the AbajoraStorySection component.
+const AbajoraStorySection = () => {
   // Use the useSectionInView custom hook to track when the "About" section is in view.
   const { ref } = useSectionInView("About");
 
-  // Return the About section, which uses framer-motion for animations.
+  // Return the AbajoraStorySection, which uses framer-motion for animations.
   return (
     <motion.section
       ref={ref}
@@ -58,4 +58,5 @@ const About = () => {
     </motion.section>
   );
 };
+
 export default AbajoraStorySection;
