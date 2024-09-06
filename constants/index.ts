@@ -81,10 +81,6 @@ export const MAIN_PAGE_LINKS = [
 // Navigation links for the Abajora page
 export const ABAJORA_PAGE_LINKS = [
   {
-    name: "Home",
-    hash: "#home",
-  },
-  {
     name: "SpotLight",
     hash: "#spotlight",
   },
