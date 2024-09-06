@@ -1,5 +1,3 @@
-// components/abajoraStorySection.tsx
-
 "use client";
 
 // Import necessary dependencies and components.
@@ -21,7 +19,7 @@ const AbajoraStorySection = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[45rem] text-center mx-auto leading-8 sm:mb-40 scroll-mt-28"
     >
       {/* Display the section heading for "About us." */}
       <SectionHeading>
@@ -29,7 +27,7 @@ const AbajoraStorySection = () => {
       </SectionHeading>
 
       {/* Display a paragraph with information about Galah Studio's background and focus. */}
-      <p className="mb-3 font-maven">
+      <p className="mb-3 font-maven text-center">
         <span
           className="font-comfortaa text-[#ff2b69] glow-effect"
           style={{
@@ -49,7 +47,7 @@ const AbajoraStorySection = () => {
       </p>
 
       {/* Display another paragraph about the studio's philosophy and approach. */}
-      <p className="font-maven">
+      <p className="font-maven text-center">
         Our focus is on delivering visually stunning and emotionally engaging
         content. We believe in the power of storytelling and strive to create
         works that resonate with audiences. Whether it's an animation show or
