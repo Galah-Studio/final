@@ -4,7 +4,7 @@ import React from 'react';
 
 const AbajoraLogos = () => {
   return (
-    <div className="flex justify-center space-x-4 items-center mb-16">
+    <div className="flex justify-center space-x-8 items-center mb-16">
       {/* First SVG Logo */}
       <div className="relative">
 <svg
