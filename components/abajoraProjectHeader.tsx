@@ -2,7 +2,7 @@
 // components/abajoraProjectHeader.tsx
 
 import { ABAJORA_PAGE_LINKS } from "@/constants"; // Ensure the path is correct
-"use client"; // This comment indicates that this code should run on the client side in Next.js.
+ // This comment indicates that this code should run on the client side in Next.js.
 
 import clsx from "clsx";
 import { motion } from "framer-motion";
