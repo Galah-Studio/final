@@ -6,11 +6,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-const abajoraProjectHeader = () => {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+const AbajoraProjectHeader = () => {
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-  // Add a Home link manually to the navbar before other links
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -20,26 +18,7 @@ const abajoraProjectHeader = () => {
       />
       <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
         <ul className="flex flex-wrap w-[22rem] items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {/* Add Home link manually */}
-          <motion.li
-            className="h-3/4 flex items-center justify-center relative"
-            key="home"
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <Link
-              className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-200 font-maven"
-              href="/"
-              onClick={() => {
-                setActiveSection("Home");
-                setTimeOfLastClick(Date.now());
-              }}
-            >
-              Home
-            </Link>
-          </motion.li>
-
-          {/* Render other page links */}
+          {/* Render page links */}
           {ABAJORA_PAGE_LINKS.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
@@ -82,4 +61,4 @@ const abajoraProjectHeader = () => {
   );
 };
 
-export default abajoraProjectHeader;
+export default AbajoraProjectHeader;
