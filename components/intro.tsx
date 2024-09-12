@@ -14,17 +14,14 @@ import { useSectionInView } from "@/lib/hooks";
 const BirdLogoSVG = () => {
   return (
     <div className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
-
-    <svg
-      id="a"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 386 382.61"
-      style={{ width: '150px', height: '150px' }} // Adjusted size
-    >
-      <defs>
-        <style>
-          {`.b{fill:#ff2b69;}`}
-        </style>
+      <svg
+        id="a"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 386 382.61"
+        style={{ width: '150px', height: '150px' }} // Adjusted size
+      >
+        <defs>
+          <style>{`.b{fill:#ff2b69;}`}</style>
       </defs>
       <path
         className="b"
