@@ -15,6 +15,8 @@
    return (
      <main className="flex flex-col items-center px-4">
       <Header />
+       {/* The Intro component is displayed at the back of the page. */}
+       <BackgroundEffect />
        {/* The Intro component is displayed at the top of the page. */}
        <Intro />
 
