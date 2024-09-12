@@ -23,9 +23,6 @@ export default function AbajoraPage() {
       {/* Project Header */}
       <AbajoraProjectHeader />
 
-      {/* Background Effect */}
-      <BackgroundEffect />
-
       {/* Spotlight Section */}
       <AbajoraSpotLight />
 
