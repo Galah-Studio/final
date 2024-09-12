@@ -3,7 +3,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
-import { usePathname } from "next/navigation";
 
 import { Footer, ThemeSwitch } from "@/components";
 import { EXTRA_LINKS, OWNER_NAME } from "@/constants";
@@ -63,26 +62,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname(); // Get the current pathname
-
-  const isAbajoraPage = pathname === "/abajora"; // Detect if we are on the Abajora page
-
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} bg-gray-50 dark:bg-custom-dark dark:text-gray-50 dark:text-opacity-90 text-gray-950 relative ${
-          isAbajoraPage ? "" : "pt-28 sm:pt-36"
-        }`}
+        className={`${inter.className} bg-gray-50 dark:bg-custom-dark dark:text-gray-50 dark:text-opacity-90 text-gray-950 relative pt-28 sm:pt-36`}
       >
-        {/* Conditional background gradients */}
-        {!isAbajoraPage && (
-          <>
-            {/* bg blur effect */}
-            <div className="bg-[#ffd3e0] dark:bg-[#290E16] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]" />
-            <div className="bg-[#ffebf1] dark:bg-[#0c0507] absolute top-[-1rem] -z-10 left-[-35rem] h-[50rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]" />
-          </>
-        )}
-
         {/* theme context provider */}
         <ThemeContextProvider>
           {/* active section context provider */}
