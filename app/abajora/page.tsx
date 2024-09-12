@@ -1,4 +1,4 @@
-"use client"; // Ensure this runs on the client-side
+"use client";
 
 import AbajoraProjectHeader from "@/components/abajoraProjectHeader";
 import AbajoraSpotLight from "@/components/abajoraSpotLight";
@@ -7,7 +7,7 @@ import AbajoraCraftSection from "@/components/abajoraCraftSection";
 import AbajoraToolsSection from "@/components/abajoraToolsSection";
 import AbajoraShareButtons from "@/components/abajoraShareButtons";
 import AbajoraLogos from "@/components/abajoraLogos";
-import { useSectionInView } from "@/lib/hooks"; // Assuming you're using a hook to track section in view
+import { useSectionInView } from "@/lib/hooks"; // Ensure this hook is used for tracking sections
 
 export default function Page() {
   // Define the props to pass to the ShareButtons component
@@ -30,12 +30,12 @@ export default function Page() {
       <AbajoraProjectHeader />
 
       {/* Spotlight Section */}
-      <section id="spotlight" ref={spotlightRef}>
+      <section ref={spotlightRef} id="spotlight">
         <AbajoraSpotLight />
       </section>
 
-       {/* AbajoraLogos Section */}
-      <section id="clients" ref={clientsRef}>
+      {/* AbajoraLogos Section */}
+      <section ref={clientsRef} id="clients">
         <AbajoraLogos />
       </section>
 
@@ -43,17 +43,17 @@ export default function Page() {
       <AbajoraShareButtons {...shareProps} />
 
       {/* Story Section */}
-      <section id="story" ref={storyRef}>
+      <section ref={storyRef} id="story">
         <AbajoraStorySection />
       </section>
 
       {/* Craft Section */}
-      <section id="craft" ref={craftRef}>
+      <section ref={craftRef} id="craft">
         <AbajoraCraftSection />
       </section>
 
       {/* Tools Section */}
-      <section id="tools" ref={toolsRef}>
+      <section ref={toolsRef} id="tools">
         <AbajoraToolsSection />
       </section>
     </main>
