@@ -1,15 +1,13 @@
 "use client";
 
-import {
-  AbajoraProjectHeader,
-  AbajoraSpotLight,
-  AbajoraStorySection,
-  AbajoraCraftSection,
-  AbajoraToolsSection,
-  AbajoraShareButtons,
-  AbajoraLogos,
-  BackgroundEffect,
-} from "@/components";
+import AbajoraProjectHeader from "@/components/abajoraProjectHeader";
+import AbajoraSpotLight from "@/components/abajoraSpotLight";
+import AbajoraStorySection from "@/components/abajoraStorySection";
+import AbajoraCraftSection from "@/components/abajoraCraftSection";
+import AbajoraToolsSection from "@/components/abajoraToolsSection";
+import AbajoraShareButtons from "@/components/abajoraShareButtons";
+import AbajoraLogos from "@/components/abajoraLogos";
+import { useSectionInView } from "@/lib/hooks"; // Assuming this hook returns a ref
 
 // This is the main component for the Abajora page.
 export default function AbajoraPage() {
