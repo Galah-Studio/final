@@ -6,8 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useSectionInView } from "@/lib/hooks";
-import SectionHeading from "./section-heading";
+import { useSectionInView } from "@/lib/hooks"; // Import custom hook
+import SectionHeading from "./section-heading"; // Import section heading component
 
 // Define the ProjectProps type based on the structure of the projects data.
 type ProjectProps = {
