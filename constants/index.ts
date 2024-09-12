@@ -38,6 +38,11 @@ export const LINKS = [
     hash: "#spotlight",
   },
   {
+    name: "Clients", // New section
+    hash: "#clients",
+  },
+
+  {
     name: "Story", // New section
     hash: "#story",
   },
