@@ -1,16 +1,16 @@
-// Import and re-export the following components to simplify imports in your project.
+import About from "./about";
+import Contact from "./contact";
+import Experience from "./experience";
+import Footer from "./footer";
+import Header from "./header";
+import Intro from "./intro";
+import Projects from "./projects";
+import SectionDivider from "./section-divider";
+import SectionHeading from "./section-heading";
+import Skills from "./skills";
+import ThemeSwitch from "./theme-switch";
+import BackgroundEffect from "./BackgroundEffect"; // Import BackgroundEffect
 
-import About from "./about"; // Re-export the 'About' component.
-import Contact from "./contact"; // Re-export the 'Contact' component.
-import Experience from "./experience"; // Re-export the 'Experience' component.
-import Footer from "./footer"; // Re-export the 'Footer' component.
-import Header from "./header"; // Re-export the 'Header' component.
-import Intro from "./intro"; // Re-export the 'Intro' component.
-import Projects from "./projects"; // Re-export the 'Projects' component.
-import SectionDivider from "./section-divider"; // Re-export the 'SectionDivider' component.
-import SectionHeading from "./section-heading"; // Re-export the 'SectionHeading' component.
-import Skills from "./skills"; // Re-export the 'Skills' component.
-import ThemeSwitch from "./theme-switch"; // Re-export the 'ThemeSwitch' component.
 export { default as abajoraProjectHeader } from './abajoraProjectHeader';
 export { default as abajoraSpotLight } from './abajoraSpotLight';
 export { default as abajoraStorySection } from './abajoraStorySection';
@@ -18,8 +18,6 @@ export { default as abajoraCraftSection } from './abajoraCraftSection';
 export { default as abajoraToolsSection } from './abajoraToolsSection';
 export { default as abajoraShareButtons } from './abajoraShareButtons';
 
-
-// Export the re-exported components.
 export {
   About,
   Contact,
@@ -32,4 +30,5 @@ export {
   SectionHeading,
   Skills,
   ThemeSwitch,
+  BackgroundEffect, // Add BackgroundEffect export here
 };
