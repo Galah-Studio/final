@@ -7,9 +7,15 @@ import AbajoraCraftSection from "@/components/abajoraCraftSection";
 import AbajoraToolsSection from "@/components/abajoraToolsSection";
 import AbajoraShareButtons from "@/components/abajoraShareButtons";
 import AbajoraLogos from "@/components/abajoraLogos";
-import { useSectionInView } from "@/lib/hooks"; // Ensure this hook is used for tracking sections
+import { useSectionInView } from "@/lib/hooks"; // Assuming this hook returns a ref
 
 export default function Page() {
+  const spotlightRef = useSectionInView("SpotLight");
+  const clientsRef = useSectionInView("Clients");
+  const storyRef = useSectionInView("Story");
+  const craftRef = useSectionInView("Craft");
+  const toolsRef = useSectionInView("Tools");
+
   // Define the props to pass to the ShareButtons component
   const shareProps = {
     title: "Abajora Project",
@@ -17,25 +23,18 @@ export default function Page() {
     imageUrl: "https://Galah.tv/_next/image?url=%2Fvivi_full.png",
   };
 
-  // Use `useSectionInView` for tracking sections
-  const spotlightRef = useSectionInView("SpotLight");
-  const clientsRef = useSectionInView("Clients");
-  const storyRef = useSectionInView("Story");
-  const craftRef = useSectionInView("Craft");
-  const toolsRef = useSectionInView("Tools");
-
   return (
     <main className="bg-custom-dark text-white">
       {/* Project Header Section */}
       <AbajoraProjectHeader />
 
       {/* Spotlight Section */}
-      <section ref={spotlightRef} id="spotlight">
+      <section ref={spotlightRef as React.Ref<HTMLElement>} id="spotlight">
         <AbajoraSpotLight />
       </section>
 
-      {/* AbajoraLogos Section */}
-      <section ref={clientsRef} id="clients">
+      {/* Clients Logos Section */}
+      <section ref={clientsRef as React.Ref<HTMLElement>} id="clients">
         <AbajoraLogos />
       </section>
 
@@ -43,17 +42,17 @@ export default function Page() {
       <AbajoraShareButtons {...shareProps} />
 
       {/* Story Section */}
-      <section ref={storyRef} id="story">
+      <section ref={storyRef as React.Ref<HTMLElement>} id="story">
         <AbajoraStorySection />
       </section>
 
       {/* Craft Section */}
-      <section ref={craftRef} id="craft">
+      <section ref={craftRef as React.Ref<HTMLElement>} id="craft">
         <AbajoraCraftSection />
       </section>
 
       {/* Tools Section */}
-      <section ref={toolsRef} id="tools">
+      <section ref={toolsRef as React.Ref<HTMLElement>} id="tools">
         <AbajoraToolsSection />
       </section>
     </main>
