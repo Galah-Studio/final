@@ -8,6 +8,7 @@
    Projects,
    SectionDivider,
    Skills,
+  BackgroundEffect,
  } from "@/components";
 
  // This is the main component for the Home page.
