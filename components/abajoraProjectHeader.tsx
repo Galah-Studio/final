@@ -1,16 +1,15 @@
-"use client"
+"use client";
+
 // components/abajoraProjectHeader.tsx
 
-import { ABAJORA_PAGE_LINKS } from "@/constants"; // Ensure the path is correct
- // This comment indicates that this code should run on the client side in Next.js.
-
+import { ABAJORA_PAGE_LINKS } from "@/constants"; 
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-// Define the Header component.
-const Header = () => {
+// Define the AbajoraProjectHeader component (rename the component)
+const AbajoraProjectHeader = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
@@ -34,7 +33,7 @@ const Header = () => {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-200 font-maven", // Applied Maven Pro font for the rest
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-200 font-maven", 
                   {
                     "!text-gray-950 font-medium dark:!text-gray-100":
                       activeSection === link.name,
@@ -42,7 +41,6 @@ const Header = () => {
                 )}
                 href={link.hash}
                 onClick={() => {
-                  // Set the active section and the time of the last click.
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
@@ -50,7 +48,6 @@ const Header = () => {
                 {link.name}
 
                 {link.name === activeSection && (
-                  // Visual indicator for the active section.
                   <motion.span
                     layoutId="activeSection"
                     transition={{
@@ -70,5 +67,5 @@ const Header = () => {
   );
 };
 
-// Export the Header component.
+// Export the AbajoraProjectHeader component
 export default AbajoraProjectHeader;
