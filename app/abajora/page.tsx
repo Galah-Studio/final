@@ -1,21 +1,18 @@
 "use client";
 
-import AbajoraProjectHeader from "@/components/abajoraProjectHeader";
-import AbajoraSpotLight from "@/components/abajoraSpotLight";
-import AbajoraStorySection from "@/components/abajoraStorySection";
-import AbajoraCraftSection from "@/components/abajoraCraftSection";
-import AbajoraToolsSection from "@/components/abajoraToolsSection";
-import AbajoraShareButtons from "@/components/abajoraShareButtons";
-import AbajoraLogos from "@/components/abajoraLogos";
-import { useSectionInView } from "@/lib/hooks"; // Assuming this hook returns a ref
+import {
+  AbajoraProjectHeader,
+  AbajoraSpotLight,
+  AbajoraStorySection,
+  AbajoraCraftSection,
+  AbajoraToolsSection,
+  AbajoraShareButtons,
+  AbajoraLogos,
+  BackgroundEffect,
+} from "@/components";
 
-export default function Page() {
-  const spotlightRef = useSectionInView("SpotLight");
-  const clientsRef = useSectionInView("Clients");
-  const storyRef = useSectionInView("Story");
-  const craftRef = useSectionInView("Craft");
-  const toolsRef = useSectionInView("Tools");
-
+// This is the main component for the Abajora page.
+export default function AbajoraPage() {
   // Define the props to pass to the ShareButtons component
   const shareProps = {
     title: "Abajora Project",
@@ -24,37 +21,30 @@ export default function Page() {
   };
 
   return (
-    <main className="bg-custom-dark text-white">
-      {/* Project Header Section */}
+    <main className="flex flex-col items-center bg-custom-dark text-white px-4">
+      {/* Project Header */}
       <AbajoraProjectHeader />
 
+      {/* Background Effect */}
+      <BackgroundEffect />
+
       {/* Spotlight Section */}
-      <section ref={spotlightRef} id="spotlight">
-        <AbajoraSpotLight />
-      </section>
+      <AbajoraSpotLight />
 
       {/* Clients Logos Section */}
-      <section ref={clientsRef} id="clients">
-        <AbajoraLogos />
-      </section>
+      <AbajoraLogos />
 
-      {/* Share Buttons Section */}
+      {/* Share Buttons */}
       <AbajoraShareButtons {...shareProps} />
 
       {/* Story Section */}
-      <section ref={storyRef} id="story">
-        <AbajoraStorySection />
-      </section>
+      <AbajoraStorySection />
 
       {/* Craft Section */}
-      <section ref={craftRef} id="craft">
-        <AbajoraCraftSection />
-      </section>
+      <AbajoraCraftSection />
 
       {/* Tools Section */}
-      <section ref={toolsRef} id="tools">
-        <AbajoraToolsSection />
-      </section>
+      <AbajoraToolsSection />
     </main>
   );
 }
