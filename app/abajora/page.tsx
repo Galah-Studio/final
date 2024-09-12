@@ -29,12 +29,12 @@ export default function Page() {
       <AbajoraProjectHeader />
 
       {/* Spotlight Section */}
-      <section ref={spotlightRef as unknown as React.Ref<HTMLElement>} id="spotlight">
+      <section ref={spotlightRef} id="spotlight">
         <AbajoraSpotLight />
       </section>
 
       {/* Clients Logos Section */}
-      <section ref={clientsRef as unknown as React.Ref<HTMLElement>} id="clients">
+      <section ref={clientsRef} id="clients">
         <AbajoraLogos />
       </section>
 
@@ -42,17 +42,17 @@ export default function Page() {
       <AbajoraShareButtons {...shareProps} />
 
       {/* Story Section */}
-      <section ref={storyRef as unknown as React.Ref<HTMLElement>} id="story">
+      <section ref={storyRef} id="story">
         <AbajoraStorySection />
       </section>
 
       {/* Craft Section */}
-      <section ref={craftRef as unknown as React.Ref<HTMLElement>} id="craft">
+      <section ref={craftRef} id="craft">
         <AbajoraCraftSection />
       </section>
 
       {/* Tools Section */}
-      <section ref={toolsRef as unknown as React.Ref<HTMLElement>} id="tools">
+      <section ref={toolsRef} id="tools">
         <AbajoraToolsSection />
       </section>
     </main>
