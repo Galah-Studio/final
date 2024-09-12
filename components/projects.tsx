@@ -6,8 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useSectionInView } from "@/lib/hooks"; // Import custom hook
-import SectionHeading from "./section-heading"; // Import section heading component
+import { useSectionInView } from "@/lib/hooks";
+import SectionHeading from "./section-heading";
 
 // Define the ProjectProps type based on the structure of the projects data.
 type ProjectProps = {
@@ -61,7 +61,7 @@ const Project = ({
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, i) => (
               <li
-                key={`${title}-tags-${i}`}
+                key={${title}-tags-${i}}
                 className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
               >
                 {tag}
@@ -74,7 +74,7 @@ const Project = ({
           href={projectUrl}
           target="_blank"
           rel="noreferrer noopener"
-          title={`Visit Project: ${title}`}
+          title={Visit Project: ${title}}
           className="group/project"
         >
           <Image
@@ -108,6 +108,8 @@ const Project = ({
 const Projects = () => {
   // Use the 'useSectionInView' hook to track section visibility.
   const { ref } = useSectionInView("Projects", 0.5);
+  
+
 
   // Projects data
   const PROJECTS_DATA = [
@@ -159,7 +161,7 @@ const Projects = () => {
       </SectionHeading>
       <div>
         {PROJECTS_DATA.map((project, i) => (
-          <Project key={`project-${i}`} {...project} />
+          <Project key={project-${i}} {...project} />
         ))}
       </div>
     </section>
