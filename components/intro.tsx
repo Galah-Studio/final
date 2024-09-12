@@ -13,6 +13,8 @@ import { useSectionInView } from "@/lib/hooks";
 // Embedded SVG as a component
 const BirdLogoSVG = () => {
   return (
+    <div className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+
     <svg
       id="a"
       xmlns="http://www.w3.org/2000/svg"
