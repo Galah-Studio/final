@@ -28,6 +28,8 @@ const Project = ({
 }: ProjectProps) => {
   // Create a reference for the project element.
   const projectRef = useRef<HTMLElement>(null);
+    // Use the 'useSectionInView' hook to track section visibility.
+  const { ref } = useSectionInView("Projects");
 
   // Use the useScroll hook to track scroll progress for animations.
   const { scrollYProgress } = useScroll({
@@ -106,8 +108,6 @@ const Project = ({
 
 // Define the Projects component to display a list of projects.
 const Projects = () => {
-  // Use the 'useSectionInView' hook to track section visibility.
-  const { ref } = useSectionInView("Projects", 0.5);
 
   // Projects data
   const PROJECTS_DATA = [
