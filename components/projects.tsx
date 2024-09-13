@@ -107,7 +107,7 @@ const Project = ({
 // Define the Projects component to display a list of projects.
 const Projects = () => {
   // Use the 'useSectionInView' hook to track section visibility.
-  const { ref } = useSectionInView("Projects", 0.5);
+  const { ref } = useSectionInView("Projects");
 
   // Projects data
   const PROJECTS_DATA = [
