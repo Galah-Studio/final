@@ -1,3 +1,5 @@
+// components/abajoraStorySection.tsx
+
 "use client";
 
 // Import necessary dependencies and components.
@@ -8,20 +10,20 @@ import SectionHeading from "./section-heading";
 
 // Define the AbajoraStorySection component.
 const AbajoraStorySection = () => {
-  // Use the useSectionInView custom hook to track when the "About" section is in view.
-  const { ref } = useSectionInView("About");
+  // Use the useSectionInView custom hook to track when the "Story" section is in view.
+  const { ref } = useSectionInView("Story", 0.25);
 
   // Return the AbajoraStorySection, which uses framer-motion for animations.
   return (
     <motion.section
       ref={ref}
-      id="about"
+      id="story"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       className="mb-28 max-w-[45rem] text-center mx-auto leading-8 sm:mb-40 scroll-mt-28"
     >
-      {/* Display the section heading for "About us." */}
+      {/* Display the section heading for "About Us." */}
       <SectionHeading>
         <span className="font-comfortaa text-[#ff2b69]">About Us</span>
       </SectionHeading>
