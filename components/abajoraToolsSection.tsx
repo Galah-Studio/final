@@ -1,22 +1,19 @@
-// components/abajora_toolssection.tsx
+// components/abajoraToolsSection.tsx
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
 import { useSectionInView } from "@/lib/hooks";
-import SectionHeading from "@/components/section-heading"; // Corrected import path
+import SectionHeading from "./section-heading";
 
 const AbajoraToolsSection = () => {
-  const { ref } = useSectionInView("Projects", 0.5);
+  const { ref } = useSectionInView("Tools", 0.25);
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
+    <section ref={ref} id="tools" className="scroll-mt-28 mb-28">
       <SectionHeading className="font-comfortaa text-[#ff2b69]">
-        Our Projects
+        Our Tools
       </SectionHeading>
-      {/* Add your tools section content here */}
+      {/* Tools section content */}
     </section>
   );
 };
