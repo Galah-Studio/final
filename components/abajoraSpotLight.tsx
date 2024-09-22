@@ -1,12 +1,15 @@
 // components/abajoraSpotLight.tsx
 
+"use client";
+
 import Image from 'next/image';
-import { FaInstagram, FaXTwitter } from 'react-icons/fa6';
-import GalahLogo from '@/public/galah_logo.svg'; // Adjust the path to your logo file
+import { useSectionInView } from "@/lib/hooks";
 
 const AbajoraSpotLight = () => {
+  const { ref } = useSectionInView("SpotLight", 0.25);
+
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section ref={ref} id="spotlight" className="relative w-full h-screen overflow-hidden">
       {/* Spotlight Image */}
       <div className="relative w-full h-full">
         <Image
@@ -25,7 +28,6 @@ const AbajoraSpotLight = () => {
           The Title Goes Here
         </h1>
       </div>
-
     </section>
   );
 };
