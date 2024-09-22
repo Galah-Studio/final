@@ -1,8 +1,11 @@
 // components/AbajoraLogos.tsx
+"use client";
 
 import React from 'react';
+import { useSectionInView } from "@/lib/hooks";
 
 const AbajoraLogos = () => {
+  const { ref } = useSectionInView("Clients", 0.25);
   return (
     <div className="flex justify-center space-x-24 items-center mb-16">
       {/* First SVG Logo */}
