@@ -1,13 +1,14 @@
-// Import necessary dependencies and components.
-"use client"; // This comment indicates that this code should run on the client side in Next.js.
+// components/projects.tsx
+
+"use client";
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useSectionInView } from "@/lib/hooks"; // Import custom hook
-import SectionHeading from "./section-heading"; // Import section heading component
+import { useSectionInView } from "@/lib/hooks";
+import SectionHeading from "./section-heading";
 
 // Define the ProjectProps type based on the structure of the projects data.
 type ProjectProps = {
@@ -107,7 +108,7 @@ const Project = ({
 // Define the Projects component to display a list of projects.
 const Projects = () => {
   // Use the 'useSectionInView' hook to track section visibility.
-  const { ref } = useSectionInView("Projects");
+  const { ref } = useSectionInView("Projects", 0.25); // Lowered threshold
 
   // Projects data
   const PROJECTS_DATA = [
@@ -119,37 +120,7 @@ const Projects = () => {
       imageUrl: "/abajora.png",
       projectUrl: "/abajora",
     },
-    {
-      title: "Vivi Water Company Ad Campaign",
-      description:
-        "Executed a compelling ad campaign for Vivi Water Company, featuring meticulously realistic product modeling and stunning renders. Our team leveraged advanced tools to create visually striking content that effectively promoted Vivi's brand.",
-      tags: ["Blender", "AfterEffects", "Photoshop", "Illustrator"],
-      imageUrl: "/vivi.png",
-      projectUrl: "#",
-    },
-    {
-      title: "ARKI Tectonica Celebration Ceremony",
-      description:
-        "Documented a prestigious celebration ceremony for ARKI Tectonica with cinematic precision. Utilizing our high-end cinematic kit, we captured and edited breathtaking visuals that highlighted the event's grandeur and significance.",
-      tags: [
-        "DaVinciResolve",
-        "AfterEffects",
-        "Premiere",
-        "Photoshop",
-        "Videography",
-        "Photography",
-      ],
-      imageUrl: "/arki.png",
-      projectUrl: "#",
-    },
-    {
-      title: "Tiraz Company Brochure Design",
-      description:
-        "Designed a visually appealing brochure for Tiraz Company, from content writing to photo editing and layout design. This project exemplifies our comprehensive approach to creating engaging marketing materials.",
-      tags: ["InDesign", "Photoshop", "Writing", "Illustrator"],
-      imageUrl: "/tiraz.png",
-      projectUrl: "#",
-    },
+    // ... other projects
   ];
 
   return (
