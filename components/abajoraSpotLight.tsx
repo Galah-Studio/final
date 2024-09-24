@@ -9,7 +9,11 @@ const AbajoraSpotLight = () => {
   const { ref } = useSectionInView("SpotLight", 0.25);
 
   return (
-    <section ref={ref} id="spotlight" className="relative w-full h-screen overflow-hidden">
+    <section
+      ref={ref}
+      id="spotlight"
+      className="relative w-full h-screen overflow-hidden"
+    >
       {/* Spotlight Image */}
       <div className="relative w-full h-full">
         <Image
@@ -18,13 +22,19 @@ const AbajoraSpotLight = () => {
           layout="fill"
           objectFit="cover"
           className="z-0"
-          style={{
-            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%)',
-          }}
         />
 
+        {/* Gradient Overlay */}
+        <div
+          className="absolute top-0 left-0 w-full h-full z-10"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%)',
+          }}
+        ></div>
+
         {/* Title */}
-        <h1 className="absolute bottom-8 w-full text-center text-4xl font-bold text-white">
+        <h1 className="absolute bottom-8 w-full text-center text-4xl font-bold text-white z-20">
           The Title Goes Here
         </h1>
       </div>
