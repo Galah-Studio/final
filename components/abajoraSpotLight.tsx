@@ -13,7 +13,7 @@ const AbajoraSpotLight = () => {
       {/* Spotlight Image */}
       <div className="relative w-full h-full">
         <Image
-          src="/vivi_full.png" // Ensure this path is correct
+          src="/abj_full.png" // Ensure this path is correct
           alt="Spotlight"
           layout="fill"
           objectFit="cover"
