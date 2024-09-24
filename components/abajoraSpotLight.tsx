@@ -14,14 +14,15 @@ const AbajoraSpotLight = () => {
       id="spotlight"
       className="relative w-full h-screen overflow-hidden"
     >
-      {/* Spotlight Image */}
+      {/* Spotlight Container */}
       <div className="relative w-full h-full">
+        {/* Image */}
         <Image
           src="/abj_full.png" // Ensure this path is correct
           alt="Spotlight"
           layout="fill"
           objectFit="cover"
-          className="z-0"
+          className="absolute top-0 left-0 w-full h-full z-0"
         />
 
         {/* Gradient Overlay */}
