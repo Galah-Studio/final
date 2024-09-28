@@ -7,15 +7,56 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 import Image from "next/image";
-import { useThemeContext } from "@/context/theme-context";
-import { TwitterTweetEmbed } from "react-twitter-embed";
+import { useEffect } from "react";
 
 const AbajoraStorySection = () => {
   // Use the useSectionInView custom hook to track when the "Story" section is in view.
   const { ref } = useSectionInView("Story", 0.25);
 
-  // Access the current theme to adjust the tweet embed theme.
-  const { theme } = useThemeContext();
+  // Load the Twitter widgets script when the component mounts.
+  useEffect(() => {
+    // Check if the script is already loaded
+    if (window.twttr) {
+      window.twttr.widgets.load();
+    } else {
+      const script = document.createElement("script");
+      script.src = "https://platform.twitter.com/widgets.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    // Function to update the tweet theme
+    const updateTweetTheme = () => {
+      const tweetBlockquote = document.querySelector(".twitter-tweet");
+      const htmlElement = document.documentElement;
+      const isDarkMode = htmlElement.classList.contains("dark");
+      if (tweetBlockquote) {
+        tweetBlockquote.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+        // Re-render the tweet to apply the new theme
+        if (window.twttr && window.twttr.widgets) {
+          window.twttr.widgets.load();
+        }
+      }
+    };
+
+    // Observe changes to the `dark` class on the <html> element
+    const observer = new MutationObserver(() => {
+      updateTweetTheme();
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    // Initial theme update
+    updateTweetTheme();
+
+    // Cleanup function
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   // Return the AbajoraStorySection, which uses framer-motion for animations.
   return (
@@ -45,10 +86,12 @@ const AbajoraStorySection = () => {
 
       {/* Embed Tweet */}
       <div className="mb-6 flex justify-center">
-        <TwitterTweetEmbed
-          tweetId="1717842627586912301"
-          options={{ theme: theme === "light" ? "light" : "dark" }}
-        />
+        <blockquote
+          className="twitter-tweet"
+          data-theme="light"
+        >
+          <a href="https://twitter.com/lubnaAlkhamis/status/1717842627586912301"></a>
+        </blockquote>
       </div>
 
       {/* Second Paragraph */}
@@ -71,7 +114,7 @@ const AbajoraStorySection = () => {
         />
       </div>
 
-      {/* Third Paragraph */}
+      {/* Remaining Paragraphs */}
       <p className="mb-6 font-maven text-left">
         Our talented team approached this project with an unwavering commitment to
         artistry and innovation. We envisioned the logos as elegant lamps,
@@ -80,7 +123,6 @@ const AbajoraStorySection = () => {
         resonated with sophistication and style.
       </p>
 
-      {/* Fourth Paragraph */}
       <p className="mb-6 font-maven text-left">
         To elevate the narrative, we seamlessly integrated dynamic live-action
         footage, enriching the visual storytelling and enhancing audience
@@ -89,7 +131,6 @@ const AbajoraStorySection = () => {
         to immerse themselves in the Abajora experience.
       </p>
 
-      {/* Fifth Paragraph */}
       <p className="mb-6 font-maven text-left">
         The culmination of our efforts resulted in a breathtaking motion graphics
         segment, where diverse styles and techniques harmoniously converge. Each
@@ -98,7 +139,6 @@ const AbajoraStorySection = () => {
         spirit—a podcast that enlightens and inspires.
       </p>
 
-      {/* Sixth Paragraph */}
       <p className="font-maven text-left">
         This project not only showcases the evolution of Abajora’s brand but also
         exemplifies our studio’s dedication to creating high-quality visual
