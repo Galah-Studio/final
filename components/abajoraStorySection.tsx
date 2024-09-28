@@ -8,6 +8,7 @@ import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useTheme } from "next-themes"; // Import useTheme
 
 // TypeScript declaration for window.twttr
 declare global {
@@ -24,50 +25,26 @@ const AbajoraStorySection = () => {
   // Use the useSectionInView custom hook to track when the "Story" section is in view.
   const { ref } = useSectionInView("Story", 0.25);
 
+  // Access the current theme
+  const { theme } = useTheme();
+
   // Load the Twitter widgets script when the component mounts.
   useEffect(() => {
     // Check if the script is already loaded
-    if (typeof window !== "undefined" && window.twttr && window.twttr.widgets) {
-      window.twttr.widgets.load();
-    } else {
+    if (typeof window !== "undefined" && !window.twttr) {
       const script = document.createElement("script");
       script.src = "https://platform.twitter.com/widgets.js";
       script.async = true;
       document.body.appendChild(script);
     }
-
-    // Function to update the tweet theme
-    const updateTweetTheme = () => {
-      const tweetBlockquote = document.querySelector(".twitter-tweet");
-      const htmlElement = document.documentElement;
-      const isDarkMode = htmlElement.classList.contains("dark");
-      if (tweetBlockquote) {
-        tweetBlockquote.setAttribute("data-theme", isDarkMode ? "dark" : "light");
-        // Re-render the tweet to apply the new theme
-        if (window.twttr && window.twttr.widgets) {
-          window.twttr.widgets.load();
-        }
-      }
-    };
-
-    // Observe changes to the `dark` class on the <html> element
-    const observer = new MutationObserver(() => {
-      updateTweetTheme();
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    // Initial theme update
-    updateTweetTheme();
-
-    // Cleanup function
-    return () => {
-      observer.disconnect();
-    };
   }, []);
+
+  // Reload the tweet when the theme changes
+  useEffect(() => {
+    if (window.twttr && window.twttr.widgets) {
+      window.twttr.widgets.load();
+    }
+  }, [theme]);
 
   // Return the AbajoraStorySection, which uses framer-motion for animations.
   return (
@@ -81,11 +58,13 @@ const AbajoraStorySection = () => {
     >
       {/* Section Heading */}
       <SectionHeading>
-        <span className="mt-12 mb-12 font-comfortaa text-[#ff2b69]">About Us</span>
+        <span className="mt-12 mb-12 font-comfortaa text-[#ff2b69] dark:text-[#ff2b69]">
+          About Us
+        </span>
       </SectionHeading>
 
       {/* First Paragraph */}
-      <p className="mb-6 font-maven text-center">
+      <p className="mb-6 font-maven text-center text-black dark:text-white">
         Abajora is not just a podcast; it is a cultural phenomenon that resonates
         throughout Saudi Arabia and the broader Arabic-speaking world. Hosted by
         the remarkable Lubna Al Khamis, she is celebrated for her exceptional
@@ -99,14 +78,14 @@ const AbajoraStorySection = () => {
       <div className="mb-12 mt-12 flex justify-center">
         <blockquote
           className="twitter-tweet"
-          data-theme="light"
+          data-theme={theme === "dark" ? "dark" : "light"}
         >
           <a href="https://twitter.com/lubnaAlkhamis/status/1717842627586912301"></a>
         </blockquote>
       </div>
 
       {/* Second Paragraph */}
-      <p className="mb-6 font-maven text-center">
+      <p className="mb-6 font-maven text-center text-black dark:text-white">
         In our latest collaboration with Abajora, we had the privilege of crafting
         a visually stunning logo reveal video, celebrating the podcast’s new
         identity. This project signifies an important milestone in our ongoing
@@ -121,12 +100,12 @@ const AbajoraStorySection = () => {
           alt="Abajora Project Image"
           width={800}
           height={450}
-          className="rounded-lg shadow-md"
+          className="rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
         />
       </div>
 
       {/* Remaining Paragraphs */}
-      <p className="mb-6 font-maven text-center">
+      <p className="mb-6 font-maven text-center text-black dark:text-white">
         Our talented team approached this project with an unwavering commitment to
         artistry and innovation. We envisioned the logos as elegant lamps,
         symbolizing enlightenment and transformation. Through meticulous 3D
@@ -134,7 +113,7 @@ const AbajoraStorySection = () => {
         resonated with sophistication and style.
       </p>
 
-      <p className="mb-6 font-maven text-center">
+      <p className="mb-6 font-maven text-center text-black dark:text-white">
         To elevate the narrative, we seamlessly integrated dynamic live-action
         footage, enriching the visual storytelling and enhancing audience
         engagement. This integration serves as a bridge that connects the
@@ -142,7 +121,7 @@ const AbajoraStorySection = () => {
         to immerse themselves in the Abajora experience.
       </p>
 
-      <p className="mb-6 font-maven text-center">
+      <p className="mb-6 font-maven text-center text-black dark:text-white">
         The culmination of our efforts resulted in a breathtaking motion graphics
         segment, where diverse styles and techniques harmoniously converge. Each
         carefully curated element reflects our studio’s relentless pursuit of
@@ -150,7 +129,7 @@ const AbajoraStorySection = () => {
         spirit—a podcast that enlightens and inspires.
       </p>
 
-      <p className="font-maven text-center">
+      <p className="font-maven text-center text-black dark:text-white">
         This project not only showcases the evolution of Abajora’s brand but also
         exemplifies our studio’s dedication to creating high-quality visual
         experiences that resonate deeply. The creative collaboration and artistic
