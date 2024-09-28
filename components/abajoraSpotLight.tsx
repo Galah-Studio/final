@@ -4,9 +4,14 @@
 
 import Image from 'next/image';
 import { useSectionInView } from "@/lib/hooks";
+import { useThemeContext } from "@/context/theme-context";
 
 const AbajoraSpotLight = () => {
   const { ref } = useSectionInView("SpotLight", 0.25);
+  const { theme } = useThemeContext();
+
+  // Define gradient based on theme
+  const gradientColor = theme === "light" ? "255, 255, 255" : "0, 0, 0";
 
   return (
     <section
@@ -29,13 +34,16 @@ const AbajoraSpotLight = () => {
         <div
           className="absolute top-0 left-0 w-full h-full z-10"
           style={{
-            background:
-              'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
+            background: `linear-gradient(to bottom, rgba(${gradientColor}, 0) 0%, rgba(${gradientColor}, 1) 100%)`,
           }}
         ></div>
 
         {/* Title */}
-        <h1 className="absolute bottom-8 w-full text-center text-4xl font-comfortaa text-white z-20">
+        <h1
+          className={`absolute bottom-8 w-full text-center text-4xl font-comfortaa z-20 ${
+            theme === "light" ? "text-black" : "text-white"
+          }`}
+        >
           The Title Goes Here
         </h1>
       </div>
