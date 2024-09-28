@@ -3,8 +3,10 @@
 "use client";
 
 import React from 'react';
+import { EXTRA_LINKS, OWNER_NAME } from "@/constants"; // Import OWNER_NAME
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
+import { useSectionInView } from "@/lib/hooks";
 
 
 const AbajoraLogos = () => {
