@@ -81,7 +81,7 @@ const AbajoraStorySection = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      className="mb-28 max-w-3xl mx-auto leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-3xl mx-auto leading-8 sm:mb-40 scroll-mt-28 bg-white dark:bg-black"
     >
       {/* Section Heading */}
       <SectionHeading>
