@@ -68,11 +68,9 @@
     "react-vertical-timeline-component": "^3.6.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
-    "react-instagram-embed": "^1.10.0",
     "react-player": "^2.11.0",
-    "react-iframe": "^1.8.0",
-    "react-embeds": "^1.0.0",
-    "react-twitter-widgets": "^1.10.0"  },
+    "react-iframe": "^1.8.0"
+  },
   "devDependencies": {
     "@types/react-vertical-timeline-component": "^3.3.5"
   },
