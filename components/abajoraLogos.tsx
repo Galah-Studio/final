@@ -4,6 +4,8 @@
 
 import React from 'react';
 import { useSectionInView } from "@/lib/hooks";
+import SectionHeading from "./section-heading";
+
 
 const AbajoraLogos = () => {
   const { ref } = useSectionInView("Clients", 0.25);
