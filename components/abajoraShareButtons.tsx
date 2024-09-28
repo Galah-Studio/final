@@ -21,7 +21,7 @@ const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({
 
   return (
     <div className="w-full flex justify-end mt-8">
-      <div className="flex items-center space-x-4 mr-8">
+      <div className="flex items-center space-x-4 mr-16">
         <a
           href={`https://x.com/share?url=${encodeURIComponent(
             url
