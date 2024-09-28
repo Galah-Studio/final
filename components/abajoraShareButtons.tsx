@@ -18,21 +18,17 @@ const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({
   const { theme } = useThemeContext();
 
   // Define button styles based on the theme
-  const buttonStyles =
-    theme === "light"
-      ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
-      : "bg-gray-700 text-gray-200 hover:bg-gray-600";
 
   return (
     <div className="w-full flex justify-end mt-8">
       <div className="flex items-center space-x-4 mr-8">
         <a
-          href={`https://twitter.com/share?url=${encodeURIComponent(
+          href={`https://x.com/share?url=${encodeURIComponent(
             url
           )}&text=${encodeURIComponent(title)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-200 ${buttonStyles} shadow-md`}
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.1] hover:scale-[1.1] active:scale-95 hover:text-gray-950 transition borderBlack dark:bg-white/10 dark:text-white/60"
         >
           <FaXTwitter size={24} className="text-current" />
         </a>
@@ -40,7 +36,7 @@ const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({
           href={`https://www.instagram.com/?url=${encodeURIComponent(url)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-200 ${buttonStyles} shadow-md`}
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.1] hover:scale-[1.1] active:scale-95 hover:text-gray-950 transition borderBlack dark:bg-white/10 dark:text-white/60"
         >
           <FaInstagram size={24} className="text-current" />
         </a>
