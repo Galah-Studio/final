@@ -1,4 +1,5 @@
 // components/AbajoraLogos.tsx
+
 "use client";
 
 import React from 'react';
@@ -7,9 +8,13 @@ import { useSectionInView } from "@/lib/hooks";
 const AbajoraLogos = () => {
   const { ref } = useSectionInView("Clients", 0.25);
   return (
-    <div className="flex justify-center space-x-44 items-center mt-32 mb-36">
+    <div
+      ref={ref}
+      id="clients"
+      className="flex justify-center space-x-44 items-center mt-32 mb-36 bg-white dark:bg-black transition-colors duration-300"
+    >
       {/* First SVG Logo */}
-      <div className="relative">
+      <div className="relative text-black dark:text-white">
         <svg
           id="a"
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +59,7 @@ const AbajoraLogos = () => {
       </div>
 
       {/* Second SVG Logo */}
-     <div className="relative">
+      <div className="relative text-black dark:text-white">
         <svg
           id="a"
           xmlns="http://www.w3.org/2000/svg"
