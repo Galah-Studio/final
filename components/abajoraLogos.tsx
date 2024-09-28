@@ -7,7 +7,7 @@ import { useSectionInView } from "@/lib/hooks";
 const AbajoraLogos = () => {
   const { ref } = useSectionInView("Clients", 0.25);
   return (
-    <div className="flex justify-center space-x-24 items-center mb-16">
+    <div className="flex justify-center space-x-24 items-center mt-32 mb-32">
       {/* First SVG Logo */}
       <div className="relative">
         <svg
