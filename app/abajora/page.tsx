@@ -24,7 +24,7 @@ export default function AbajoraPage() {
   return (
     <ThemeContextProvider>
       <ActiveSectionContextProvider>
-        <main className="flex flex-col items-center bg-white text-gray-950 dark:bg-black dark:text-gray-50 px-4">
+        <main className="flex flex-col items-center bg-gray-50 text-gray-950 dark:bg-custom-dark dark:text-gray-50 dark:text-opacity-90 px-4">
           {/* Project Header */}
           <AbajoraProjectHeader />
 
