@@ -25,7 +25,7 @@ const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({
 
   return (
     <div className="w-full flex justify-end mt-8">
-      <div className="flex flex-col items-center space-y-4 mr-4">
+      <div className="flex items-center space-x-4 mr-8">
         <a
           href={`https://twitter.com/share?url=${encodeURIComponent(
             url
@@ -34,7 +34,7 @@ const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({
           rel="noopener noreferrer"
           className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-200 ${buttonStyles} shadow-md`}
         >
-          <FaXTwitter size={24} />
+          <FaXTwitter size={24} className="text-current" />
         </a>
         <a
           href={`https://www.instagram.com/?url=${encodeURIComponent(url)}`}
@@ -42,7 +42,7 @@ const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({
           rel="noopener noreferrer"
           className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-200 ${buttonStyles} shadow-md`}
         >
-          <FaInstagram size={24} />
+          <FaInstagram size={24} className="text-current" />
         </a>
       </div>
     </div>
