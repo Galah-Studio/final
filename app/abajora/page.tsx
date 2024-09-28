@@ -45,9 +45,6 @@ export default function AbajoraPage() {
 
           {/* Tools Section */}
           <AbajoraToolsSection />
-
-          {/* Footer */}
-          <Footer />
         </main>
       </ActiveSectionContextProvider>
     </ThemeContextProvider>
