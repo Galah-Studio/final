@@ -37,30 +37,57 @@ const AbajoraStorySection = () => {
               "0 0 80px #ff2b69, 0 0 10px #ff2b69, 0 0 12px #ff2b69",
           }}
         >
-        Abajora is not just a podcast; it is a cultural phenomenon that resonates throughout Saudi Arabia and the broader Arabic-speaking world. Hosted by the remarkable Lubna Al Khamis, she is celebrated for her exceptional storytelling and dedication to enriching Arabic content. Lubna’s approach blends profound narratives with engaging discussions, elevating her audience’s listening experience and reflecting a deep appreciation for the Arabic language and its cultural significance .
-
-        <b className="font-medium">In our latest collaboration with Abajora, we had the privilege of crafting a visually stunning logo reveal video, celebrating the podcast’s new identity. This project signifies an important milestone in our ongoing partnership, building on the creative synergy established in our previous work together.
+          Abajora is not just a podcast; it is a cultural phenomenon that
+          resonates throughout Saudi Arabia and the broader Arabic-speaking
+          world. Hosted by the remarkable Lubna Al Khamis, she is celebrated for
+          her exceptional storytelling and dedication to enriching Arabic
+          content. Lubna’s approach blends profound narratives with engaging
+          discussions, elevating her audience’s listening experience and
+          reflecting a deep appreciation for the Arabic language and its
+          cultural significance.
+        </span>
+        <b className="font-medium">
+          In our latest collaboration with Abajora, we had the privilege of
+          crafting a visually stunning logo reveal video, celebrating the
+          podcast’s new identity. This project signifies an important milestone
+          in our ongoing partnership, building on the creative synergy
+          established in our previous work together.
+        </b>
       </p>
 
       {/* Display another paragraph about the studio's philosophy and approach. */}
       <p className="font-maven text-center">
-        Our talented team approached this project with an unwavering commitment to artistry and innovation. We envisioned the logos as elegant lamps, symbolizing enlightenment and transformation. Through meticulous 3D modeling, we brought these logos to life, ensuring that the reveal resonated with sophistication and style.
+        Our talented team approached this project with an unwavering commitment
+        to artistry and innovation. We envisioned the logos as elegant lamps,
+        symbolizing enlightenment and transformation. Through meticulous 3D
+        modeling, we brought these logos to life, ensuring that the reveal
+        resonated with sophistication and style.
       </p>
 
       <p className="font-maven text-center">
-        To elevate the narrative, we seamlessly integrated dynamic live-action footage, enriching the visual storytelling and enhancing audience engagement. This integration serves as a bridge that connects the podcast’s imaginative essence with its real-world impact, allowing viewers to immerse themselves in the Abajora experience.
+        To elevate the narrative, we seamlessly integrated dynamic live-action
+        footage, enriching the visual storytelling and enhancing audience
+        engagement. This integration serves as a bridge that connects the
+        podcast’s imaginative essence with its real-world impact, allowing
+        viewers to immerse themselves in the Abajora experience.
       </p>
 
       <p className="font-maven text-center">
-        The culmination of our efforts culminated in a breathtaking motion graphics segment, where diverse styles and techniques harmoniously converge. Each carefully curated element reflects our studio’s relentless pursuit of excellence, resulting in a captivating video that encapsulates Abajora’s spirit—a podcast that enlightens and inspires.
+        The culmination of our efforts resulted in a breathtaking motion
+        graphics segment, where diverse styles and techniques harmoniously
+        converge. Each carefully curated element reflects our studio’s
+        relentless pursuit of excellence, resulting in a captivating video that
+        encapsulates Abajora’s spirit—a podcast that enlightens and inspires.
       </p>
 
       <p className="font-maven text-center">
-        This project not only showcases the evolution of Abajora’s brand but also exemplifies our studio’s dedication to creating high-quality visual experiences that resonate deeply. The creative collaboration and artistic exploration throughout this journey have been exhilarating, celebrating the rich narratives that Lubna and her team continue to share with the world.
+        This project not only showcases the evolution of Abajora’s brand but
+        also exemplifies our studio’s dedication to creating high-quality visual
+        experiences that resonate deeply. The creative collaboration and
+        artistic exploration throughout this journey have been exhilarating,
+        celebrating the rich narratives that Lubna and her team continue to
+        share with the world.
       </p>
-
-
-
     </motion.section>
   );
 };
