@@ -10,16 +10,14 @@ const AbajoraLogos = () => {
     <div className="flex justify-center space-x-24 items-center mb-16">
       {/* First SVG Logo */}
       <div className="relative">
-<svg
+        <svg
           id="a"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 386 382.61"
           style={{ width: '150px', height: '150px' }}
         >
           <defs>
-            <style>
-              {`.b{fill:#ffffff;}`}
-            </style>
+            <style>{`.b{fill:#ffffff;}`}</style>
           </defs>
           <path
             className="b"
@@ -64,9 +62,7 @@ const AbajoraLogos = () => {
           style={{ width: '150px', height: '150px' }}
         >
           <defs>
-            <style>
-              {`.b{fill:#ffffff;}`}
-            </style>
+            <style>{`.b{fill:#ffffff;}`}</style>
           </defs>
           <path
             className="b"
