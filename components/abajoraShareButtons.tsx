@@ -10,27 +10,41 @@ interface ShareButtonsProps {
   imageUrl: string;
 }
 
-const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({ title, url, imageUrl }) => {
+const AbajoraShareButtons: React.FC<ShareButtonsProps> = ({
+  title,
+  url,
+  imageUrl,
+}) => {
   const { theme } = useThemeContext();
 
+  // Define button styles based on the theme
+  const buttonStyles =
+    theme === "light"
+      ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
+      : "bg-gray-700 text-gray-200 hover:bg-gray-600";
+
   return (
-    <div className="fixed right-4 bottom-20 flex flex-col items-center space-y-4">
-      <a
-        href={`https://twitter.com/share?url=${url}&text=${title}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`w-12 h-12 flex items-center justify-center rounded-full ${theme === "light" ? "bg-white text-black" : "bg-black text-white"} shadow-md`}
-      >
-        <FaXTwitter size={24} />
-      </a>
-      <a
-        href={`https://www.instagram.com/?url=${url}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`w-12 h-12 flex items-center justify-center rounded-full ${theme === "light" ? "bg-white text-black" : "bg-black text-white"} shadow-md`}
-      >
-        <FaInstagram size={24} />
-      </a>
+    <div className="w-full flex justify-end mt-8">
+      <div className="flex flex-col items-center space-y-4 mr-4">
+        <a
+          href={`https://twitter.com/share?url=${encodeURIComponent(
+            url
+          )}&text=${encodeURIComponent(title)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-200 ${buttonStyles} shadow-md`}
+        >
+          <FaXTwitter size={24} />
+        </a>
+        <a
+          href={`https://www.instagram.com/?url=${encodeURIComponent(url)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-200 ${buttonStyles} shadow-md`}
+        >
+          <FaInstagram size={24} />
+        </a>
+      </div>
     </div>
   );
 };
