@@ -30,12 +30,12 @@ const AbajoraSpotLight = () => {
           className="absolute top-0 left-0 w-full h-full z-10"
           style={{
             background:
-              'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%)',
+              'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
           }}
         ></div>
 
         {/* Title */}
-        <h1 className="absolute bottom-8 w-full text-center text-4xl font-bold text-white z-20">
+        <h1 className="absolute bottom-8 w-full text-center text-4xl font-comfortaa text-white z-20">
           The Title Goes Here
         </h1>
       </div>
