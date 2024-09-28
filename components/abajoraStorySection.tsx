@@ -81,11 +81,11 @@ const AbajoraStorySection = () => {
     >
       {/* Section Heading */}
       <SectionHeading>
-        <span className="font-comfortaa text-[#ff2b69]">About Us</span>
+        <span className="mt-12 mb-12 font-comfortaa text-[#ff2b69]">About Us</span>
       </SectionHeading>
 
       {/* First Paragraph */}
-      <p className="mb-6 font-maven text-left">
+      <p className="mb-6 font-maven text-center">
         Abajora is not just a podcast; it is a cultural phenomenon that resonates
         throughout Saudi Arabia and the broader Arabic-speaking world. Hosted by
         the remarkable Lubna Al Khamis, she is celebrated for her exceptional
@@ -96,7 +96,7 @@ const AbajoraStorySection = () => {
       </p>
 
       {/* Embed Tweet */}
-      <div className="mb-6 flex justify-center">
+      <div className="mb-12 mt-12 flex justify-center">
         <blockquote
           className="twitter-tweet"
           data-theme="light"
@@ -106,7 +106,7 @@ const AbajoraStorySection = () => {
       </div>
 
       {/* Second Paragraph */}
-      <p className="mb-6 font-maven text-left">
+      <p className="mb-6 font-maven text-center">
         In our latest collaboration with Abajora, we had the privilege of crafting
         a visually stunning logo reveal video, celebrating the podcast’s new
         identity. This project signifies an important milestone in our ongoing
@@ -115,7 +115,7 @@ const AbajoraStorySection = () => {
       </p>
 
       {/* Embed Image */}
-      <div className="mb-6 flex justify-center">
+      <div className="mt-12 mb-12 flex justify-center">
         <Image
           src="/abajora/abj_01.png"
           alt="Abajora Project Image"
@@ -126,7 +126,7 @@ const AbajoraStorySection = () => {
       </div>
 
       {/* Remaining Paragraphs */}
-      <p className="mb-6 font-maven text-left">
+      <p className="mb-6 font-maven text-center">
         Our talented team approached this project with an unwavering commitment to
         artistry and innovation. We envisioned the logos as elegant lamps,
         symbolizing enlightenment and transformation. Through meticulous 3D
@@ -134,7 +134,7 @@ const AbajoraStorySection = () => {
         resonated with sophistication and style.
       </p>
 
-      <p className="mb-6 font-maven text-left">
+      <p className="mb-6 font-maven text-center">
         To elevate the narrative, we seamlessly integrated dynamic live-action
         footage, enriching the visual storytelling and enhancing audience
         engagement. This integration serves as a bridge that connects the
@@ -142,7 +142,7 @@ const AbajoraStorySection = () => {
         to immerse themselves in the Abajora experience.
       </p>
 
-      <p className="mb-6 font-maven text-left">
+      <p className="mb-6 font-maven text-center">
         The culmination of our efforts resulted in a breathtaking motion graphics
         segment, where diverse styles and techniques harmoniously converge. Each
         carefully curated element reflects our studio’s relentless pursuit of
@@ -150,7 +150,7 @@ const AbajoraStorySection = () => {
         spirit—a podcast that enlightens and inspires.
       </p>
 
-      <p className="font-maven text-left">
+      <p className="font-maven text-center">
         This project not only showcases the evolution of Abajora’s brand but also
         exemplifies our studio’s dedication to creating high-quality visual
         experiences that resonate deeply. The creative collaboration and artistic
