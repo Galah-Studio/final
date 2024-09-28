@@ -9,6 +9,17 @@ import SectionHeading from "./section-heading";
 import Image from "next/image";
 import { useEffect } from "react";
 
+// TypeScript declaration for window.twttr
+declare global {
+  interface Window {
+    twttr?: {
+      widgets: {
+        load: () => void;
+      };
+    };
+  }
+}
+
 const AbajoraStorySection = () => {
   // Use the useSectionInView custom hook to track when the "Story" section is in view.
   const { ref } = useSectionInView("Story", 0.25);
@@ -16,7 +27,7 @@ const AbajoraStorySection = () => {
   // Load the Twitter widgets script when the component mounts.
   useEffect(() => {
     // Check if the script is already loaded
-    if (window.twttr) {
+    if (typeof window !== "undefined" && window.twttr && window.twttr.widgets) {
       window.twttr.widgets.load();
     } else {
       const script = document.createElement("script");
