@@ -1,4 +1,4 @@
-// app/abajora.tsx
+// app/abajora/page.tsx
 
 "use client";
 
@@ -24,7 +24,7 @@ export default function AbajoraPage() {
   return (
     <ThemeContextProvider>
       <ActiveSectionContextProvider>
-        <main className="flex flex-col items-center bg-custom-dark text-white px-4">
+        <main className="flex flex-col items-center bg-white text-gray-950 dark:bg-black dark:text-gray-50 px-4">
           {/* Project Header */}
           <AbajoraProjectHeader />
 
