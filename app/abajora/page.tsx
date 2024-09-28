@@ -1,17 +1,20 @@
+// app/abajora/page.tsx
+
 "use client";
+
+import { ActiveSectionContextProvider } from "@/context/active-section-context";
+import ThemeContextProvider from "@/context/theme-context";
 
 import AbajoraProjectHeader from "@/components/abajoraProjectHeader";
 import AbajoraSpotLight from "@/components/abajoraSpotLight";
+import AbajoraLogos from "@/components/abajoraLogos";
+import AbajoraShareButtons from "@/components/abajoraShareButtons";
 import AbajoraStorySection from "@/components/abajoraStorySection";
 import AbajoraCraftSection from "@/components/abajoraCraftSection";
 import AbajoraToolsSection from "@/components/abajoraToolsSection";
-import AbajoraShareButtons from "@/components/abajoraShareButtons";
-import AbajoraLogos from "@/components/abajoraLogos";
-import { useSectionInView } from "@/lib/hooks"; // Assuming this hook returns a ref
+import Footer from "@/components/footer";
 
-// This is the main component for the Abajora page.
 export default function AbajoraPage() {
-  // Define the props to pass to the ShareButtons component
   const shareProps = {
     title: "Abajora Project",
     url: "https://Galah.tv/abajora",
@@ -19,27 +22,32 @@ export default function AbajoraPage() {
   };
 
   return (
-    <main className="flex flex-col items-center bg-custom-dark text-white px-4">
-      {/* Project Header */}
-      <AbajoraProjectHeader />
+    <ThemeContextProvider>
+      <ActiveSectionContextProvider>
+        <main className="flex flex-col items-center bg-custom-dark text-white px-4">
+          {/* Project Header */}
+          <AbajoraProjectHeader />
 
-      {/* Spotlight Section */}
-      <AbajoraSpotLight />
+          {/* Spotlight Section */}
+          <AbajoraSpotLight />
 
-      {/* Clients Logos Section */}
-      <AbajoraLogos />
+          {/* Clients Logos Section */}
+          <AbajoraLogos />
 
-      {/* Share Buttons */}
-      <AbajoraShareButtons {...shareProps} />
+          {/* Share Buttons */}
+          <AbajoraShareButtons {...shareProps} />
 
-      {/* Story Section */}
-      <AbajoraStorySection />
+          {/* Story Section */}
+          <AbajoraStorySection />
 
-      {/* Craft Section */}
-      <AbajoraCraftSection />
+          {/* Craft Section */}
+          <AbajoraCraftSection />
 
-      {/* Tools Section */}
-      <AbajoraToolsSection />
-    </main>
+          {/* Tools Section */}
+          <AbajoraToolsSection />
+
+        </main>
+      </ActiveSectionContextProvider>
+    </ThemeContextProvider>
   );
 }
