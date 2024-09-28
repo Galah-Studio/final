@@ -22,7 +22,7 @@ const AbajoraLogos = () => {
           style={{ width: '150px', height: '150px' }}
         >
           <defs>
-            <style>{`.b{fill:#ffffff;}`}</style>
+            <style>{`.b{fill: currentColor;}`}</style>
           </defs>
           <path
             className="b"
@@ -67,7 +67,7 @@ const AbajoraLogos = () => {
           style={{ width: '150px', height: '150px' }}
         >
           <defs>
-            <style>{`.b{fill:#ffffff;}`}</style>
+            <style>{`.b{fill: currentColor;}`}</style>
           </defs>
           <path
             className="b"
