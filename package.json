@@ -72,8 +72,7 @@
     "react-player": "^2.11.0",
     "react-iframe": "^1.8.0",
     "react-embeds": "^1.0.0",
-    "react-twitter-embed": "^3.0.3"
-  },
+    "react-twitter-widgets": "^1.10.0"  },
   "devDependencies": {
     "@types/react-vertical-timeline-component": "^3.3.5"
   },
