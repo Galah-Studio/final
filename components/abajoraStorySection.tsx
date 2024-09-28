@@ -8,7 +8,6 @@ import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 import Image from "next/image";
 import { useEffect } from "react";
-import { useTheme } from "next-themes"; // Import useTheme
 
 // TypeScript declaration for window.twttr
 declare global {
@@ -25,26 +24,54 @@ const AbajoraStorySection = () => {
   // Use the useSectionInView custom hook to track when the "Story" section is in view.
   const { ref } = useSectionInView("Story", 0.25);
 
-  // Access the current theme
-  const { theme } = useTheme();
-
   // Load the Twitter widgets script when the component mounts.
   useEffect(() => {
-    // Check if the script is already loaded
-    if (typeof window !== "undefined" && !window.twttr) {
-      const script = document.createElement("script");
-      script.src = "https://platform.twitter.com/widgets.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
+    // Function to load or reload the tweet
+    const loadTweet = () => {
+      // Check if the script is already loaded
+      if (window.twttr && window.twttr.widgets) {
+        window.twttr.widgets.load();
+      } else {
+        const script = document.createElement("script");
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        script.onload = () => {
+          window.twttr?.widgets.load();
+        };
+        document.body.appendChild(script);
+      }
+    };
 
-  // Reload the tweet when the theme changes
-  useEffect(() => {
-    if (window.twttr && window.twttr.widgets) {
-      window.twttr.widgets.load();
-    }
-  }, [theme]);
+    // Function to update the tweet theme
+    const updateTweetTheme = () => {
+      const tweetBlockquote = document.querySelector(".twitter-tweet");
+      const htmlElement = document.documentElement;
+      const isDarkMode = htmlElement.classList.contains("dark");
+      if (tweetBlockquote) {
+        tweetBlockquote.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+        // Re-render the tweet to apply the new theme
+        window.twttr?.widgets.load();
+      }
+    };
+
+    // Load the tweet initially
+    loadTweet();
+
+    // Observe changes to the `class` attribute on the `<html>` element
+    const observer = new MutationObserver(() => {
+      updateTweetTheme();
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    // Cleanup function
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   // Return the AbajoraStorySection, which uses framer-motion for animations.
   return (
@@ -58,9 +85,7 @@ const AbajoraStorySection = () => {
     >
       {/* Section Heading */}
       <SectionHeading>
-        <span className="mt-12 mb-12 font-comfortaa text-[#ff2b69] dark:text-[#ff2b69]">
-          About Us
-        </span>
+        <span className="mt-12 mb-12 font-comfortaa text-[#ff2b69]">About Us</span>
       </SectionHeading>
 
       {/* First Paragraph */}
@@ -78,7 +103,7 @@ const AbajoraStorySection = () => {
       <div className="mb-12 mt-12 flex justify-center">
         <blockquote
           className="twitter-tweet"
-          data-theme={theme === "dark" ? "dark" : "light"}
+          data-theme="light"
         >
           <a href="https://twitter.com/lubnaAlkhamis/status/1717842627586912301"></a>
         </blockquote>
