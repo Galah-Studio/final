@@ -1,4 +1,4 @@
-// app/abajora/page.tsx
+// app/abajora.tsx
 
 "use client";
 
@@ -46,6 +46,8 @@ export default function AbajoraPage() {
           {/* Tools Section */}
           <AbajoraToolsSection />
 
+          {/* Footer */}
+          <Footer />
         </main>
       </ActiveSectionContextProvider>
     </ThemeContextProvider>
