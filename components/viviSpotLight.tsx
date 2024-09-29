@@ -18,7 +18,7 @@ const viviSpotLight = () => {
       <div className="relative w-full h-full">
         {/* Image */}
         <Image
-          src="/abj_full.png" // Ensure this path is correct
+          src="/vivi_full.png" // Ensure this path is correct
           alt="Spotlight"
           layout="fill"
           objectFit="cover"
