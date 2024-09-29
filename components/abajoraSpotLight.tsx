@@ -27,12 +27,12 @@ const AbajoraSpotLight = () => {
 
         {/* Gradient Overlay */}
         <div
-          className="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-white dark:to-black"
+          className="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-gray-50 dark:to-black"
         ></div>
 
         {/* Title */}
         <h1
-          className="absolute bottom-8 w-full text-center text-4xl font-comfortaa z-20 text-black dark:text-white"
+          className="absolute bottom-8 w-full text-center text-4xl font-comfortaa z-20 text-[#ff2b69]"
         >
           The Title Goes Here
         </h1>
