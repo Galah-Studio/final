@@ -126,7 +126,7 @@ const Projects = () => {
         "Executed a compelling ad campaign for Vivi Water Company, featuring meticulously realistic product modeling and stunning renders. Our team leveraged advanced tools to create visually striking content that effectively promoted Vivi's brand.",
       tags: ["Blender", "AfterEffects", "Photoshop", "Illustrator"],
       imageUrl: "/vivi.png",
-      projectUrl: "#",
+      projectUrl: "/vivi",
     },
     {
       title: "ARKI Tectonica Celebration Ceremony",
