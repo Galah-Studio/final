@@ -13,7 +13,7 @@ const AbajoraLogos = () => {
     <div
       ref={ref}
       id="clients"
-      className="flex justify-center space-x-44 items-center mt-32 mb-36 bg-white dark:bg-black transition-colors duration-300"
+      className="flex justify-center space-x-44 items-center mt-32 mb-36 bg-gray-50 dark:bg-black transition-colors duration-300"
     >
       {/* First SVG Logo */}
       <div className="relative text-black dark:text-white">
