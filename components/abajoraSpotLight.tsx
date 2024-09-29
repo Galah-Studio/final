@@ -22,12 +22,13 @@ const AbajoraSpotLight = () => {
           alt="Spotlight"
           layout="fill"
           objectFit="cover"
-          className="absolute top-0 left-0 w-full h-full z-0"
+          priority={true}
+          className="absolute inset-0 w-full h-full z-0"
         />
 
         {/* Gradient Overlay */}
         <div
-          className="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-gray-50 dark:to-black"
+          className="absolute inset-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-gray-50 dark:to-black"
         ></div>
 
         {/* Title */}
