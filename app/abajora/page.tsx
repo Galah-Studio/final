@@ -18,7 +18,7 @@ export default function AbajoraPage() {
   const shareProps = {
     title: "Abajora Project",
     url: "https://Galah.tv/abajora",
-    imageUrl: "https://Galah.tv/_next/image?url=%2Fvivi_full.png",
+    imageUrl: "https://Galah.tv/_next/image?url=%2Fabj_full.png",
   };
 
   return (
