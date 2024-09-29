@@ -14,7 +14,7 @@ const AbajoraCraftSection = () => {
     <section
       ref={ref}
       id="craft"
-      className="bg-gray-50 text-black bg-bg-black text-white"
+      className="bg-gray-50 dark:bg-black text-black bg-bg-black text-white"
     >
       <div className="max-w-4xl mx-auto">
         <SectionHeading>
