@@ -14,7 +14,7 @@ const AbajoraCraftSection = () => {
     <section
       ref={ref}
       id="craft"
-      className={`p-8 ${theme === "light" ? "bg-gray-100 text-black" : "bg-custom-dark text-white"}`}
+      className="bg-gray-50 text-black bg-custom-dark text-white"
     >
       <div className="max-w-4xl mx-auto">
         <SectionHeading>
