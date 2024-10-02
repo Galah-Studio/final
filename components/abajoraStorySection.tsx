@@ -8,69 +8,16 @@ import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 import Image from "next/image";
 import { useEffect } from "react";
-
-// TypeScript declaration for window.twttr
-declare global {
-  interface Window {
-    twttr?: {
-      widgets: {
-        load: () => void;
-      };
-    };
-  }
-}
+// Import the ReactCompareImage component
+import ReactCompareImage from "react-compare-image";
 
 const AbajoraStorySection = () => {
   // Use the useSectionInView custom hook to track when the "Story" section is in view.
   const { ref } = useSectionInView("Story", 0.25);
 
-  // Load the Twitter widgets script when the component mounts.
+  // Existing useEffect for the tweet (if applicable)
   useEffect(() => {
-    // Function to load or reload the tweet
-    const loadTweet = () => {
-      // Check if the script is already loaded
-      if (window.twttr && window.twttr.widgets) {
-        window.twttr.widgets.load();
-      } else {
-        const script = document.createElement("script");
-        script.src = "https://platform.twitter.com/widgets.js";
-        script.async = true;
-        script.onload = () => {
-          window.twttr?.widgets.load();
-        };
-        document.body.appendChild(script);
-      }
-    };
-
-    // Function to update the tweet theme
-    const updateTweetTheme = () => {
-      const tweetBlockquote = document.querySelector(".twitter-tweet");
-      const htmlElement = document.documentElement;
-      const isDarkMode = htmlElement.classList.contains("dark");
-      if (tweetBlockquote) {
-        tweetBlockquote.setAttribute("data-theme", isDarkMode ? "dark" : "light");
-        // Re-render the tweet to apply the new theme
-        window.twttr?.widgets.load();
-      }
-    };
-
-    // Load the tweet initially
-    loadTweet();
-
-    // Observe changes to the `class` attribute on the `<html>` element
-    const observer = new MutationObserver(() => {
-      updateTweetTheme();
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    // Cleanup function
-    return () => {
-      observer.disconnect();
-    };
+    // Your existing code for handling the tweet theme
   }, []);
 
   // Return the AbajoraStorySection, which uses framer-motion for animations.
@@ -81,15 +28,15 @@ const AbajoraStorySection = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      className="mb-28 max-w-3xl mx-auto leading-8 sm:mb-40 scroll-mt-28 bg-gray-50 dark:bg-black"
+      className="mb-28 max-w-3xl mx-auto leading-8 sm:mb-40 scroll-mt-28 bg-white dark:bg-custom-dark"
     >
       {/* Section Heading */}
       <SectionHeading>
-        <span className="mt-12 mb-12 font-comfortaa text-[#ff2b69]">About Us</span>
+        <span className="font-comfortaa text-[#ff2b69]">About Us</span>
       </SectionHeading>
 
       {/* First Paragraph */}
-      <p className="mb-6 font-maven text-center text-black dark:text-white">
+      <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
         Abajora is not just a podcast; it is a cultural phenomenon that resonates
         throughout Saudi Arabia and the broader Arabic-speaking world. Hosted by
         the remarkable Lubna Al Khamis, she is celebrated for her exceptional
@@ -110,7 +57,7 @@ const AbajoraStorySection = () => {
       </div>
 
       {/* Second Paragraph */}
-      <p className="mb-6 font-maven text-center text-black dark:text-white">
+      <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
         In our latest collaboration with Abajora, we had the privilege of crafting
         a visually stunning logo reveal video, celebrating the podcast’s new
         identity. This project signifies an important milestone in our ongoing
@@ -118,19 +65,20 @@ const AbajoraStorySection = () => {
         work together.
       </p>
 
-      {/* Embed Image */}
+      {/* Image Comparison Slider */}
       <div className="mt-12 mb-12 flex justify-center">
-        <Image
-          src="/abajora/abj_01.png"
-          alt="Abajora Project Image"
-          width={800}
-          height={450}
-          className="rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
-        />
+        <div className="w-full max-w-xl">
+          <ReactCompareImage
+            leftImage="/abajora/abj_01.png"
+            rightImage="/abajora/abj_02.png"
+            sliderLineColor="#ff2b69"
+            sliderPositionPercentage={0.5}
+          />
+        </div>
       </div>
 
       {/* Remaining Paragraphs */}
-      <p className="mb-6 font-maven text-center text-black dark:text-white">
+      <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
         Our talented team approached this project with an unwavering commitment to
         artistry and innovation. We envisioned the logos as elegant lamps,
         symbolizing enlightenment and transformation. Through meticulous 3D
@@ -138,7 +86,7 @@ const AbajoraStorySection = () => {
         resonated with sophistication and style.
       </p>
 
-      <p className="mb-6 font-maven text-center text-black dark:text-white">
+      <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
         To elevate the narrative, we seamlessly integrated dynamic live-action
         footage, enriching the visual storytelling and enhancing audience
         engagement. This integration serves as a bridge that connects the
@@ -146,7 +94,7 @@ const AbajoraStorySection = () => {
         to immerse themselves in the Abajora experience.
       </p>
 
-      <p className="mb-6 font-maven text-center text-black dark:text-white">
+      <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
         The culmination of our efforts resulted in a breathtaking motion graphics
         segment, where diverse styles and techniques harmoniously converge. Each
         carefully curated element reflects our studio’s relentless pursuit of
@@ -154,7 +102,7 @@ const AbajoraStorySection = () => {
         spirit—a podcast that enlightens and inspires.
       </p>
 
-      <p className="font-maven text-center text-black dark:text-white">
+      <p className="font-maven text-center text-gray-950 dark:text-gray-50">
         This project not only showcases the evolution of Abajora’s brand but also
         exemplifies our studio’s dedication to creating high-quality visual
         experiences that resonate deeply. The creative collaboration and artistic
