@@ -70,6 +70,7 @@
     "typescript": "5.2.2",
     "react-player": "^2.11.0",
     "react-iframe": "^1.8.0"
+    "react-compare-image": "^2.0.3"
   },
   "devDependencies": {
     "@types/react-vertical-timeline-component": "^3.3.5"
