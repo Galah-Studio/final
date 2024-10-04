@@ -92,6 +92,17 @@ const AbajoraCraftSection = () => {
   ];
 
   return (
+    <section
+      ref={ref}
+      id="craft"
+      className="scroll-mt-28 mb-28 bg-gray-50 dark:bg-custom-dark"
+    >
+      <div>
+        {CRAFT_DATA.map((item, i) => (
+          <CraftBox key={`craft-${i}`} {...item} isEven={i % 2 !== 0} />
+        ))}
+      </div>
+    </section>
   );
 };
 
