@@ -39,8 +39,8 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
         <div
           className={`pt-4 pb-7 px-5 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${
             isEven
-              ? "sm:pl-10 sm:mr-[18rem] items-end text-right"
-              : "sm:pr-10 sm:ml-[18rem] items-start text-left"
+              ? "sm:pr-10 sm:ml-[18rem] items-start text-left"
+              : "sm:pl-10 sm:mr-[18rem] items-end text-right"
           }`}
         >
           <p className="leading-relaxed text-gray-700 dark:text-white/70 font-maven">
@@ -50,7 +50,7 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
 
         <div
           className={`absolute top-0 bottom-0 hidden sm:block ${
-            isEven ? "-left-40" : "-right-40"
+            isEven ? "-right-40" : "-left-40"
           } w-[28.25rem]`}
         >
           <Image
@@ -100,7 +100,7 @@ const AbajoraCraftSection = () => {
     >
       <div>
         {CRAFT_DATA.map((item, i) => (
-          <CraftBox key={`craft-${i}`} {...item} isEven={i % 2 !== 0} />
+          <CraftBox key={`craft-${i}`} {...item} isEven={i % 2 === 0} />
         ))}
       </div>
     </section>
