@@ -9,12 +9,9 @@ import Image from "next/image";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 
-type CraftBoxData = {
+type CraftBoxProps = {
   description: string;
   imageUrl: string;
-};
-
-type CraftBoxProps = CraftBoxData & {
   isEven: boolean;
 };
 
@@ -72,7 +69,7 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
 const AbajoraCraftSection = () => {
   const { ref } = useSectionInView("Craft", 0.25);
 
-  const CRAFT_DATA: CraftBoxData[] = [
+  const CRAFT_DATA = [
     {
       description:
         "The bed lamps designs showcase the artistry and creativity involved in its creation. The smooth, flowing lines evoke a sense of elegance, while the soft glow creates an inviting atmosphere. Behind the scenes, our team utilized advanced techniques in modeling and rendering to achieve a lifelike appearance. The careful attention to detail in the texture and lighting helps the lamp not only look realistic but also resonate emotionally with viewers. This combination of artistry and technical skill enhances the visual narrative of the logo reveal, reinforcing the deep connection between the Abajora brand and its dedicated listeners.",
@@ -103,12 +100,7 @@ const AbajoraCraftSection = () => {
     >
       <div>
         {CRAFT_DATA.map((item, i) => (
-          <CraftBox
-            key={`craft-${i}`}
-            description={item.description}
-            imageUrl={item.imageUrl}
-            isEven={i % 2 === 0}
-          />
+          <CraftBox key={`craft-${i}`} {...item} isEven={i % 2 === 0} />
         ))}
       </div>
     </section>
