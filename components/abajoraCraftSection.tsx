@@ -12,9 +12,10 @@ import SectionHeading from "./section-heading";
 type CraftBoxProps = {
   description: string;
   imageUrl: string;
+  isEven: boolean;
 };
 
-const CraftBox = ({ description, imageUrl }: CraftBoxProps & { isEven: boolean }) => {
+const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
   const boxRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -25,8 +26,6 @@ const CraftBox = ({ description, imageUrl }: CraftBoxProps & { isEven: boolean }
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
 
-  const isEven = (boxRef.current?.dataset.index ?? 0) % 2 === 0;
-
   return (
     <motion.article
       style={{
@@ -34,7 +33,6 @@ const CraftBox = ({ description, imageUrl }: CraftBoxProps & { isEven: boolean }
         opacity: opacityProgress,
       }}
       ref={boxRef}
-      data-index={isEven ? 0 : 1}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <div className="bg-gray-100 max-w-[42rem] sm:group-even:pl-8 border border-black/5 overflow-hidden sm:pr-8 relative sm:min-h-[28rem] rounded-lg transition dark:bg-white/10">
@@ -102,7 +100,12 @@ const AbajoraCraftSection = () => {
     >
       <div>
         {CRAFT_DATA.map((item, i) => (
-          <CraftBox key={`craft-${i}`} {...item} isEven={i % 2 === 0} />
+          <CraftBox
+            key={`craft-${i}`}
+            description={item.description}
+            imageUrl={item.imageUrl}
+            isEven={i % 2 === 0}
+          />
         ))}
       </div>
     </section>
