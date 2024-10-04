@@ -12,10 +12,9 @@ import SectionHeading from "./section-heading";
 type CraftBoxProps = {
   description: string;
   imageUrl: string;
-  isEven: boolean;
 };
 
-const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
+const CraftBox = ({ description, imageUrl }: CraftBoxProps & { isEven: boolean }) => {
   const boxRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -26,6 +25,8 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
 
+  const isEven = (boxRef.current?.dataset.index ?? 0) % 2 === 0;
+
   return (
     <motion.article
       style={{
@@ -33,6 +34,7 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
         opacity: opacityProgress,
       }}
       ref={boxRef}
+      data-index={isEven ? 0 : 1}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <div className="bg-gray-100 max-w-[42rem] sm:group-even:pl-8 border border-black/5 overflow-hidden sm:pr-8 relative sm:min-h-[28rem] rounded-lg transition dark:bg-white/10">
@@ -69,8 +71,27 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
 const AbajoraCraftSection = () => {
   const { ref } = useSectionInView("Craft", 0.25);
 
-  const CRAFT_DATA = [
-    // ... your data ...
+  const CRAFT_DATA: CraftBoxProps[] = [
+    {
+      description:
+        "The bed lamps designs showcase the artistry and creativity involved in its creation. The smooth, flowing lines evoke a sense of elegance, while the soft glow creates an inviting atmosphere. Behind the scenes, our team utilized advanced techniques in modeling and rendering to achieve a lifelike appearance. The careful attention to detail in the texture and lighting helps the lamp not only look realistic but also resonate emotionally with viewers. This combination of artistry and technical skill enhances the visual narrative of the logo reveal, reinforcing the deep connection between the Abajora brand and its dedicated listeners.",
+      imageUrl: "/abajora/abj_03.png",
+    },
+    {
+      description:
+        "To elevate the narrative, we seamlessly integrated dynamic live-action footage, enriching the visual storytelling and enhancing audience engagement. This integration serves as a bridge that connects the podcast’s imaginative essence with its real-world impact, allowing viewers to immerse themselves in the Abajora experience.",
+      imageUrl: "/abajora/abj_04.png",
+    },
+    {
+      description:
+        "The culmination of our efforts resulted in a breathtaking motion graphics segment, where diverse styles and techniques harmoniously converge. Each carefully curated element reflects our studio’s relentless pursuit of excellence, resulting in a captivating video that encapsulates Abajora’s spirit—a podcast that enlightens and inspires.",
+      imageUrl: "/abajora/abj_05.png",
+    },
+    {
+      description:
+        "This project not only showcases the evolution of Abajora’s brand but also exemplifies our studio’s dedication to creating high-quality visual experiences that resonate deeply. The creative collaboration and artistic exploration throughout this journey have been exhilarating, celebrating the rich narratives that Lubna and her team continue to share with the world.",
+      imageUrl: "/abajora/abj_06.png",
+    },
   ];
 
   return (
