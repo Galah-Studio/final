@@ -34,13 +34,13 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
       ref={boxRef}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <div className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden relative sm:min-h-[28rem] rounded-lg transition dark:bg-white/10">
+      <div className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden relative rounded-lg transition dark:bg-white/10">
         {/* Text */}
         <div
-          className={`pt-4 pb-7 px-5 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${
+          className={`pt-10 pb-10 px-5 sm:max-w-[50%] flex flex-col h-full ${
             isEven
-              ? "sm:pr-10 sm:ml-[18rem] items-end text-right"
-              : "sm:pl-10 sm:mr-[18rem] items-start text-left"
+              ? "sm:pr-10 sm:mr-[20rem] items-end text-right"
+              : "sm:pl-10 sm:ml-[20rem] items-start text-left"
           }`}
         >
           <p className="leading-relaxed text-gray-700 dark:text-white/70 font-maven">
@@ -52,7 +52,7 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
         <div
           className={`absolute top-0 bottom-0 hidden sm:block ${
             isEven ? "-left-40" : "-right-40"
-          } w-[28.25rem]`}
+          } w-[20rem]`}
         >
           <Image
             src={imageUrl}
