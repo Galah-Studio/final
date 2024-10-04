@@ -9,14 +9,12 @@ import Image from "next/image";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 
-// Define the CraftBoxProps type based on the structure of the craft data.
 type CraftBoxProps = {
   description: string;
   imageUrl: string;
   isEven: boolean;
 };
 
-// Define the CraftBox component for displaying individual boxes.
 const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
   const boxRef = useRef<HTMLElement>(null);
 
@@ -35,32 +33,31 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
         opacity: opacityProgress,
       }}
       ref={boxRef}
-      className="group mb-3 sm:mb-8 last:mb-0 font-maven"
+      className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <div className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden relative rounded-lg transition dark:bg-white/10">
-        {/* Text */}
+      <div className="bg-gray-100 max-w-[42rem] sm:group-even:pl-8 border border-black/5 overflow-hidden sm:pr-8 relative sm:min-h-[28rem] rounded-lg transition dark:bg-white/10">
         <div
-          className={`pt-4 pb-7 px-5 sm:px-10 flex flex-col h-full sm:max-w-[50%] ${
-            isEven ? "sm:pr-8 sm:items-start text-left sm:ml-[18rem]" : "sm:pl-8 sm:items-end text-right sm:mr-[18rem]"
+          className={`pt-4 pb-7 px-5 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${
+            isEven
+              ? "sm:pl-10 sm:mr-[18rem] items-end text-right"
+              : "sm:pr-10 sm:ml-[18rem] items-start text-left"
           }`}
         >
-          <p className="leading-relaxed text-gray-700 dark:text-white/70">
+          <p className="leading-relaxed text-gray-700 dark:text-white/70 font-maven">
             {description}
           </p>
         </div>
 
-        {/* Image */}
         <div
-          className={`absolute top-0 ${
-            isEven ? "-right-40" : "-left-40"
-          } w-[28.25rem] h-full sm:block hidden`}
+          className={`absolute top-0 bottom-0 hidden sm:block ${
+            isEven ? "-left-40" : "-right-40"
+          } w-[28.25rem]`}
         >
           <Image
             src={imageUrl}
             alt="Craft Image"
             quality={95}
-            layout="fill"
-            objectFit="cover"
+            fill
             className="object-cover w-full h-full"
           />
         </div>
@@ -69,11 +66,9 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
   );
 };
 
-// Define the AbajoraCraftSection component to display the boxes.
 const AbajoraCraftSection = () => {
-  const { ref } = useSectionInView("Craft", 0.25); // Lowered threshold
+  const { ref } = useSectionInView("Craft", 0.25);
 
-  // Craft data
   const CRAFT_DATA = [
     {
       description:
