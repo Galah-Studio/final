@@ -7,7 +7,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
 import { useSectionInView } from "@/lib/hooks";
-import SectionHeading from "./section-heading";
 
 type CraftBoxProps = {
   description: string;
@@ -35,12 +34,13 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
       ref={boxRef}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <div className="bg-gray-100 max-w-[42rem] sm:group-even:pl-8 border border-black/5 overflow-hidden sm:pr-8 relative sm:min-h-[28rem] rounded-lg transition dark:bg-white/10">
+      <div className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden relative sm:min-h-[28rem] rounded-lg transition dark:bg-white/10">
+        {/* Text */}
         <div
           className={`pt-4 pb-7 px-5 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${
             isEven
-              ? "sm:pl-10 sm:mr-[18rem] items-end text-right"
-              : "sm:pr-10 sm:ml-[18rem] items-start text-left"
+              ? "sm:pr-10 sm:ml-[18rem] items-end text-right"
+              : "sm:pl-10 sm:mr-[18rem] items-start text-left"
           }`}
         >
           <p className="leading-relaxed text-gray-700 dark:text-white/70 font-maven">
@@ -48,6 +48,7 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
           </p>
         </div>
 
+        {/* Image */}
         <div
           className={`absolute top-0 bottom-0 hidden sm:block ${
             isEven ? "-left-40" : "-right-40"
@@ -100,7 +101,11 @@ const AbajoraCraftSection = () => {
     >
       <div>
         {CRAFT_DATA.map((item, i) => (
-          <CraftBox key={`craft-${i}`} {...item} isEven={i % 2 === 0} />
+          <CraftBox
+            key={`craft-${i}`}
+            {...item}
+            isEven={i % 2 === 0} // Ensures the first box has isEven === true
+          />
         ))}
       </div>
     </section>
