@@ -14,28 +14,7 @@ const AbajoraLogos = () => {
       className="flex justify-center space-x-44 items-center mt-32 mb-36 bg-gray-50 dark:bg-black transition-colors duration-300"
     >
       {/* First SVG Logo */}
-      <div className="relative text-black dark:text-white">
-        <svg
-          id="a"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 386 382.61"
-          style={{ width: '150px', height: '150px' }}
-        >
-          <g id="Layer_5">
-            <path
-              d="M374,183c3,0,6-1,7-3,1.4-1.7,2.1-3.8,2-6l-11-165c0-5-4-9-9-9H22c-5,0-8,4-9,9L2,174l1,3c1.2,3.4,4.4,5.8,8,6"
-              fill="currentColor"
-            />
-            <path
-             d="M201,361l80-80c4-5,4-12,0-16l-80-80c-5-5-12-5-16,0l-80,80c-5,4-5,11,0,16l80,80v-176l-80,80c-5,4-5,11,0,16l80,80c4,4,11,4,16,0l80-80c4-5,4-12,0-16l-80-80"
-              fill="currentColor"
-            />
-          </g>
-        </svg>
-      </div>
-
-      {/* Second SVG Logo */}
-      <div className="relative text-black dark:text-white">
+       <div className="relative text-black dark:text-white">
         <svg
           id="a"
           xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +55,27 @@ const AbajoraLogos = () => {
             className="b"
             d="M175.57,75.43c-4.01.86-5.52,4.72-5.52,5.9,0,2.36,9.66,0,12.41-3.54,1.27-1.63-1.38-3.54-6.9-2.36Z"
           />
+        </svg>
+      </div>
+
+      {/* Second SVG Logo */}
+      <div className="relative text-black dark:text-white">
+        <svg
+          id="a"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 386 382.61"
+          style={{ width: '150px', height: '150px' }}
+        >
+          <g id="Layer_5">
+            <path
+              d="M374,183c3,0,6-1,7-3,1.4-1.7,2.1-3.8,2-6l-11-165c0-5-4-9-9-9H22c-5,0-8,4-9,9L2,174l1,3c1.2,3.4,4.4,5.8,8,6"
+              fill="currentColor"
+            />
+            <path
+             d="M201,361l80-80c4-5,4-12,0-16l-80-80c-5-5-12-5-16,0l-80,80c-5,4-5,11,0,16l80,80v-176l-80,80c-5,4-5,11,0,16l80,80c4,4,11,4,16,0l80-80c4-5,4-12,0-16l-80-80"
+              fill="currentColor"
+            />
+          </g>
         </svg>
       </div>
     </div>
