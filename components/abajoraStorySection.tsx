@@ -11,13 +11,68 @@ import { useEffect } from "react";
 // Import the ReactCompareImage component
 import ReactCompareImage from "react-compare-image";
 
+// TypeScript declaration for window.twttr
+declare global {
+  interface Window {
+    twttr?: {
+      widgets: {
+        load: () => void;
+      };
+    };
+  }
+}
+
 const AbajoraStorySection = () => {
   // Use the useSectionInView custom hook to track when the "Story" section is in view.
   const { ref } = useSectionInView("Story", 0.25);
 
-  // Existing useEffect for the tweet (if applicable)
+  // Load the Twitter widgets script when the component mounts.
   useEffect(() => {
-    // Your existing code for handling the tweet theme
+    // Function to load or reload the tweet
+    const loadTweet = () => {
+      // Check if the script is already loaded
+      if (window.twttr && window.twttr.widgets) {
+        window.twttr.widgets.load();
+      } else {
+        const script = document.createElement("script");
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        script.onload = () => {
+          window.twttr?.widgets.load();
+        };
+        document.body.appendChild(script);
+      }
+    };
+
+    // Function to update the tweet theme
+    const updateTweetTheme = () => {
+      const tweetBlockquote = document.querySelector(".twitter-tweet");
+      const htmlElement = document.documentElement;
+      const isDarkMode = htmlElement.classList.contains("dark");
+      if (tweetBlockquote) {
+        tweetBlockquote.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+        // Re-render the tweet to apply the new theme
+        window.twttr?.widgets.load();
+      }
+    };
+
+    // Load the tweet initially
+    loadTweet();
+
+    // Observe changes to the `class` attribute on the `<html>` element
+    const observer = new MutationObserver(() => {
+      updateTweetTheme();
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    // Cleanup function
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   // Return the AbajoraStorySection, which uses framer-motion for animations.
