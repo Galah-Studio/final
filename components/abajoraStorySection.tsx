@@ -87,7 +87,7 @@ const AbajoraStorySection = () => {
     >
       {/* Section Heading */}
       <SectionHeading>
-        <span className="font-comfortaa text-[#ff2b69]">About Us</span>
+        <span className="font-comfortaa text-[#ff2b69]">What is Abajora?</span>
       </SectionHeading>
 
       {/* First Paragraph */}
@@ -138,8 +138,8 @@ const AbajoraStorySection = () => {
         artistry and innovation. We envisioned the logos as elegant bed lamps,
         The rendered scene of the logo as a bed lamp beautifully captures the essence
         of the project, emphasizing both the elegance of the design and the symbolic
-        meaning behind it. This lamp represents the listeners of the Abajora podcast—
-        -providing warmth, comfort, and illumination during their reflective moments.
+        meaning behind it. This lamp represents the listeners of the Abajora podcast 
+        providing warmth, comfort, and illumination during their reflective moments.
         It embodies the habit many listeners have of tuning into the podcast before
         drifting off to sleep, creating a sense of serenity in their nightly routines.
       </p>
