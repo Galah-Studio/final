@@ -16,7 +16,13 @@ const AbajoraLogos = () => {
       className="flex justify-center space-x-44 items-center mt-32 mb-36 bg-gray-50 dark:bg-black transition-colors duration-300"
     >
       {/* First SVG Logo */}
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386 382.6" {...props}>
+      <div className="relative text-black dark:text-white">
+        <svg
+          id="a"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 386 382.61"
+          style={{ width: '150px', height: '150px' }}
+        >
     <defs>
       <style>{".cls-1{fill:#282725}"}</style>
     </defs>
