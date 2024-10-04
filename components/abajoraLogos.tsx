@@ -17,15 +17,14 @@ const AbajoraLogos = () => {
     >
       {/* First SVG Logo */}
       <div className="relative text-black dark:text-white">
-        <svg
-          id="a"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 386 382.61"
-          style={{ width: '150px', height: '150px' }}
-        >
-          <defs>
-            <style>{`.b{fill: currentColor;}`}</style>
-                </defs>
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386 382.61" {...props}>
+    <defs>
+      <style>
+        {
+          ".cls-1{fill:#282725}.cls-2,.cls-3,.cls-4{fill:#ff2b69}.cls-5{fill:#fd487d;stroke:#fd487d;stroke-width:.75px;stroke-miterlimit:10}.cls-6,.cls-7,.cls-8{stroke-miterlimit:10;fill:none;stroke:#ff2b69;stroke-width:10px}.cls-7{stroke-width:8px}.cls-3,.cls-7,.cls-8,.cls-9{display:none}"
+        }
+      </style>
+    </defs>
     <g id="Layer_5">
       <path
         d="M374.37 195.11c2.86 0 5.38-1.36 6.99-3.46a8.61 8.61 0 0 0 1.79-5.84L372.19 20.5c-.25-4.64-4.11-8.29-8.76-8.29H22.07c-4.66 0-8.52 3.65-8.76 8.29L2.34 185.82c-.08 1.26.13 2.46.55 3.57a8.77 8.77 0 0 0 8.23 5.73"
