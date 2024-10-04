@@ -9,25 +9,20 @@ import Image from "next/image";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 
-// Define the CraftBoxProps type based on the structure of the craft data.
 type CraftBoxProps = {
   description: string;
   imageUrl: string;
   isEven: boolean;
 };
 
-// Define the CraftBox component for displaying individual boxes.
 const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
-  // Create a reference for the box element.
   const boxRef = useRef<HTMLElement>(null);
 
-  // Use the useScroll hook to track scroll progress for animations.
   const { scrollYProgress } = useScroll({
     target: boxRef,
     offset: ["0 1", "1.33 1"],
   });
 
-  // Define animations based on scroll progress.
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
 
@@ -38,42 +33,41 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
         opacity: opacityProgress,
       }}
       ref={boxRef}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 sm:mb-8 last:mb-0 font-maven"
     >
-      <div className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden relative rounded-lg transition dark:bg-white/10 flex flex-col sm:flex-row">
-        {/* Image */}
-        <div className={`w-full sm:w-1/2 ${isEven ? 'sm:order-last' : ''}`}>
+      <div className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden relative rounded-lg transition dark:bg-white/10">
+        <div className="pt-4 pb-7 px-5 sm:px-10 flex flex-col h-full sm:max-w-[50%] sm:pr-8 sm:group-even:pl-8">
+          <p
+            className={`leading-relaxed text-gray-700 dark:text-white/70 ${
+              isEven ? "text-left" : "text-right"
+            }`}
+          >
+            {description}
+          </p>
+        </div>
+
+        <div
+          className={`absolute top-0 ${
+            isEven ? "-left-40" : "-right-40"
+          } w-[28.25rem] sm:block hidden`}
+        >
           <Image
             src={imageUrl}
             alt="Craft Image"
             quality={95}
-            width={600}
-            height={400}
+            width={452}
+            height={280}
             className="object-cover w-full h-full"
           />
-        </div>
-
-        {/* Text */}
-        <div
-          className={`p-5 sm:p-10 flex items-center ${
-            isEven ? 'text-left' : 'text-right'
-          }`}
-        >
-          <p className="leading-relaxed text-gray-700 dark:text-white/70 font-maven">
-            {description}
-          </p>
         </div>
       </div>
     </motion.article>
   );
 };
 
-// Define the AbajoraCraftSection component to display the boxes.
 const AbajoraCraftSection = () => {
-  // Use the 'useSectionInView' hook to track section visibility.
-  const { ref } = useSectionInView("Craft", 0.25); // Lowered threshold
+  const { ref } = useSectionInView("Craft", 0.25);
 
-  // Craft data
   const CRAFT_DATA = [
     {
       description:
@@ -96,7 +90,6 @@ const AbajoraCraftSection = () => {
       imageUrl: "/abajora/abj_06.png",
     },
   ];
-
 
   return (
     <section
