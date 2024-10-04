@@ -9,12 +9,14 @@ import Image from "next/image";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 
+// Define the CraftBoxProps type based on the structure of the craft data.
 type CraftBoxProps = {
   description: string;
   imageUrl: string;
   isEven: boolean;
 };
 
+// Define the CraftBox component for displaying individual boxes.
 const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
   const boxRef = useRef<HTMLElement>(null);
 
@@ -36,27 +38,29 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
       className="group mb-3 sm:mb-8 last:mb-0 font-maven"
     >
       <div className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden relative rounded-lg transition dark:bg-white/10">
-        <div className="pt-4 pb-7 px-5 sm:px-10 flex flex-col h-full sm:max-w-[50%] sm:pr-8 sm:group-even:pl-8">
-          <p
-            className={`leading-relaxed text-gray-700 dark:text-white/70 ${
-              isEven ? "text-left" : "text-right"
-            }`}
-          >
+        {/* Text */}
+        <div
+          className={`pt-4 pb-7 px-5 sm:px-10 flex flex-col h-full sm:max-w-[50%] ${
+            isEven ? "sm:pr-8 sm:items-start text-left sm:ml-[18rem]" : "sm:pl-8 sm:items-end text-right sm:mr-[18rem]"
+          }`}
+        >
+          <p className="leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
         </div>
 
+        {/* Image */}
         <div
           className={`absolute top-0 ${
-            isEven ? "-left-40" : "-right-40"
-          } w-[28.25rem] sm:block hidden`}
+            isEven ? "-right-40" : "-left-40"
+          } w-[28.25rem] h-full sm:block hidden`}
         >
           <Image
             src={imageUrl}
             alt="Craft Image"
             quality={95}
-            width={452}
-            height={280}
+            layout="fill"
+            objectFit="cover"
             className="object-cover w-full h-full"
           />
         </div>
@@ -65,13 +69,15 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
   );
 };
 
+// Define the AbajoraCraftSection component to display the boxes.
 const AbajoraCraftSection = () => {
-  const { ref } = useSectionInView("Craft", 0.25);
+  const { ref } = useSectionInView("Craft", 0.25); // Lowered threshold
 
+  // Craft data
   const CRAFT_DATA = [
     {
       description:
-        "The bed lamps designs showcases the artistry and creativity involved in its creation. The smooth, flowing lines evoke a sense of elegance, while the soft glow creates an inviting atmosphere. Behind the scenes, our team utilized advanced techniques in modeling and rendering to achieve a lifelike appearance. The careful attention to detail in the texture and lighting helps the lamp not only look realistic but also resonate emotionally with viewers. This combination of artistry and technical skill enhances the visual narrative of the logo reveal, reinforcing the deep connection between the Abajora brand and its dedicated listeners.",
+        "The bed lamps designs showcase the artistry and creativity involved in its creation. The smooth, flowing lines evoke a sense of elegance, while the soft glow creates an inviting atmosphere. Behind the scenes, our team utilized advanced techniques in modeling and rendering to achieve a lifelike appearance. The careful attention to detail in the texture and lighting helps the lamp not only look realistic but also resonate emotionally with viewers. This combination of artistry and technical skill enhances the visual narrative of the logo reveal, reinforcing the deep connection between the Abajora brand and its dedicated listeners.",
       imageUrl: "/abajora/abj_03.png",
     },
     {
