@@ -40,22 +40,28 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
       ref={boxRef}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <div className="bg-gray-100 max-w-[42rem] sm:group-even:pl-8 border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[28rem] rounded-lg transition dark:bg-white/10">
-        <div className={`pt-4 pb-7 px-5 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${isEven ? "sm:pr-10" : "sm:pl-10"} ${isEven ? "sm:ml-[18rem]" : "sm:mr-[18rem]"}`}>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 font-maven">
-            {description}
-          </p>
-        </div>
-
-        <div className={`absolute hidden sm:block top-8 ${isEven ? "-left-40" : "-right-40"} w-[28.25rem] rounded-t-lg shadow-2xl`}>
+      <div className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden relative rounded-lg transition dark:bg-white/10 flex flex-col sm:flex-row">
+        {/* Image */}
+        <div className={`w-full sm:w-1/2 ${isEven ? 'sm:order-last' : ''}`}>
           <Image
             src={imageUrl}
             alt="Craft Image"
             quality={95}
-            width={452}
-            height={280}
-            className="rounded-lg object-cover w-full h-full"
+            width={600}
+            height={400}
+            className="object-cover w-full h-full"
           />
+        </div>
+
+        {/* Text */}
+        <div
+          className={`p-5 sm:p-10 flex items-center ${
+            isEven ? 'text-left' : 'text-right'
+          }`}
+        >
+          <p className="leading-relaxed text-gray-700 dark:text-white/70 font-maven">
+            {description}
+          </p>
         </div>
       </div>
     </motion.article>
@@ -90,6 +96,7 @@ const AbajoraCraftSection = () => {
       imageUrl: "/abajora/abj_06.png",
     },
   ];
+
 
   return (
     <section
