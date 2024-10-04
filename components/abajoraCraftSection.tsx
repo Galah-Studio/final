@@ -39,8 +39,8 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
         <div
           className={`pt-4 pb-7 px-5 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${
             isEven
-              ? "sm:pr-10 sm:ml-[18rem] items-start text-right"
-              : "sm:pl-10 sm:mr-[18rem] items-end text-left"
+              ? "sm:pl-10 sm:mr-[18rem] items-end text-right"
+              : "sm:pr-10 sm:ml-[18rem] items-start text-left"
           }`}
         >
           <p className="leading-relaxed text-gray-700 dark:text-white/70 font-maven">
@@ -50,7 +50,7 @@ const CraftBox = ({ description, imageUrl, isEven }: CraftBoxProps) => {
 
         <div
           className={`absolute top-0 bottom-0 hidden sm:block ${
-            isEven ? "-right-40" : "-left-40"
+            isEven ? "-left-40" : "-right-40"
           } w-[28.25rem]`}
         >
           <Image
@@ -70,26 +70,7 @@ const AbajoraCraftSection = () => {
   const { ref } = useSectionInView("Craft", 0.25);
 
   const CRAFT_DATA = [
-    {
-      description:
-        "The bed lamps designs showcase the artistry and creativity involved in its creation. The smooth, flowing lines evoke a sense of elegance, while the soft glow creates an inviting atmosphere. Behind the scenes, our team utilized advanced techniques in modeling and rendering to achieve a lifelike appearance. The careful attention to detail in the texture and lighting helps the lamp not only look realistic but also resonate emotionally with viewers. This combination of artistry and technical skill enhances the visual narrative of the logo reveal, reinforcing the deep connection between the Abajora brand and its dedicated listeners.",
-      imageUrl: "/abajora/abj_03.png",
-    },
-    {
-      description:
-        "To elevate the narrative, we seamlessly integrated dynamic live-action footage, enriching the visual storytelling and enhancing audience engagement. This integration serves as a bridge that connects the podcast’s imaginative essence with its real-world impact, allowing viewers to immerse themselves in the Abajora experience.",
-      imageUrl: "/abajora/abj_04.png",
-    },
-    {
-      description:
-        "The culmination of our efforts resulted in a breathtaking motion graphics segment, where diverse styles and techniques harmoniously converge. Each carefully curated element reflects our studio’s relentless pursuit of excellence, resulting in a captivating video that encapsulates Abajora’s spirit—a podcast that enlightens and inspires.",
-      imageUrl: "/abajora/abj_05.png",
-    },
-    {
-      description:
-        "This project not only showcases the evolution of Abajora’s brand but also exemplifies our studio’s dedication to creating high-quality visual experiences that resonate deeply. The creative collaboration and artistic exploration throughout this journey have been exhilarating, celebrating the rich narratives that Lubna and her team continue to share with the world.",
-      imageUrl: "/abajora/abj_06.png",
-    },
+    // ... your data ...
   ];
 
   return (
