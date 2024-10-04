@@ -132,38 +132,16 @@ const AbajoraStorySection = () => {
         </div>
       </div>
 
-      {/* Remaining Paragraphs */}
+      {/* Remaining Paragraphs */}      
       <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
         Our talented team approached this project with an unwavering commitment to
-        artistry and innovation. We envisioned the logos as elegant lamps,
-        symbolizing enlightenment and transformation. Through meticulous 3D
-        modeling, we brought these logos to life, ensuring that the reveal
-        resonated with sophistication and style.
-      </p>
-
-      <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
-        To elevate the narrative, we seamlessly integrated dynamic live-action
-        footage, enriching the visual storytelling and enhancing audience
-        engagement. This integration serves as a bridge that connects the
-        podcast’s imaginative essence with its real-world impact, allowing viewers
-        to immerse themselves in the Abajora experience.
-      </p>
-
-      <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
-        The culmination of our efforts resulted in a breathtaking motion graphics
-        segment, where diverse styles and techniques harmoniously converge. Each
-        carefully curated element reflects our studio’s relentless pursuit of
-        excellence, resulting in a captivating video that encapsulates Abajora’s
-        spirit—a podcast that enlightens and inspires.
-      </p>
-
-      <p className="font-maven text-center text-gray-950 dark:text-gray-50">
-        This project not only showcases the evolution of Abajora’s brand but also
-        exemplifies our studio’s dedication to creating high-quality visual
-        experiences that resonate deeply. The creative collaboration and artistic
-        exploration throughout this journey have been exhilarating, celebrating
-        the rich narratives that Lubna and her team continue to share with the
-        world.
+        artistry and innovation. We envisioned the logos as elegant bed lamps,
+        The rendered scene of the logo as a bed lamp beautifully captures the essence
+        of the project, emphasizing both the elegance of the design and the symbolic
+        meaning behind it. This lamp represents the listeners of the Abajora podcast—
+        -providing warmth, comfort, and illumination during their reflective moments.
+        It embodies the habit many listeners have of tuning into the podcast before
+        drifting off to sleep, creating a sense of serenity in their nightly routines.
       </p>
     </motion.section>
   );
