@@ -35,7 +35,7 @@ const AbajoraSpotLight = () => {
         <h1
           className="absolute bottom-8 w-full text-center text-4xl font-comfortaa z-20 text-[#ff2b69]"
         >
-          The Title Goes Here
+          Abajora .. Illuminates the Soul✨
         </h1>
       </div>
     </section>
