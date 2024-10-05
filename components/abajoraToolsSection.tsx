@@ -1,14 +1,12 @@
-// components/AbajoraToolsSection.tsx
-
-"use client";
+use client";
 
 import { motion } from "framer-motion";
 
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
 
-// Define the tags data
-const TAGS_DATA = [
+// Define the skills data
+const SKILLS_DATA = [
   "Animation",
   "Motion Graphics",
   "3D Modeling",
@@ -39,51 +37,52 @@ const TAGS_DATA = [
   "High-Quality Visuals",
 ];
 
-// Shuffle the tags array to mix up the tags
-const shuffledTags = TAGS_DATA.sort(() => Math.random() - 0.5);
+// Shuffle the skills array to mix up the skills
+const shuffledSkills = SKILLS_DATA.sort(() => Math.random() - 0.5);
 
 // Define animation variants for the fade-in effect
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    y: 50,
+    y: 100,
   },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.05 * index, // Stagger the delay for each tag item
-      duration: 0.5,
-      ease: "easeOut",
+      delay: 0.05 * index, // Stagger the delay for each skill item
     },
   }),
 };
 
 const AbajoraToolsSection = () => {
   // Use the custom hook to determine when this section is in view
-  const { ref } = useSectionInView("Tools", 0.25);
+  const { ref } = useSectionInView("Tools");
 
   return (
-    <section ref={ref} id="tools" className="scroll-mt-28 mb-28">
+    <section
+      ref={ref}
+      className="mb-28 max-w-[53rem] scroll-mt-8 text-center sm:mb-40"
+    >
       <SectionHeading className="font-comfortaa text-[#ff2b69]">
-        Our Tools
+        Our Skills
       </SectionHeading>
 
-      <ul className="flex flex-wrap justify-center gap-2 mt-8">
-        {shuffledTags.map((tag, index) => (
+      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 font-maven">
+        {shuffledSkills.map((skill, i) => (
           <motion.li
-            key={`tag-${index}`}
-            className="bg-white border border-black max-sm:text-sm rounded-md md:rounded-xl px-3.5 py-1.5 md:px-5 md:py-3 dark:bg-white/10 dark:text-white/80"
+            id="skills"
+            key={`skill-${i}`}
+            className="bg-white borderBlack max-sm:text-sm rounded-md md:rounded-xl px-3.5 py-1.5 md:px-5 md:py-3 dark:bg-white/10 dark:text-white/80"
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
               once: true,
-              amount: 0.2,
             }}
-            custom={index} // Assign a custom index for animation delay
+            custom={i} // Assign a custom index for animation delay
           >
-            {tag}
+            {skill}
           </motion.li>
         ))}
       </ul>
