@@ -91,6 +91,3 @@ const Skills = () => {
 };
 
 export default AbajoraToolsSection;
-/////////////
-
-export default AbajoraToolsSection;
