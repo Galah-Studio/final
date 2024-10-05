@@ -117,8 +117,8 @@ export const EXTRA_LINKS = {
   linkedin: "https://www.instagram.com/galah.tv/",
   github: "https://x.com/Galahtv",
   resume: "/resume.pdf",
-  source_code: "https://github.com/sanidhyy/portfolio",
-  email: "sanidhya.verma12345@gmail.com",
+  source_code: "",
+  email: "hamid@galah.tv",
 } as const;
 
 // Data for work experience
@@ -173,29 +173,29 @@ export const PROJECTS_DATA = [
     title: "Abajora Podcast Commercial",
     description: `We created a commercial for a podcast called "Abajora". The ad includes realistic 3D modeling, motion graphics, and video editing. #3D #Blender #AfterEffects #Premiere`,
     tags: ["3D", "Blender", "AfterEffects", "Premiere"],
-    imageUrl: "/path/to/abajora-image.png",
-    projectUrl: "https://yourprojecturl.com/abajora",
+    imageUrl: "/abj_full.png",
+    projectUrl: "https://galah.tv/abajora",
   },
   {
     title: "Vivi Water Company Campaign",
     description: `We created an ad campaign for Vivi, a water company, featuring realistic product modeling and renders. #Blender #AfterEffects #Photoshop #Illustrator`,
     tags: ["Blender", "AfterEffects", "Photoshop", "Illustrator"],
-    imageUrl: "/path/to/vivi-image.png",
-    projectUrl: "https://yourprojecturl.com/vivi",
+    imageUrl: "/vivi_full.png",
+    projectUrl: "https://galah.tv/vivi",
   },
   {
     title: "ARKI Tectonica Ceremony Documentation",
     description: `We documented a celebration ceremony for ARKI Tectonica, using a cinematic kit and edited the videos and photos. #DaVinciResolve #AfterEffects #Premiere #Photoshop #Videography #Photography`,
     tags: ["DaVinciResolve", "AfterEffects", "Premiere", "Photoshop", "Videography", "Photography"],
-    imageUrl: "/path/to/arki-image.png",
-    projectUrl: "https://yourprojecturl.com/arki",
+    imageUrl: "/arki_full.png",
+    projectUrl: "https://galah.tv/arki",
   },
   {
     title: "Tiraz Brochure Design",
     description: `We designed a brochure for Tiraz, including writing the content, editing photos, and designing the layout. #InDesign #Photoshop #Writing #Illustrator`,
     tags: ["InDesign", "Photoshop", "Writing", "Illustrator"],
-    imageUrl: "/path/to/tiraz-image.png",
-    projectUrl: "https://yourprojecturl.com/tiraz",
+    imageUrl: "/tir_full.png",
+    projectUrl: "https://galah.tv/tiraz",
   },
 ] as const;
 
