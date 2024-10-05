@@ -21,8 +21,8 @@ export const viewport: Viewport = {
 
 // site metadata
 export const metadata: Metadata = {
-  title: `${OWNER_NAME.split(" ")[0]} | Personal Portfolio`,
-  description: `${OWNER_NAME.split(" ")[0]} is a full-stack developer with 4 years of experience.`,
+  title: `${OWNER_NAME.split(" ")[0]} | Production Studio`,
+  description: `${OWNER_NAME.split(" ")[0]}  is a renowned production studio specializing in high-quality film and multimedia projects.`,
   authors: {
     name: OWNER_NAME,
     url: EXTRA_LINKS.github,
