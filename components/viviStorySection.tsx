@@ -24,7 +24,7 @@ const ViviStorySection = () => {
       {/* Section Heading */}
       <SectionHeading>
         <span className="font-comfortaa text-[#ff2b69]">
-          Vivi: Pure Refreshment
+          Pure Refreshment
         </span>
       </SectionHeading>
 
