@@ -64,7 +64,7 @@ const viviLogos = () => {
         <svg
           id="a"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 386 382.61"
+          viewBox="0 0 257.55 198.51"
           style={{ width: '150px', height: '150px' }}
         >
           <g id="Layer_5">
