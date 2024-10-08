@@ -80,17 +80,19 @@ const ViviStorySection = () => {
         platforms.
       </p>
 
+
       {/* Image Comparison Slider */}
-      <div className="mt-12 mb-12 flex justify-center">
-        <div className="w-full max-w-xl h-[450px]">
-          <ReactCompareImage
-            leftImage="/vivi/vivi_01.png"
-            rightImage="/vivi/vivi_02.png"
-            sliderLineColor="#ff2b69"
-            sliderPositionPercentage={0.5}
-          />
-        </div>
-      </div>
+<div className="mt-12 mb-12 flex justify-center">
+  <div className="w-[800px] h-[450px]">
+    <ReactCompareImage
+      leftImage="/vivi/vivi_01.png"
+      rightImage="/vivi/vivi_02.png"
+      sliderLineColor="#ff2b69"
+      sliderPositionPercentage={0.5}
+      style={{ width: '100%', height: '100%' }}
+    />
+  </div>
+</div>
 
       {/* Remaining Paragraphs */}
       <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
