@@ -74,22 +74,22 @@ const ViviCraftSection = () => {
     {
       description:
         "Our journey with Vivi began by meticulously crafting 3D models of their entire product line. Each bottle was designed with precision, capturing the essence of Vivi's commitment to purity and refreshment. The models highlight the sleek design and branding that make Vivi stand out in the market.",
-      imageUrl: "/vivi/vivi_03.png",
-    },
-    {
-      description:
-        "To bring Vivi's story to life, we embarked on creating a vibrant 2D animated commercial. This animation was carefully storyboarded to convey the brand's message effectively, focusing on themes of natural purity and sustainable practices. The characters and scenes were designed to resonate with a wide audience.",
-      imageUrl: "/vivi/vivi_04.png",
-    },
-    {
-      description:
-        "Our team also developed high-quality renders for Vivi's marketing campaigns. Utilizing advanced rendering techniques, we produced visuals that showcase the water's clarity and the elegance of the bottle design. These images play a crucial role in advertising materials across various platforms.",
       imageUrl: "/vivi/vivi_05.png",
     },
     {
       description:
-        "Collaborating closely with Vivi, we ensured that every aspect of the project aligned with their brand values. From initial concept to final production, our focus was on creating content that not only looks impressive but also tells the story of Vivi's dedication to delivering pure refreshment.",
+        "Our Ramadan campaign was meticulously crafted to ensure the video content performed effectively across both vertical and horizontal platforms. The production process included thoughtful framing and composition to optimize the viewing experience regardless of the orientation. For horizontal platforms like YouTube, we created immersive scenes with a wide aspect ratio, allowing viewers to fully appreciate the rich visuals and details of Vivi’s products. Conversely, the vertical format was tailored for social media platforms such as Instagram and Snapchat, ensuring that key elements remained prominent and engaging in a mobile-friendly display. By strategically designing the video with adaptability in mind, we maximized engagement and reach, allowing the campaign to resonate with audiences wherever they chose to watch. This dual-format approach not only showcased Vivi’s offerings effectively but also reinforced the brand’s commitment to accessibility and user experience across various digital landscapes.",
       imageUrl: "/vivi/vivi_06.png",
+    },
+    {
+      description:
+        "we developed character designs and scene concepts aimed at resonating with a diverse audience, ensuring that each element aligned with Vivi’s core values and identity. This thorough groundwork laid the foundation for a cohesive narrative that captures the essence of the brand.",
+      imageUrl: "/vivi/vivi_07.png",
+    },
+    {
+      description:
+        "Collaborating closely with Vivi, we ensured that every aspect of the project aligned with their brand values. From initial concept to final production, our focus was on creating content that not only looks impressive but also tells the story of Vivi's dedication to delivering pure refreshment.",
+      imageUrl: "/vivi/vivi_08.png",
     },
   ];
 
