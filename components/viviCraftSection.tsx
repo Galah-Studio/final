@@ -78,7 +78,7 @@ const ViviCraftSection = () => {
     },
     {
       description:
-        "Our Ramadan campaign was meticulously crafted to ensure the video content performed effectively across both vertical and horizontal platforms. The production process included thoughtful framing and composition to optimize the viewing experience regardless of the orientation. For horizontal platforms like YouTube, we created immersive scenes with a wide aspect ratio, allowing viewers to fully appreciate the rich visuals and details of Vivi’s products. Conversely, the vertical format was tailored for social media platforms such as Instagram and Snapchat, ensuring that key elements remained prominent and engaging in a mobile-friendly display. By strategically designing the video with adaptability in mind, we maximized engagement and reach, allowing the campaign to resonate with audiences wherever they chose to watch. This dual-format approach not only showcased Vivi’s offerings effectively but also reinforced the brand’s commitment to accessibility and user experience across various digital landscapes.",
+        "Our Ramadan campaign was crafted for seamless performance across vertical and horizontal platforms. We focused on thoughtful framing and composition to enhance viewer experience. For YouTube, immersive scenes were designed in a wide aspect ratio, while the vertical format for Instagram and Snapchat ensured key elements were prominent and engaging for mobile users.",
       imageUrl: "/vivi/vivi_06.png",
     },
     {
