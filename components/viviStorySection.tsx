@@ -80,7 +80,7 @@ const ViviStorySection = () => {
         platforms.
       </p>
 
-     {/* Image Comparison Slider */}
+      {/* Image Comparison Slider */}
       <div className="mt-12 mb-12 flex justify-center">
         <div className="w-full max-w-xl h-[450px]">
           <ReactCompareImage
@@ -90,7 +90,6 @@ const ViviStorySection = () => {
             sliderPositionPercentage={0.5}
           />
         </div>
-      </div>
       </div>
 
       {/* Remaining Paragraphs */}
