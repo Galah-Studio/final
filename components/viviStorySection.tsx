@@ -10,10 +10,8 @@ import Image from "next/image";
 import ReactCompareImage from "react-compare-image";
 
 const ViviStorySection = () => {
-  // Use the useSectionInView custom hook to track when the "Story" section is in view.
   const { ref } = useSectionInView("Story", 0.25);
 
-  // Return the ViviStorySection, which uses framer-motion for animations.
   return (
     <motion.section
       ref={ref}
@@ -80,19 +78,22 @@ const ViviStorySection = () => {
         platforms.
       </p>
 
-
       {/* Image Comparison Slider */}
-<div className="mt-12 mb-6 flex justify-center">
-  <div className="w-[800px] h-[450px]">
-    <ReactCompareImage
-      leftImage="/vivi/vivi_01.png"
-      rightImage="/vivi/vivi_02.png"
-      sliderLineColor="#ff2b69"
-      sliderPositionPercentage={0.5}
-      style={{ width: '100%', height: '100%' }}
-    />
-  </div>
-</div>
+      <div className="mt-12 mb-12 flex justify-center">
+        <div
+          className="w-[800px] h-[450px]"
+          style={{ position: "relative" }}
+        >
+          <div className="absolute inset-0">
+            <ReactCompareImage
+              leftImage="/vivi/vivi_01.png"
+              rightImage="/vivi/vivi_02.png"
+              sliderLineColor="#ff2b69"
+              sliderPositionPercentage={0.5}
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Remaining Paragraphs */}
       <p className="mb-6 font-maven text-center text-gray-950 dark:text-gray-50">
