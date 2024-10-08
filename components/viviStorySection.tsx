@@ -82,7 +82,7 @@ const ViviStorySection = () => {
 
 
       {/* Image Comparison Slider */}
-<div className="mt-12 mb-12 flex justify-center">
+<div className="mt-12 mb-6 flex justify-center">
   <div className="w-[800px] h-[450px]">
     <ReactCompareImage
       leftImage="/vivi/vivi_01.png"
