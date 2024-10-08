@@ -34,7 +34,7 @@ const viviSpotLight = () => {
         <h1
           className="absolute bottom-8 w-full text-center text-4xl font-comfortaa z-20 text-[#ff2b69]"
         >
-          The Title Goes Here
+          Vivi Water… Nourishing Your Aspirations 🌊✨
         </h1>
       </div>
     </section>
