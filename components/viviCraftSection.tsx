@@ -83,12 +83,12 @@ const ViviCraftSection = () => {
     },
     {
       description:
-        "We developed detailed character designs and scene concepts specifically aimed at resonating with a diverse audience, carefully considering various cultural and emotional touchpoints. Each element was meticulously crafted to ensure alignment with Vivi’s core values and identity, reflecting the brand’s commitment to quality and refreshment. This thorough groundwork not only laid the foundation for a cohesive narrative but also created a rich tapestry that captures the essence of the brand. By prioritizing these aspects, we aimed to create a compelling story that engages viewers on multiple levels, fostering a deeper connection with the Vivi brand and its mission.",
+        "We developed detailed character designs and scene concepts specifically aimed at resonating with a diverse audience, carefully considering various cultural and emotional touchpoints. Each element was meticulously crafted to ensure alignment with Vivi’s core values and identity, reflecting the brand’s commitment to quality and refreshment. This thorough groundwork not only laid the foundation for a cohesive narrative but also created a rich tapestry that captures the essence of the brand.",
       imageUrl: "/vivi/vivi_07.png",
     },
     {
       description:
-        "Collaborating closely with Vivi allowed us to ensure that every aspect of the project was in perfect harmony with their brand values. From the initial concept phase through to the final production, our unwavering focus was on creating content that not only looks visually impressive but also effectively narrates Vivi’s commitment to delivering pure refreshment. We engaged in extensive discussions and feedback sessions with the Vivi team to align our creative direction with their vision. This collaborative approach enabled us to weave the brand’s essence into every detail, resulting in a cohesive narrative that highlights Vivi’s dedication to quality and sustainability.",
+        "Collaborating closely with Vivi allowed us to ensure that every aspect of the project was in perfect harmony with their brand values. From the initial concept phase through to the final production, our unwavering focus was on creating content that not only looks visually impressive but also effectively narrates Vivi’s commitment to delivering pure refreshment. We engaged in extensive discussions and feedback sessions with the Vivi team to align our creative direction with their vision.",
       imageUrl: "/vivi/vivi_08.png",
     },
   ];
